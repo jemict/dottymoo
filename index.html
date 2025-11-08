@@ -1,50 +1,58 @@
-<!doctype html>
-<html lang="en-GB">
+<!doctype html><html lang="en-GB">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Dotty Moo | Creating smiles, one cuddly keepsake at a time</title>
-  <meta name="description" content="Personalised school bears and keepsakes. Orders open through your child's school only."/>
-  <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32"/>
-  <link rel="icon" href="images/favicon.ico"/>
-  <link rel="stylesheet" href="styles.css"/>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dotty Moo | Creating smiles, one cuddly keepsake at a time</title>
+<meta name="description" content="Personalised school bears and keepsakes. Orders open through your child's school only.">
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
 
-  <div class="card">
-    <h1>Creating smiles, one cuddly keepsake at a time</h1>
-    <p class="lead">Personalised school bears and gifts that celebrate memories. Orders open through your child's school only.</p>
-    <p>
-      <a class="btn btn-primary" href="how-it-works.html">How it works</a>
-      <a class="btn btn-secondary" href="order.html">Order</a>
-    </p>
-  </div>
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="how-it-works.html">How it works</a>
+  <a href="about.html">About</a>
+  <a href="order.html">Order</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
+<div class="wrap">
   <div class="card">
-    <h2>Example School Keepsakes</h2>
-    <p class="lead">See how a Dotty Moo bear might look with different school identities.</p>
-    <div class="dm-carousel" role="region" aria-label="Example bears">
-      <div class="dm-track">
-        <figure class="dm-slide"><img src="assets/sample1.png" alt="Example bear: Maple Coppice Primary"><figcaption>Maple Coppice Primary (example)</figcaption></figure>
-        <figure class="dm-slide"><img src="assets/sample2.png" alt="Example bear: Silverbrook Academy"><figcaption>Silverbrook Academy (example)</figcaption></figure>
-        <figure class="dm-slide"><img src="assets/sample3.png" alt="Example bear: Willowbrook Green Primary"><figcaption>Willowbrook Green Primary (example)</figcaption></figure>
-      </div>
-      <button class="dm-prev" aria-label="Previous slide" type="button">‹</button>
-      <button class="dm-next" aria-label="Next slide" type="button">›</button>
-      <div class="dm-dots" aria-label="Slide navigation"></div>
+
+    <div class="header">
+      <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
     </div>
-    <p><em>Images shown for illustration purposes only. Actual designs are personalised for each participating school.</em></p>
-  </div>
 
+    <div class="content">
+      <p class="lead">Personalised school bears and gifts that celebrate memories. Orders open through your child's school only.</p>
+
+      <h3>Example School Mascots</h3>
+      <div class="dm-carousel" role="region" aria-label="Example bears" data-per-view="3">
+  <div class="dm-track">
+    <figure class="dm-slide"><img src="assets/sample1.png" alt="Example bear: Maple Coppice Primary"><figcaption>Maple Coppice Primary (example)</figcaption></figure>
+    <figure class="dm-slide"><img src="assets/sample2.png" alt="Example bear: Silverbrook Academy"><figcaption>Silverbrook Academy (example)</figcaption></figure>
+    <figure class="dm-slide"><img src="assets/sample3.png" alt="Example bear: Willowbrook Green Primary"><figcaption>Willowbrook Green Primary (example)</figcaption></figure>
+  </div>
+  <button class="dm-prev" aria-label="Previous slide" type="button">‹</button>
+  <button class="dm-next" aria-label="Next slide" type="button">›</button>
+  <div class="dm-dots" aria-label="Slide navigation"></div>
 </div>
+
+      <p><a class="btn btn-primary" href="how-it-works.html">How it works</a>
+         <a class="btn btn-secondary" href="order.html">Order</a></p>
+    </div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="footer-card">
     <div><strong>Dotty Moo</strong> • <a href="mailto:sales@dottymoo.co.uk">sales@dottymoo.co.uk</a></div>
     <div class="footer-links"><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="contact.html">Contact</a></div>
-    <small>Creating smiles, one cuddly keepsake at a time</small>
+    <small>© Dotty Moo 2025</small>
   </div>
 </footer>
 <script src="carousel.js"></script>
-</body>
-</html>
+<script>const here=(location.pathname.split('/').pop()||'index.html');document.querySelectorAll('.site-nav a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});</script>
+</body></html>
