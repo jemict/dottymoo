@@ -83,6 +83,11 @@ body::before{content:"";position:fixed;inset:0;background:var(--overlay);pointer
 }
 
 
+@media (max-width: 600px) {
+  .hiw-illustration img {
+    max-width: 320px;
+  }
+}
 
 
 
