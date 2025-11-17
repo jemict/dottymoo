@@ -1,47 +1,66 @@
-<!doctype html><html lang="en-GB"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How it works | Dotty Moo</title>
-<meta name="description" content="Three simple steps to order your Dotty Moo bear through your child's school.">
-<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32"><link rel="icon" href="assets/favicon.ico">
-<link rel="stylesheet" href="styles.css"></head><body>
+<!doctype html>
+<html lang="en-GB">
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How it works | Dotty Moo</title>
+  <meta name="description" content="Three simple steps to order your Dotty Moo bear through your child's school.">
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
 <nav class="site-nav">
-  <a href="index.html">Home</a><a href="how-it-works.html">How it works</a><a href="about.html">About</a><a href="order.html">Order</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="how-it-works.html">How it works</a>
+  <a href="about.html">About</a>
+  <a href="order.html">Order</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<div class="wrap"><div class="card">
-  <div class="header">
-  <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
-</div>
+<div class="wrap">
+  <div class="card">
+    <div class="header">
+      <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+    </div>
 
-  <div class="content">
-    <h2>How it works</h2>
-    <p>Dotty Moo partners with schools. Parents order only when a school's window is open.</p>
-    <ol>
-      <li><strong>Your school launches.</strong> Look out for a letter or email from your child's school (QR code or link).</li>
-      <li><strong>Scan the QR code.</strong> Go to your school's private page and order your school's mascot bear.</li>
-      <li><strong>Pay securely.</strong> Complete checkout. We deliver a single bulk order to school so every bear arrives together for pupils.</li>
-    </ol>
+    <div class="content">
+      <h2>How it works</h2>
+      <p>Dotty Moo partners with schools. Parents order only when a school's window is open.</p>
+      <ol>
+        <li><strong>Your school launches.</strong> Look out for a letter or email from your child's school (QR code or link).</li>
+        <li><strong>Scan the QR code.</strong> Go to your school's private page and order your school's mascot bear.</li>
+        <li><strong>Pay securely.</strong> Complete checkout. We deliver a single bulk order to school so every bear arrives together for pupils.</li>
+      </ol>
 
-   
-    <div class="dm-carousel" role="region" aria-label="Example bears">
-      <div class="dm-track">
-        <figure class="dm-slide"><img src="assets/sample1.png" alt="Example bear: Maple Coppice Primary"></figure>
-        <figure class="dm-slide"><img src="assets/sample2.png" alt="Example bear: Silverbrook Academy"></figure>
-        <figure class="dm-slide"><img src="assets/sample3.png" alt="Example bear: Willowbrook Green Primary"></figure>
-      </div>
-      <button class="dm-prev" aria-label="Previous slide" type="button">‹</button>
-      <button class="dm-next" aria-label="Next slide" type="button">›</button>
-      <div class="dm-dots" aria-label="Slide navigation"></div>
+      <!-- New fixed image instead of carousel -->
+      <figure class="hiw-illustration">
+        <img src="assets/hiw_icon.png"
+             alt="Three simple steps: school launches, families order online, bears arrive at school in a box.">
+      </figure>
     </div>
   </div>
-</div></div>
+</div>
 
-<footer class="site-footer"><div class="footer-card">
-  <div><strong>Dotty Moo</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
-  <div class="footer-links"><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="contact.html">Contact</a></div>
-  <small>© Dotty Moo 2025</small>
-</div></footer>
+<footer class="site-footer">
+  <div class="footer-card">
+    <div><strong>Dotty Moo</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a> • <a href="contact.html">Contact</a>
+    </div>
+    <small>© Dotty Moo 2025</small>
+  </div>
+</footer>
+
+<!-- You can remove this script if no page uses the carousel any more -->
 <script src="carousel.js"></script>
-<script>const here=(location.pathname.split('/').pop()||'index.html');document.querySelectorAll('.site-nav a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});</script>
-</body></html>
+<script>
+  const here = (location.pathname.split('/').pop() || 'index.html');
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    if (a.getAttribute('href') === here) a.classList.add('active');
+  });
+</script>
+</body>
+</html>
