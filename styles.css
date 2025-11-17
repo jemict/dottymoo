@@ -62,7 +62,8 @@ body::before{content:"";position:fixed;inset:0;background:var(--overlay);pointer
 }
 
 .hiw-illustration img {
-  max-width: 90%;   /* scales it down so it fits */
+  width: 100%;
+  max-width: 600px;   /* Optional: sets a comfortable limit */
   height: auto;
   display: block;
   margin: 0 auto;
