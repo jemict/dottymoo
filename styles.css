@@ -55,6 +55,18 @@ body::before{content:"";position:fixed;inset:0;background:var(--overlay);pointer
   margin-bottom: 1rem;
 }
 
+.hiw-illustration {
+  margin-top: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hiw-illustration img {
+  max-width: 90%;   /* scales it down so it fits */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 
 .header img.banner {
