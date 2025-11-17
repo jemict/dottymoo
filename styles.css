@@ -184,16 +184,6 @@ small{opacity:.75}
 .dm-dots button{width:9px; height:9px; border-radius:50%; background:#AFC6D3; border:2px solid #fff}
 .dm-dots button[aria-current="true"]{background:#F2C24B}
 
-/* Responsive: 2 per view on tablets, 1 on phones */
-@media (max-width: 900px){
-  .dm-slide{min-width: calc((100% - 16px)/2)}
-  .dm-slide img{height:220px}
-}
-@media (max-width: 600px){
-  .dm-slide{min-width: 100%}
-  .dm-slide img{height:200px}
-}
-
 /* Small helpers */
 .btn{display:inline-block; padding:.6rem .9rem; border-radius:10px; text-decoration:none; font-weight:700}
 .btn-primary{background:var(--dm-coral); color:#fff}
