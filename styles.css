@@ -99,10 +99,13 @@ body::before{content:"";position:fixed;inset:0;background:var(--overlay);pointer
 
 }
 
-/* Content area with compact scroll if long */
+/* Content area – let the page scroll instead of the card */
 .content{
-  max-height: 55vh; overflow:auto; padding-right:6px;
+  padding-right: 6px;
+  overflow-x: hidden;   /* stops any horizontal scroll inside the card */
+  overflow-y: visible;  /* no inner vertical scrollbar */
 }
+
 .content h2{margin-top:10px}
 .lead{color:#5B646B}
 
