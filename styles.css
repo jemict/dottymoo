@@ -143,13 +143,31 @@ small{opacity:.75}
 /* Uniform bear display refinement */
 .dm-slide img {
   width: 100%;
-  height: auto;
+  height: auto;        /* keep correct proportions */
+  max-width: 260px;    /* keeps them nicely sized on desktop */
   object-fit: contain;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   padding: 2px;
+  display: block;
+  margin: 0 auto;
 }
+
+@media (max-width: 900px){
+  .dm-slide{
+    min-width: calc((100% - 16px)/2);
+  }
+  /* no fixed height on the image */
+}
+
+@media (max-width: 600px){
+  .dm-slide{
+    min-width: 100%;
+  }
+  /* still no fixed height – image scales automatically */
+}
+
 
 
 .dm-slide figcaption{margin-top:8px; font-size:0.95rem; color:#333; text-align:center}
