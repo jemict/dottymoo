@@ -74,4 +74,16 @@
 </div></footer>
 <script src="carousel.js"></script>
 <script>const here=(location.pathname.split('/').pop()||'index.html');document.querySelectorAll('.site-nav a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});</script>
+<script>
+  const nav = document.querySelector('.site-nav');
+  const toggle = document.querySelector('.nav-toggle');
+
+  if (nav && toggle) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+</script>
+
 </body></html>
