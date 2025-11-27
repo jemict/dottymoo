@@ -248,6 +248,21 @@ small{opacity:.75}
     width:100%;
   }
 }
+.footer-meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.footer-links {
+  margin-top: 6px;
+}
+
+.site-footer small {
+  margin-top: 6px;
+  display: block;
+  opacity: 0.7;
+}
 
 
 
