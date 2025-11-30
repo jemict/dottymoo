@@ -280,7 +280,7 @@ small{
 }
 
 @media (max-width: 600px) {
-  /* Make the bar look like BBC: centred brand, icons at edges */
+  /* Make the bar look centred brand, icons at edges */
   .site-nav {
     position: fixed;
     top: 0;
