@@ -279,59 +279,91 @@ small{
   }
 }
 
-/* MOBILE NAV ONLY */
-@media (max-width:600px){
-  .site-nav{
-    justify-content:flex-start;
-    padding:8px 10px;
-    gap:8px;
-  }
-
-  .nav-toggle{
-    display:block;
-    background:none;
-    border:none;
-    font-size:24px;
-    padding:4px 6px;
-    cursor:pointer;
-    border-radius:8px;
-  }
-
-  .nav-toggle:focus-visible{
-    outline:2px solid var(--dm-coral);
-  }
-
-  /* show brand on mobile */
-  .nav-brand{
-    display:flex;
-  }
-
-  /* links become a dropdown panel */
-  .nav-links{
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-    background:rgba(255,255,255,.97);
+@media (max-width: 600px) {
+  /* Make the bar look like BBC: centred brand, icons at edges */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;   /* brand sits in the middle */
+    align-items: center;
+    padding: 8px 40px;         /* extra space so burger doesn't overlap */
+    background: rgba(255,255,255,.95);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    flex-direction:column;
-    align-items:flex-start;
-    gap:4px;
-    padding:8px 14px 10px;
-    border-bottom:1px solid rgba(0,0,0,.06);
-    display:none; /* hidden by default */
+    border-bottom: 1px solid rgba(0,0,0,.06);
   }
 
-  .site-nav.open .nav-links{
-    display:flex;
+  /* Burger pinned to the left */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 22px;
+    padding: 4px 6px;
+    cursor: pointer;
+    border-radius: 8px;
   }
 
-  .nav-links a{
-    padding:6px 4px;
-    width:100%;
+  .nav-toggle:focus-visible {
+    outline: 2px solid var(--dm-coral);
+  }
+
+  /* Brand visible and a bit stronger */
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .nav-brand img {
+    height: 22px;
+    width: auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  /* Dropdown panel when menu is open */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 8px 14px 10px;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+    display: none;
+  }
+
+  .site-nav.open .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 6px 4px;
+    width: 100%;
+  }
+
+  /* Slightly reduce top padding to pull card closer */
+  .wrap {
+    padding-top: 72px;
   }
 }
+
 
 /* slide captions */
 .dm-slide figcaption{
