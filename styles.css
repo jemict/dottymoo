@@ -34,7 +34,7 @@ body::before{
   justify-content:center;
   gap:16px;
   padding:10px 14px;
-  background:rgba(255,255,255,.65);
+  background:#ffffff !important;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-bottom:1px solid rgba(0,0,0,.06);
@@ -50,7 +50,7 @@ body::before{
 }
 
 .nav-brand img{
-  height:24px;
+  height:28px;
   width:auto;
   display:block;
   border-radius:6px;
