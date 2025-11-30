@@ -281,56 +281,61 @@ small{
 
 @media (max-width: 600px) {
   /* Make the bar look centred brand, icons at edges */
-  .site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    display: flex;
-    justify-content: center;   /* brand sits in the middle */
-    align-items: center;
-    padding: 8px 40px;         /* extra space so burger doesn't overlap */
-    background: rgba(255,255,255,.95);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(0,0,0,.06);
-  }
+.site-nav {
+  display: flex;
+  justify-content: center; /* brand centred */
+  align-items: center;
+  padding: 10px 40px;      /* space for icons */
+  background: rgba(255,255,255,.95);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
 
   /* Burger pinned to the left */
-  .nav-toggle {
-    display: block;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 22px;
-    padding: 4px 6px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
+.nav-toggle {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 
   .nav-toggle:focus-visible {
     outline: 2px solid var(--dm-coral);
   }
 
   /* Brand visible and a bit stronger */
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 18px;
-    font-weight: 700;
-  }
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
 
-  .nav-brand img {
-    height: 22px;
-    width: auto;
-    display: block;
-    border-radius: 6px;
-  }
+.nav-brand img {
+  height: 22px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
+}
+.nav-icon-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  opacity: 0.9;
+  pointer-events: none;   /* decorative only */
+}
+
 
   /* Dropdown panel when menu is open */
   .nav-links {
