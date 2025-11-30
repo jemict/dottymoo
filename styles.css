@@ -26,6 +26,22 @@ body::before{content:"";position:fixed;inset:0;background:var(--overlay);pointer
   border-bottom:1px solid rgba(0,0,0,.06);
 }
 
+/* brand next to burger (hidden on desktop by default) */
+.nav-brand {
+  display:none;
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  font-size:16px;
+}
+
+.nav-brand img {
+  height:24px;
+  width:auto;
+  display:block;
+  border-radius:6px;
+}
+
 /* hide burger on larger screens */
 .nav-toggle {
   display:none;
@@ -105,14 +121,11 @@ body::before{content:"";position:fixed;inset:0;background:var(--overlay);pointer
   }
 }
 
-
-
 @media (max-width: 600px) {
   .header img.banner {
     width: 280px;
     padding: 0.5rem 0.8rem;
   }
-
 }
 
 /* Content area – let the page scroll instead of the card */
@@ -207,6 +220,58 @@ small{opacity:.75}
     justify-content: space-between;
     padding: 8px 10px;
   }
+@media (max-width: 600px) {
+  .site-nav {
+    justify-content: flex-start;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .nav-toggle {
+    display:block;
+    background:none;
+    border:none;
+    font-size:24px;
+    padding:4px 6px;
+    cursor:pointer;
+    border-radius:8px;
+  }
+
+  .nav-toggle:focus-visible {
+    outline:2px solid var(--dm-coral);
+  }
+
+  /* show brand on mobile */
+  .nav-brand {
+    display:flex;
+  }
+
+  /* links become a dropdown panel */
+  .nav-links {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:rgba(255,255,255,.97);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    flex-direction:column;
+    align-items:flex-start;
+    gap:4px;
+    padding:8px 14px 10px;
+    border-bottom:1px solid rgba(0,0,0,.06);
+    display:none; /* hidden by default */
+  }
+
+  .site-nav.open .nav-links {
+    display:flex;
+  }
+
+  .nav-links a {
+    padding:6px 4px;
+    width:100%;
+  }
+}
 
   .nav-toggle {
     display:block;
