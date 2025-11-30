@@ -320,7 +320,7 @@ small{
 }
 
 .nav-brand img {
-  height: 32px;
+  height: 40px;
   width: auto;
   display: block;
   border-radius: 4px;
@@ -371,7 +371,7 @@ small{
 }
 /* FORCE bigger nav-brand icon */
 .nav-brand img {
-  height: 32px !important;
+  height: 40px !important;
   width: auto !important;
 }
 
