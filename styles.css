@@ -47,6 +47,7 @@ body::before{
   gap:6px;
   font-weight:600;
   font-size:16px;
+  padding-top: 3px;   /* adjust vertical alignment */
 }
 
 .nav-brand img{
