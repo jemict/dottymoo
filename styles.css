@@ -15,6 +15,14 @@ body{
   color:var(--dm-black);
   background:#fff url('assets/cover.png') center/cover no-repeat;
 }
+
+/* Desktop: restore fixed background so dots always show nicely */
+@media (min-width: 800px){
+  body{
+    background-attachment: fixed;
+  }
+}
+
 body::before{
   content:"";
   position:fixed;
