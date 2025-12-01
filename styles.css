@@ -10,25 +10,30 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 
+/* Plain body background, dots now handled by .bg-layer */
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--dm-black);
+  background:#fff;
+}
+
+/* Fixed dotty background layer for all devices */
+.bg-layer{
+  position:fixed;
+  inset:0;
   background:#fff url('assets/cover.png') center/cover no-repeat;
+  z-index:-2;
+  pointer-events:none;
 }
 
-/* Desktop: restore fixed background so dots always show nicely */
-@media (min-width: 800px){
-  body{
-    background-attachment: fixed;
-  }
-}
-
+/* Glass overlay over the dots */
 body::before{
   content:"";
   position:fixed;
   inset:0;
   background:var(--overlay);
   pointer-events:none;
+  z-index:-1;
 }
 
 /* ------------------------- */
