@@ -13,7 +13,7 @@ html,body{height:100%;margin:0}
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--dm-black);
-  background:#fff url('assets/cover.png') center/cover fixed no-repeat;
+  background:#fff url('assets/cover.png') center/cover no-repeat;
 }
 body::before{
   content:"";
