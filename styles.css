@@ -230,10 +230,13 @@ small{ opacity:.75; }
   gap:16px;
   transition:transform .45s ease;
 }
+.dm-slide{
+  flex:0 0 100%;
+}
+
 
 .dm-slide{
-  min-width:calc((100% - 32px)/3);
-  display:flex;
+    display:flex;
   flex-direction:column;
   align-items:center;
   background:#fff;
