@@ -1,4 +1,4 @@
-// Scroll-based Dotty Moo carousel: robust on all screen sizes
+// Scroll-based Dotty Moo carousel with reliable looping
 (function () {
   const carousels = document.querySelectorAll('.dm-carousel');
   if (!carousels.length) return;
@@ -15,19 +15,11 @@
     let index = 0;
     const lastIndex = slides.length - 1;
     const dots = [];
+    let isProgrammatic = false;
+    let scrollTimeout = null;
 
     function getSlideWidth() {
       return carousel.getBoundingClientRect().width;
-    }
-
-    function scrollToIndex(i) {
-      const slideWidth = getSlideWidth();
-      index = i;
-      track.scrollTo({
-        left: slideWidth * index,
-        behavior: 'smooth'
-      });
-      updateDots();
     }
 
     function updateDots() {
@@ -38,6 +30,25 @@
           dot.removeAttribute('aria-current');
         }
       });
+    }
+
+    function scrollToIndex(targetIndex) {
+      const slideWidth = getSlideWidth();
+      index = targetIndex;
+      isProgrammatic = true;
+
+      track.scrollTo({
+        left: slideWidth * index,
+        behavior: 'smooth'
+      });
+
+      updateDots();
+
+      // after scroll finishes, allow manual scroll updates again
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isProgrammatic = false;
+      }, 450);
     }
 
     // Build dots
@@ -53,7 +64,7 @@
       });
     }
 
-    // Arrow buttons
+    // Arrow buttons (with looping)
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
         const next = (index === 0) ? lastIndex : index - 1;
@@ -68,11 +79,14 @@
       });
     }
 
-    // Update index when user swipes manually
+    // Update index when the user manually swipes
     track.addEventListener('scroll', () => {
+      if (isProgrammatic) return; // ignore scrolls from our own scrollTo()
+
       const slideWidth = getSlideWidth();
       const newIndex = Math.round(track.scrollLeft / slideWidth);
-      if (newIndex !== index) {
+
+      if (newIndex !== index && newIndex >= 0 && newIndex <= lastIndex) {
         index = newIndex;
         updateDots();
       }
