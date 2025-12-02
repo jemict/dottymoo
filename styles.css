@@ -227,9 +227,11 @@ small{ opacity:.75; }
 
 .dm-track{
   display:flex;
-  gap:16px;
+  /* remove the gap to keep slides perfectly aligned */
+  gap:0;
   transition:transform .45s ease;
 }
+
 .dm-slide{
   flex:0 0 100%;
 }
