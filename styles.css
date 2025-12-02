@@ -228,11 +228,11 @@ small{ opacity:.75; }
 /* Make the track a horizontal scroller with snap */
 .dm-track{
   display:flex;
-  flex-shrink:0;
-  width:100%;
   gap:0;
+  width:100%;
   transition:transform .45s ease;
 }
+
 
 
 /* Each slide is one full viewport of the track */
@@ -251,6 +251,7 @@ small{ opacity:.75; }
 }
 
 
+
 .dm-slide img{
   width:auto;
   height:auto;
@@ -260,6 +261,7 @@ small{ opacity:.75; }
   margin:0 auto;
   display:block;
 }
+
 
 
 /* Carousel arrows + dots */
