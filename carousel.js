@@ -1,4 +1,4 @@
-// Scroll-based Dotty Moo carousel with reliable looping
+// Dotty Moo Carousel — transform based, reliable on mobile + desktop
 (function () {
   const carousels = document.querySelectorAll('.dm-carousel');
   if (!carousels.length) return;
@@ -15,16 +15,13 @@
     let index = 0;
     const lastIndex = slides.length - 1;
     const dots = [];
-    let isProgrammatic = false;
-    let scrollTimeout = null;
 
-   function getSlideWidth() {
-  // use the actual scrollable area, not the padded outer card
-  return track.getBoundingClientRect().width;
-}
+    /* ---------------------------
+       UPDATE UI (arrows + dots)
+    ----------------------------*/
+    function update() {
+      track.style.transform = `translateX(-${index * 100}%)`;
 
-
-    function updateDots() {
       dots.forEach((dot, i) => {
         if (i === index) {
           dot.setAttribute('aria-current', 'true');
@@ -34,26 +31,9 @@
       });
     }
 
-    function scrollToIndex(targetIndex) {
-      const slideWidth = getSlideWidth();
-      index = targetIndex;
-      isProgrammatic = true;
-
-      track.scrollTo({
-        left: slideWidth * index,
-        behavior: 'smooth'
-      });
-
-      updateDots();
-
-      // after scroll finishes, allow manual scroll updates again
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        isProgrammatic = false;
-      }, 450);
-    }
-
-    // Build dots
+    /* ---------------------------
+       BUILD DOTS
+    ----------------------------*/
     if (dotsWrap) {
       dotsWrap.innerHTML = '';
       slides.forEach((_, i) => {
@@ -62,39 +42,58 @@
         dotsWrap.appendChild(dot);
         dots.push(dot);
 
-        dot.addEventListener('click', () => scrollToIndex(i));
+        dot.addEventListener('click', () => {
+          index = i;
+          update();
+        });
       });
     }
 
-    // Arrow buttons (with looping)
+    /* ---------------------------
+       ARROWS WITH LOOPING
+    ----------------------------*/
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        const next = (index === 0) ? lastIndex : index - 1;
-        scrollToIndex(next);
+        index = (index === 0) ? lastIndex : index - 1;
+        update();
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        const next = (index === lastIndex) ? 0 : index + 1;
-        scrollToIndex(next);
+        index = (index === lastIndex) ? 0 : index + 1;
+        update();
       });
     }
 
-    // Update index when the user manually swipes
-    track.addEventListener('scroll', () => {
-      if (isProgrammatic) return; // ignore scrolls from our own scrollTo()
+    /* ---------------------------
+       SWIPE SUPPORT
+    ----------------------------*/
+    let startX = null;
 
-      const slideWidth = getSlideWidth();
-      const newIndex = Math.round(track.scrollLeft / slideWidth);
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
 
-      if (newIndex !== index && newIndex >= 0 && newIndex <= lastIndex) {
-        index = newIndex;
-        updateDots();
+    track.addEventListener('touchend', e => {
+      if (startX === null) return;
+      const diff = e.changedTouches[0].clientX - startX;
+
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          index = (index === lastIndex) ? 0 : index + 1;
+        } else {
+          index = (index === 0) ? lastIndex : index - 1;
+        }
+        update();
       }
+
+      startX = null;
     });
 
-    // Initial state
-    scrollToIndex(0);
+    /* ---------------------------
+       INITIAL STATE
+    ----------------------------*/
+    update();
   });
 })();
