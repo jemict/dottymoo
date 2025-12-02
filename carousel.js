@@ -1,4 +1,4 @@
-// Super simple Dotty Moo carousel: one slide at a time
+// Dotty Moo carousel - always centres one slide at a time
 (function () {
   const carousels = document.querySelectorAll('.dm-carousel');
   if (!carousels.length) return;
@@ -16,8 +16,16 @@
     const lastIndex = slides.length - 1;
     const dots = [];
 
-    function update() {
-      track.style.transform = `translateX(-${index * 100}%)`;
+    function getSlideWidth() {
+      const first = slides[0];
+      if (!first) return 0;
+      return first.getBoundingClientRect().width;
+    }
+
+    function applyTransform() {
+      const slideWidth = getSlideWidth();
+      track.style.transform = `translateX(${-index * slideWidth}px)`;
+
       dots.forEach((dot, i) => {
         if (i === index) {
           dot.setAttribute('aria-current', 'true');
@@ -38,7 +46,7 @@
 
         dot.addEventListener('click', () => {
           index = i;
-          update();
+          applyTransform();
         });
       });
     }
@@ -47,18 +55,18 @@
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
         index = (index === 0) ? lastIndex : index - 1;
-        update();
+        applyTransform();
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
         index = (index === lastIndex) ? 0 : index + 1;
-        update();
+        applyTransform();
       });
     }
 
-    // Basic swipe support on touch screens
+    // Basic swipe on touch
     let startX = null;
 
     track.addEventListener('touchstart', e => {
@@ -70,18 +78,22 @@
       const diff = e.changedTouches[0].clientX - startX;
       if (Math.abs(diff) > 40) {
         if (diff < 0) {
-          // swipe left -> next
           index = (index === lastIndex) ? 0 : index + 1;
         } else {
-          // swipe right -> prev
           index = (index === 0) ? lastIndex : index - 1;
         }
-        update();
+        applyTransform();
       }
       startX = null;
     });
 
+    // Keep things aligned on resize / orientation change
+    window.addEventListener('resize', applyTransform);
+
+    // Also recalc after all images/fonts loaded
+    window.addEventListener('load', applyTransform);
+
     // Initial state
-    update();
+    applyTransform();
   });
 })();
