@@ -1,4 +1,4 @@
-// Dotty Moo carousel – pixel-based transform so each slide stays centred
+// Dotty Moo carousel – simple, pixel-perfect, loops correctly on mobile & desktop
 (function () {
   const carousels = document.querySelectorAll('.dm-carousel');
   if (!carousels.length) return;
@@ -14,57 +14,111 @@
 
     let index = 0;
     const lastIndex = slides.length - 1;
-
-    // Build dots
     const dots = [];
-    if (dotsWrap) {
-      dotsWrap.innerHTML = "";
+
+    // ----- sizing -----
+    function setWidths() {
+      const width = carousel.clientWidth; // inner width of the carousel card
+      track.style.width = (width * slides.length) + 'px';
+
+      slides.forEach(slide => {
+        slide.style.width = width + 'px';
+        slide.style.flex = '0 0 ' + width + 'px';
+      });
+
+      // keep current slide centred after resize
+      track.style.transform = `translateX(${-index * width}px)`;
+    }
+
+    // ----- dots -----
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = '';
       slides.forEach((_, i) => {
-        const dot = document.createElement("button");
-        if (i === 0) dot.setAttribute("aria-current", "true");
+        const dot = document.createElement('button');
+        if (i === 0) dot.setAttribute('aria-current', 'true');
         dotsWrap.appendChild(dot);
         dots.push(dot);
 
-        dot.addEventListener("click", () => {
-          index = i;
-          update();
-        });
+        dot.addEventListener('click', () => goTo(i));
       });
     }
 
-    function getSlideWidth() {
-      // width of the visible carousel area
-      return carousel.getBoundingClientRect().width;
-    }
-
-    function update() {
-      const slideWidth = getSlideWidth();
-      track.style.transform = `translateX(-${index * slideWidth}px)`;
-
+    function updateDots() {
       dots.forEach((dot, i) => {
-        dot.toggleAttribute("aria-current", i === index);
+        if (i === index) {
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
       });
     }
 
-    // Arrows with looping
+    // ----- movement -----
+    function goTo(target) {
+      const width = carousel.clientWidth;
+      // loop nicely
+      if (target < 0) target = lastIndex;
+      if (target > lastIndex) target = 0;
+
+      index = target;
+      track.style.transform = `translateX(${-index * width}px)`;
+      updateDots();
+    }
+
+    // arrows
     if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        index = (index === 0 ? lastIndex : index - 1);
-        update();
+      prevBtn.addEventListener('click', () => {
+        goTo(index - 1);
       });
     }
 
     if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        index = (index === lastIndex ? 0 : index + 1);
-        update();
+      nextBtn.addEventListener('click', () => {
+        goTo(index + 1);
       });
     }
 
-    // Keep things correct on resize (desktop ↔ mobile etc.)
-    window.addEventListener("resize", update);
+    // ----- swipe on touch -----
+    let startX = null;
+    let isDragging = false;
 
-    // Initial position
-    update();
+    track.addEventListener('touchstart', e => {
+      if (!e.touches || !e.touches.length) return;
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }, { passive: true });
+
+    track.addEventListener('touchmove', e => {
+      if (!isDragging || startX === null) return;
+      // we let the browser do the actual drag/scroll visually;
+      // we only care about deciding left/right on touchend
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+      if (!isDragging || startX === null) return;
+      const endX = (e.changedTouches && e.changedTouches[0].clientX) || startX;
+      const deltaX = endX - startX;
+
+      // simple threshold so tiny taps don’t move slides
+      if (Math.abs(deltaX) > 40) {
+        if (deltaX < 0) {
+          goTo(index + 1); // swiped left, go forwards
+        } else {
+          goTo(index - 1); // swiped right, go backwards
+        }
+      }
+
+      startX = null;
+      isDragging = false;
+    });
+
+    // keep everything correct on resize / orientation change
+    window.addEventListener('resize', setWidths);
+
+    // initial setup
+    setWidths();
+    buildDots();
+    updateDots();
   });
 })();
