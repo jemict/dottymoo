@@ -228,37 +228,39 @@ small{ opacity:.75; }
 /* Make the track a horizontal scroller with snap */
 .dm-track{
   display:flex;
+  flex-shrink:0;
+  width:100%;
   gap:0;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;
-  -webkit-overflow-scrolling:touch;
+  transition:transform .45s ease;
 }
+
 
 /* Each slide is one full viewport of the track */
 .dm-slide{
   flex:0 0 100%;
+  width:100%;
   max-width:100%;
-  scroll-snap-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
   background:#fff;
   border-radius:12px;
   padding:8px;
   box-shadow:0 1px 3px rgba(0,0,0,.04);
 }
 
+
 .dm-slide img{
-  width:100%;
+  width:auto;
   height:auto;
   max-width:260px;
+  max-height:260px;
   object-fit:contain;
-  border-radius:12px;
-  padding:2px;
+  margin:0 auto;
   display:block;
-  margin:auto;
 }
+
 
 /* Carousel arrows + dots */
 .dm-prev,
