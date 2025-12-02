@@ -227,15 +227,9 @@ small{ opacity:.75; }
 
 .dm-track{
   display:flex;
-  /* remove the gap to keep slides perfectly aligned */
-  gap:0;
+  gap:0; /* keep slides perfectly aligned */
   transition:transform .45s ease;
 }
-
-.dm-slide{
-  flex:0 0 100%;
-}
-
 
 .dm-slide{
   flex:0 0 100%;
@@ -249,7 +243,6 @@ small{ opacity:.75; }
   box-shadow:0 1px 3px rgba(0,0,0,.04);
 }
 
-
 .dm-slide img{
   width:100%;
   height:auto;
@@ -260,7 +253,6 @@ small{ opacity:.75; }
   display:block;
   margin:auto;
 }
-
 
 /* Carousel arrows + dots */
 .dm-prev,
@@ -299,6 +291,7 @@ small{ opacity:.75; }
 .dm-dots button[aria-current="true"]{
   background:#F2C24B;
 }
+
 
 /* ------------------------- */
 /*     MOBILE NAV */
