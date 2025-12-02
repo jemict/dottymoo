@@ -18,9 +18,11 @@
     let isProgrammatic = false;
     let scrollTimeout = null;
 
-    function getSlideWidth() {
-      return carousel.getBoundingClientRect().width;
-    }
+   function getSlideWidth() {
+  // use the actual scrollable area, not the padded outer card
+  return track.getBoundingClientRect().width;
+}
+
 
     function updateDots() {
       dots.forEach((dot, i) => {
