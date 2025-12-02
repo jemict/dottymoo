@@ -216,6 +216,7 @@ small{ opacity:.75; }
 /* ------------------------- */
 /*         CAROUSEL          */
 /* ------------------------- */
+
 .dm-carousel{
   position:relative;
   overflow:hidden;
@@ -225,17 +226,13 @@ small{ opacity:.75; }
   padding:10px;
 }
 
-/* Make the track a horizontal scroller with snap */
+/* IMPORTANT: no width here – let it grow to N * 100% */
 .dm-track{
   display:flex;
   gap:0;
-  width:100%;
   transition:transform .45s ease;
 }
 
-
-
-/* Each slide is one full viewport of the track */
 .dm-slide{
   flex:0 0 100%;
   width:100%;
@@ -250,8 +247,6 @@ small{ opacity:.75; }
   box-shadow:0 1px 3px rgba(0,0,0,.04);
 }
 
-
-
 .dm-slide img{
   width:auto;
   height:auto;
@@ -261,8 +256,6 @@ small{ opacity:.75; }
   margin:0 auto;
   display:block;
 }
-
-
 
 /* Carousel arrows + dots */
 .dm-prev,
@@ -301,8 +294,6 @@ small{ opacity:.75; }
 .dm-dots button[aria-current="true"]{
   background:#F2C24B;
 }
-
-
 
 /* ------------------------- */
 /*     MOBILE NAV */
