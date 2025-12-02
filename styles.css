@@ -227,10 +227,13 @@ small{ opacity:.75; }
 }
 
 /* IMPORTANT: no width here – let it grow to N * 100% */
+
 .dm-track{
   display:flex;
-  gap:0;
+  gap:0;                 /* no spaces between slides */
   transition:transform .45s ease;
+  will-change: transform;
+  touch-action: pan-y;   /* allow vertical scroll, we handle horizontal */
 }
 
 .dm-slide{
