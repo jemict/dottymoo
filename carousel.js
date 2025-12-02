@@ -1,4 +1,4 @@
-// Dotty Moo carousel - always centres one slide at a time
+// Scroll-based Dotty Moo carousel: robust on all screen sizes
 (function () {
   const carousels = document.querySelectorAll('.dm-carousel');
   if (!carousels.length) return;
@@ -17,15 +17,20 @@
     const dots = [];
 
     function getSlideWidth() {
-      const first = slides[0];
-      if (!first) return 0;
-      return first.getBoundingClientRect().width;
+      return carousel.getBoundingClientRect().width;
     }
 
-    function applyTransform() {
+    function scrollToIndex(i) {
       const slideWidth = getSlideWidth();
-      track.style.transform = `translateX(${-index * slideWidth}px)`;
+      index = i;
+      track.scrollTo({
+        left: slideWidth * index,
+        behavior: 'smooth'
+      });
+      updateDots();
+    }
 
+    function updateDots() {
       dots.forEach((dot, i) => {
         if (i === index) {
           dot.setAttribute('aria-current', 'true');
@@ -44,56 +49,36 @@
         dotsWrap.appendChild(dot);
         dots.push(dot);
 
-        dot.addEventListener('click', () => {
-          index = i;
-          applyTransform();
-        });
+        dot.addEventListener('click', () => scrollToIndex(i));
       });
     }
 
     // Arrow buttons
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        index = (index === 0) ? lastIndex : index - 1;
-        applyTransform();
+        const next = (index === 0) ? lastIndex : index - 1;
+        scrollToIndex(next);
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        index = (index === lastIndex) ? 0 : index + 1;
-        applyTransform();
+        const next = (index === lastIndex) ? 0 : index + 1;
+        scrollToIndex(next);
       });
     }
 
-    // Basic swipe on touch
-    let startX = null;
-
-    track.addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
-    }, { passive: true });
-
-    track.addEventListener('touchend', e => {
-      if (startX === null) return;
-      const diff = e.changedTouches[0].clientX - startX;
-      if (Math.abs(diff) > 40) {
-        if (diff < 0) {
-          index = (index === lastIndex) ? 0 : index + 1;
-        } else {
-          index = (index === 0) ? lastIndex : index - 1;
-        }
-        applyTransform();
+    // Update index when user swipes manually
+    track.addEventListener('scroll', () => {
+      const slideWidth = getSlideWidth();
+      const newIndex = Math.round(track.scrollLeft / slideWidth);
+      if (newIndex !== index) {
+        index = newIndex;
+        updateDots();
       }
-      startX = null;
     });
 
-    // Keep things aligned on resize / orientation change
-    window.addEventListener('resize', applyTransform);
-
-    // Also recalc after all images/fonts loaded
-    window.addEventListener('load', applyTransform);
-
     // Initial state
-    applyTransform();
+    scrollToIndex(0);
   });
 })();
