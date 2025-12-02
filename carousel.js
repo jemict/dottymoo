@@ -1,4 +1,4 @@
-// Simple Dotty Moo carousel: one slide at a time, works on mobile + desktop
+// Super simple Dotty Moo carousel: one slide at a time
 (function () {
   const carousels = document.querySelectorAll('.dm-carousel');
   if (!carousels.length) return;
@@ -13,23 +13,11 @@
     if (!track || slides.length <= 1) return;
 
     let index = 0;
-    let slideWidth = 0;
-    let gap = 0;
+    const lastIndex = slides.length - 1;
     const dots = [];
 
-    function measure() {
-      const first = slides[0];
-      if (!first) return;
-
-      const style = getComputedStyle(track);
-      gap = parseFloat(style.columnGap || style.gap || '0') || 0;
-      slideWidth = first.getBoundingClientRect().width + gap;
-
-      applyTransform();
-    }
-
-    function applyTransform() {
-      track.style.transform = `translateX(${-index * slideWidth}px)`;
+    function update() {
+      track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((dot, i) => {
         if (i === index) {
           dot.setAttribute('aria-current', 'true');
@@ -50,29 +38,50 @@
 
         dot.addEventListener('click', () => {
           index = i;
-          applyTransform();
+          update();
         });
       });
     }
 
-    // Prev / Next buttons
+    // Arrow buttons
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        index = (index - 1 + slides.length) % slides.length;
-        applyTransform();
+        index = (index === 0) ? lastIndex : index - 1;
+        update();
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        index = (index + 1) % slides.length;
-        applyTransform();
+        index = (index === lastIndex) ? 0 : index + 1;
+        update();
       });
     }
 
-    window.addEventListener('resize', measure);
+    // Basic swipe support on touch screens
+    let startX = null;
 
-    // Initial layout
-    measure();
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+      if (startX === null) return;
+      const diff = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          // swipe left -> next
+          index = (index === lastIndex) ? 0 : index + 1;
+        } else {
+          // swipe right -> prev
+          index = (index === 0) ? lastIndex : index - 1;
+        }
+        update();
+      }
+      startX = null;
+    });
+
+    // Initial state
+    update();
   });
 })();
