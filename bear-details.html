@@ -1,139 +1,131 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mascot Bear Product Details | Dotty Moo</title>
-  <meta name="description" content="Full product details for Dotty Moo mascot bears, including size, safety standards and print information.">
-  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
-  <link rel="icon" href="assets/favicon.ico">
-  <link rel="preload" as="image" href="assets/banner.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mascot Bear Product Details | Dotty Moo</title>
+<meta name="description" content="Full product details for Dotty Moo mascot bears.">
+
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+<link rel="icon" href="assets/favicon.ico">
+
+<link rel="preload" as="image" href="assets/banner.png">
 <link rel="preload" as="image" href="assets/cover.png">
 
-  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="bg-layer"></div>
-<nav class="site-nav">
-  <!-- Burger (mobile only) -->
-  <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
-    ☰
-  </button>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Brand (centre on mobile) -->
-  <div class="nav-brand">
-    <img src="assets/favicon.png" alt="Dotty Moo icon">
-    Dotty Moo
-  </div>
+  <nav class="site-nav" aria-label="Primary">
+    <button class="nav-toggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            aria-controls="primary-nav">
+      ☰
+    </button>
 
-  <!-- Right-hand bear icon (decorative) -->
-  <div class="nav-icon-right" aria-hidden="true">
-    🧸
-  </div>
-
-  <!-- Actual nav links -->
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="how-it-works.html">How it works</a>
-    <a href="about.html">About</a>
-    <a href="order.html">Order</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
-
-<div class="wrap">
-  <div class="card">
-
-    <div class="header">
-      <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+    <div class="nav-brand">
+      <img src="assets/favicon.png" alt="Dotty Moo icon">
+      Dotty Moo
     </div>
 
-    <div class="content">
-
-      <h1>Dotty Moo Mascot Bears – Product Details</h1>
-
-      <p>
-        Our mascot bears are high quality, safety tested and designed to showcase your school logo in full colour.
-        Soft, durable and loved by pupils and parents, they make the perfect school keepsake or fundraiser.
-      </p>
-
-      <h3>Key Information</h3>
-      <ul>
-        <li><strong>Size:</strong> 22 cm sitting height, 27 cm head to toe (sits unaided)</li>
-        <li><strong>Included:</strong> Soft plush bear with white t-shirt printed in full colour with your school logo</li>
-        <li><strong>Print area:</strong> 9 cm wide × 8.3 cm high</li>
-        <li><strong>Artwork set up:</strong> Free – full artwork support included</li>
-        <li><strong>Colour:</strong> Classic soft brown (our standard Dotty Moo bear)</li>
-      </ul>
-
-      <h3>Materials &amp; Safety</h3>
-      <ul>
-        <li>Soft plush fabric with embroidered facial features and paws</li>
-        <li>Fibre filled and durable, designed as a long lasting keepsake</li>
-        <li><strong>CE / UKCA marked</strong></li>
-        <li>Conforms to <strong>EN71 Toy Safety Standards</strong></li>
-        <li><strong>Age recommendation:</strong> Suitable for all ages</li>
-      </ul>
-
-
-      <h3>Why Schools Love Them</h3>
-      <p>
-        Our mascot bears offer one of the largest print areas available on a compact bear, so your school logo is bright,
-        clear and stands out beautifully. Bears arrive ready to hand out, creating a memorable keepsake that families treasure.
-      </p>
-
-    </div>
-  </div>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-card">
-    
-    <div><strong>Dotty Moo Ltd</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
-
-    <div class="footer-meta">
-      Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
-      Company No. 16877316
+    <div class="nav-icon-right" aria-hidden="true">
+      🧸
     </div>
 
-    <div class="footer-links">
-      <a href="privacy.html">Privacy</a> • 
-      <a href="terms.html">Terms</a> • 
+    <div class="nav-links" id="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="about.html">About</a>
+      <a href="order.html">Order</a>
+      <a href="testimonials.html">Testimonials</a>
       <a href="contact.html">Contact</a>
     </div>
+  </nav>
 
-    <small>© Dotty Moo Ltd 2025</small>
-  </div>
-</footer>
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
 
-<script>
-  const here = (location.pathname.split('/').pop() || 'index.html');
-  document.querySelectorAll('.site-nav a').forEach(a => {
-    if (a.getAttribute('href') === here) a.classList.add('active');
-  });
-</script>
-<script>
-  const nav = document.querySelector('.site-nav');
-  const toggle = document.querySelector('.nav-toggle');
+        <div class="header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+        </div>
 
-  if (nav && toggle) {
-    toggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        <div class="content">
+          <h1>Dotty Moo Mascot Bears – Product Details</h1>
+
+          <p>
+            Our mascot bears are high quality, safety tested and designed to showcase your school logo in full colour.
+            Soft, durable and loved by pupils and parents, they make the perfect school keepsake or fundraiser.
+          </p>
+
+          <h3>Key Information</h3>
+          <ul>
+            <li><strong>Size:</strong> 22 cm sitting height, 27 cm head to toe (sits unaided)</li>
+            <li><strong>Included:</strong> Soft plush bear with white t-shirt printed in full colour with your school logo</li>
+            <li><strong>Print area:</strong> 9 cm wide × 8.3 cm high</li>
+            <li><strong>Artwork set up:</strong> Free – full artwork support included</li>
+            <li><strong>Colour:</strong> Classic soft brown (our standard Dotty Moo bear)</li>
+          </ul>
+
+          <h3>Materials &amp; Safety</h3>
+          <ul>
+            <li>Soft plush fabric with embroidered facial features and paws</li>
+            <li>Fibre filled and durable, designed as a long lasting keepsake</li>
+            <li><strong>CE / UKCA marked</strong></li>
+            <li>Conforms to <strong>EN71 Toy Safety Standards</strong></li>
+            <li><strong>Age recommendation:</strong> Suitable for all ages</li>
+          </ul>
+
+          <h3>Why Schools Love Them</h3>
+          <p>
+            Our mascot bears offer one of the largest print areas available on a compact bear, so your school logo is bright,
+            clear and stands out beautifully. Bears arrive ready to hand out, creating a memorable keepsake that families treasure.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-card">
+      <div><strong>Dotty Moo Ltd</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
+      <div class="footer-meta">
+        Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+        Company No. 16877316
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a> •
+        <a href="terms.html">Terms</a> •
+        <a href="contact.html">Contact</a>
+      </div>
+      <small>© Dotty Moo Ltd 2025</small>
+    </div>
+  </footer>
+
+  <script>
+    const here = (location.pathname.split('/').pop() || 'index.html');
+    document.querySelectorAll('.site-nav a').forEach(a => {
+      if (a.getAttribute('href') === here) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
     });
-  }
-</script>
+  </script>
+  <script>
+    const nav = document.querySelector('.site-nav');
+    const toggle = document.querySelector('.nav-toggle');
 
+    if (nav && toggle) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
