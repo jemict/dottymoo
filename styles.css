@@ -214,88 +214,63 @@ body::before{
 small{ opacity:.75; }
 
 /* ------------------------- */
-/*         CAROUSEL          */
+/*         IMAGE SHOW          */
 /* ------------------------- */
 
-.dm-carousel{
-  position:relative;
-  overflow:hidden;
-  border-radius:14px;
-  background:#fff;
-  box-shadow:0 2px 5px rgba(0,0,0,.05);
-  padding:10px;
+.dm-samples {
+  padding: 48px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* IMPORTANT: no width here – let it grow to N * 100% */
-
-.dm-track{
-  display:flex;
-  gap:0;                 /* no spaces between slides */
-  transition:transform .45s ease;
-  will-change: transform;
-  touch-action: pan-y;   /* allow vertical scroll, we handle horizontal */
+.dm-samples-header {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.dm-slide{
-  flex:0 0 100%;
-  width:100%;
-  max-width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  background:#fff;
-  border-radius:12px;
-  padding:8px;
-  box-shadow:0 1px 3px rgba(0,0,0,.04);
+.dm-samples-header h2 {
+  font-size: 1.9rem;
+  margin: 0 0 8px;
 }
 
-.dm-slide img{
-  width:auto;
-  height:auto;
-  max-width:260px;
-  max-height:260px;
-  object-fit:contain;
-  margin:0 auto;
-  display:block;
+.dm-samples-header p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #555;
 }
 
-/* Carousel arrows + dots */
-.dm-prev,
-.dm-next{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  border:none;
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  background:var(--dm-coral);
-  color:#fff;
-  font-size:18px;
-  cursor:pointer;
+.dm-samples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
 }
-.dm-prev{ left:6px; }
-.dm-next{ right:6px; }
 
-.dm-dots{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:8px;
-  display:flex;
-  justify-content:center;
-  gap:8px;
+.dm-sample-card {
+  background: var(--glass-bg, rgba(255,255,255,0.88));
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  text-align: center;
 }
-.dm-dots button{
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  background:#AFC6D3;
-  border:2px solid #fff;
+
+.dm-sample-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  object-fit: contain;
 }
-.dm-dots button[aria-current="true"]{
-  background:#F2C24B;
+
+.dm-sample-card h3 {
+  margin: 4px 0 6px;
+  font-size: 1.05rem;
+}
+
+.dm-sample-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* ------------------------- */
