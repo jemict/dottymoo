@@ -376,6 +376,17 @@ small{ opacity:.75; }
   border:2px solid #AFC6D3;
   color:#111;
 }
+/* ------------------------- */
+/*     ACCESSIBLE FOCUS      */
+/* ------------------------- */
+
+.site-nav a:focus-visible,
+.footer-card a:focus-visible,
+.btn:focus-visible,
+.nav-toggle:focus-visible {
+  outline:2px solid #000;
+  outline-offset:3px;
+}
 
 blockquote{
   margin:8px 0;
