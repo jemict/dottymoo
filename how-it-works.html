@@ -10,12 +10,20 @@
 <link rel="icon" href="assets/favicon.ico">
 
 <link rel="preload" as="image" href="assets/banner.png">
-<link rel="preload" as="image" href="assets/cover.png">
+(link rel="preload" as="image" href="assets/cover.png">
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="cookie-accept">OK</button>
+  </div>
+  <!-- END COOKIE BANNER -->
+
   <div class="bg-layer"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -57,6 +65,7 @@
           <h1>How it works</h1>
           <p>Dotty Moo works directly with schools to offer personalised mascot bears.
 After a school signs up, parents receive a link to our order form and can order at any time during the school’s chosen ordering period. Every bear is custom-printed with your school logo and delivered to the school ready for pupils.</p>
+
           <ol>
             <li><strong>Your school launches.</strong> Look out for a letter or email from your child's school (QR code or link).</li>
             <li><strong>Scan the QR code.</strong> Go to your school's private page and order your school's mascot bear.</li>
@@ -91,6 +100,24 @@ After a school signs up, parents receive a link to our order form and can order 
     </div>
   </footer>
 
+  <!-- COOKIE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("cookie-accept");
+
+      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+        banner.classList.add("hidden");
+      }
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("dm_cookie_consent", "yes");
+        banner.classList.add("hidden");
+      });
+    });
+  </script>
+  <!-- END COOKIE SCRIPT -->
+
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
@@ -100,6 +127,7 @@ After a school signs up, parents receive a link to our order form and can order 
       }
     });
   </script>
+  
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
@@ -111,5 +139,6 @@ After a school signs up, parents receive a link to our order form and can order 
       });
     }
   </script>
+
 </body>
 </html>
