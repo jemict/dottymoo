@@ -208,6 +208,20 @@ body::before{
 .lead{color:#5B646B}
 
 /* ------------------------- */
+/*       COMP IMAGE          */
+/* ------------------------- */
+
+.dm-competition-hero img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* ------------------------- */
 /*           FOOTER          */
 /* ------------------------- */
 .site-footer{ position:relative; }
