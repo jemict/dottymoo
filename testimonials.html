@@ -16,6 +16,14 @@
 </head>
 
 <body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="cookie-accept">OK</button>
+  </div>
+  <!-- END COOKIE BANNER -->
+
   <div class="bg-layer"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -55,7 +63,9 @@
 
         <div class="content">
           <h1>Testimonials</h1>
+
           <p>We are gathering comments from families and partner schools. Please check back soon.</p>
+
           <blockquote>“Lovely quality and a special memory for our pupil.”</blockquote>
           <blockquote>“Simple ordering and a smooth delivery to school.”</blockquote>
         </div>
@@ -79,6 +89,24 @@
     </div>
   </footer>
 
+  <!-- COOKIE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("cookie-accept");
+
+      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+        banner.classList.add("hidden");
+      }
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("dm_cookie_consent", "yes");
+        banner.classList.add("hidden");
+      });
+    });
+  </script>
+  <!-- END COOKIE SCRIPT -->
+
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
@@ -88,6 +116,7 @@
       }
     });
   </script>
+
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
@@ -99,5 +128,6 @@
       });
     }
   </script>
+
 </body>
 </html>
