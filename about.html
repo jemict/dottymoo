@@ -15,6 +15,22 @@
   <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
   <button id="cookie-accept">OK</button>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const btn = document.getElementById("cookie-accept");
+
+    // Hide banner if already accepted
+    if (localStorage.getItem("dm_cookie_consent") === "yes") {
+      banner.classList.add("hidden");
+    }
+
+    btn.addEventListener("click", () => {
+      localStorage.setItem("dm_cookie_consent", "yes");
+      banner.classList.add("hidden");
+    });
+  });
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
