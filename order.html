@@ -16,6 +16,14 @@
 </head>
 
 <body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="cookie-accept">OK</button>
+  </div>
+  <!-- END COOKIE BANNER -->
+
   <div class="bg-layer"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -56,10 +64,12 @@
         <div class="content">
           <h1>Order through your school</h1>
           <p>Dotty Moo orders are made through your child’s school.</p>
+
           <p><strong>Ready to order?</strong> Please use the QR code or link provided on the letter from your school. This will take you to your school’s private ordering page where you can place your order and pay securely.
 If you haven’t received a letter, please contact your school.</p>
 
           <h3>What your school order could look like</h3>
+
           <section class="dm-samples">
             <div class="dm-samples-grid">
               <article class="dm-sample-card">
@@ -115,6 +125,24 @@ If you haven’t received a letter, please contact your school.</p>
     </div>
   </footer>
 
+  <!-- COOKIE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("cookie-accept");
+
+      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+        banner.classList.add("hidden");
+      }
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("dm_cookie_consent", "yes");
+        banner.classList.add("hidden");
+      });
+    });
+  </script>
+  <!-- END COOKIE SCRIPT -->
+
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
@@ -124,6 +152,7 @@ If you haven’t received a letter, please contact your school.</p>
       }
     });
   </script>
+
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
@@ -135,5 +164,6 @@ If you haven’t received a letter, please contact your school.</p>
       });
     }
   </script>
+
 </body>
 </html>
