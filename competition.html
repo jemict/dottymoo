@@ -16,6 +16,14 @@
 </head>
 
 <body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="cookie-accept">OK</button>
+  </div>
+  <!-- END COOKIE BANNER -->
+
   <div class="bg-layer"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -77,11 +85,13 @@
             <li>Answer the skill question shown during checkout.</li>
           </ol>
           <p>Only completed payments with the correct answer will be entered into the draw.</p>
- <p>
-  <a class="btn btn-primary" style="font-size:1.2rem; padding:14px 28px;" href="https://dottymoo.co.uk/competition">
-    Enter Now
-  </a>
-</p>
+
+          <p>
+            <a class="btn btn-primary" style="font-size:1.2rem; padding:14px 28px;" href="https://dottymoo.co.uk/competition">
+              Enter Now
+            </a>
+          </p>
+
           <h3>Bonus entry (optional)</h3>
           <p>If you would like an extra free entry, like and share the competition post on Facebook or Instagram and comment <strong>“Done! 🐮✨”</strong> on the post. One bonus entry is added per qualifying comment.</p>
 
@@ -90,9 +100,6 @@
             <li>Facebook: <a href="https://www.facebook.com/dottymoouk/" target="_blank" rel="noopener">Dotty Moo</a></li>
             <li>Instagram: <a href="https://www.instagram.com/dottymoouk" target="_blank" rel="noopener">@dottymoouk</a></li>
           </ul>
-        
-
-
 
           <h2>School donation</h2>
           <p>20% of ticket sales (capped at £100) is donated to a UK primary or first school chosen by the winner.</p>
@@ -157,6 +164,24 @@
     </div>
   </footer>
 
+  <!-- COOKIE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("cookie-accept");
+
+      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+        banner.classList.add("hidden");
+      }
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("dm_cookie_consent", "yes");
+        banner.classList.add("hidden");
+      });
+    });
+  </script>
+  <!-- END COOKIE SCRIPT -->
+
   <!-- Active nav link -->
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
@@ -182,7 +207,3 @@
 
 </body>
 </html>
-
-
-
-
