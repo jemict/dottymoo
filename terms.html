@@ -16,6 +16,14 @@
 </head>
 
 <body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="cookie-accept">OK</button>
+  </div>
+  <!-- END COOKIE BANNER -->
+
   <div class="bg-layer"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -81,6 +89,7 @@
           <h3>Contact</h3>
           <p>Questions about these terms: <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></p>
           <p>Dotty Moo Ltd is registered with the Information Commissioner’s Office (ICO). Registration number: ZC049916.</p>
+
           <p><em>Last updated: November 2025</em></p>
         </div>
       </div>
@@ -103,6 +112,24 @@
     </div>
   </footer>
 
+  <!-- COOKIE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("cookie-accept");
+
+      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+        banner.classList.add("hidden");
+      }
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("dm_cookie_consent", "yes");
+        banner.classList.add("hidden");
+      });
+    });
+  </script>
+  <!-- END COOKIE SCRIPT -->
+
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
@@ -112,6 +139,7 @@
       }
     });
   </script>
+
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
@@ -123,5 +151,6 @@
       });
     }
   </script>
+
 </body>
 </html>
