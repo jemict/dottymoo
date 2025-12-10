@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>School Mascot Bears | Dotty Moo Personalised Keepsake Bears</title>
 <meta name="description" content="Personalised school mascot bears for primary and first schools across the UK. High-quality keepsake bears printed with your school logo. Order through your child’s school.">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,6 +41,14 @@
 </head>
 
 <body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="cookie-accept">OK</button>
+  </div>
+  <!-- END COOKIE BANNER -->
+
   <div class="bg-layer"></div>
 
   <!-- Skip link -->
@@ -156,6 +165,24 @@
 
     </div>
   </footer>
+
+  <!-- COOKIE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("cookie-accept");
+
+      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+        banner.classList.add("hidden");
+      }
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("dm_cookie_consent", "yes");
+        banner.classList.add("hidden");
+      });
+    });
+  </script>
+  <!-- END COOKIE SCRIPT -->
 
   <!-- Active link + aria-current -->
   <script>
