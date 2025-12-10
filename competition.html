@@ -17,10 +17,13 @@
 
 <body>
 
-  <!-- COOKIE BANNER -->
+  <!-- COOKIE BANNER (ADS + ANALYTICS CONSENT) -->
   <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
-    <button id="cookie-accept">OK</button>
+    <p>This page uses cookies for ads and basic analytics. Please choose your preference.</p>
+    <div>
+      <button id="cookie-accept">Accept</button>
+      <button id="cookie-reject">Reject</button>
+    </div>
   </div>
   <!-- END COOKIE BANNER -->
 
@@ -164,23 +167,49 @@
     </div>
   </footer>
 
-  <!-- COOKIE SCRIPT -->
+  <!-- COOKIE / ADS CONSENT SCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const banner = document.getElementById("cookie-banner");
-      const btn = document.getElementById("cookie-accept");
+      const acceptBtn = document.getElementById("cookie-accept");
+      const rejectBtn = document.getElementById("cookie-reject");
 
-      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+      const consent = localStorage.getItem("dm_cookie_ads");
+
+      if (consent === "yes") {
+        banner.classList.add("hidden");
+        loadAdScripts();
+      } else if (consent === "no") {
         banner.classList.add("hidden");
       }
 
-      btn.addEventListener("click", () => {
-        localStorage.setItem("dm_cookie_consent", "yes");
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("dm_cookie_ads", "yes");
+        banner.classList.add("hidden");
+        loadAdScripts();
+      });
+
+      rejectBtn.addEventListener("click", function () {
+        localStorage.setItem("dm_cookie_ads", "no");
         banner.classList.add("hidden");
       });
     });
+
+    function loadAdScripts() {
+      // Paste your ad / tracking scripts here so they ONLY run after consent.
+      //
+      // Example for Google AdSense (replace YOUR-CLIENT-ID):
+      //
+      // const s = document.createElement("script");
+      // s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-CLIENT-ID";
+      // s.async = true;
+      // s.crossOrigin = "anonymous";
+      // document.head.appendChild(s);
+      //
+      // Add any other ad or analytics scripts in the same way.
+    }
   </script>
-  <!-- END COOKIE SCRIPT -->
+  <!-- END COOKIE / ADS CONSENT SCRIPT -->
 
   <!-- Active nav link -->
   <script>
