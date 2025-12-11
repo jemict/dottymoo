@@ -39,179 +39,440 @@
 
 <link rel="stylesheet" href="styles.css">
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319"
+<!-- AdSense snippet kept for verification (same as blog & competition) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319"
      crossorigin="anonymous"></script>
+
+<!-- GDPR Cookie Banner + Modal Styles -->
+<style>
+  .cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    font-size: 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .cookie-banner p {
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .cookie-banner a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .cookie-banner-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cookie-btn {
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+
+  .cookie-btn-primary {
+    background-color: #f38b8b;
+    color: #000000;
+  }
+
+  .cookie-btn-secondary {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .cookie-btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .cookie-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+
+  .cookie-modal {
+    background: #ffffff;
+    max-width: 480px;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    font-size: 0.95rem;
+  }
+
+  .cookie-modal h2 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .cookie-category {
+    margin-bottom: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 0.7rem;
+  }
+
+  .cookie-category h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+  }
+
+  .cookie-category small {
+    display: block;
+    font-size: 0.8rem;
+    color: #555;
+  }
+
+  .cookie-modal-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .cookie-toggle {
+    margin-right: 0.35rem;
+  }
+</style>
 
 </head>
 
 <body>
 
-  <!-- COOKIE BANNER -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
-    <button id="cookie-accept">OK</button>
+<!-- GDPR COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+  <p>
+    We use cookies to improve your experience and understand how visitors use our site.
+    You can accept all cookies, reject non essential cookies, or manage preferences.
+    See our <a href="privacy.html">Privacy Policy</a> for details.
+  </p>
+  <div class="cookie-banner-buttons">
+    <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+    <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+    <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
   </div>
-  <!-- END COOKIE BANNER -->
+</div>
 
-  <div class="bg-layer"></div>
+<!-- GDPR COOKIE MODAL -->
+<div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+  <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+    <h2 id="cookie-modal-title">Cookie preferences</h2>
+    <p>You can choose which types of cookies we use. Essential cookies are always enabled.</p>
 
-  <!-- Skip link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Navigation -->
-  <nav class="site-nav" aria-label="Primary">
-    <button class="nav-toggle"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            aria-controls="primary-nav">
-      ☰
-    </button>
-
-    <div class="nav-brand">
-      <img src="assets/favicon.png" alt="Dotty Moo icon">
-      Dotty Moo
+    <div class="cookie-category">
+      <h3>Essential cookies</h3>
+      <label>
+        <input type="checkbox" checked disabled class="cookie-toggle" />
+        Always active
+      </label>
+      <small>Required for basic website functionality.</small>
     </div>
 
-    <div class="nav-icon-right" aria-hidden="true">
-      🧸
+    <div class="cookie-category">
+      <h3>Analytics cookies</h3>
+      <label>
+        <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+        Allow analytics cookies
+      </label>
+      <small>Helps us understand how visitors use the site.</small>
     </div>
 
-    <div class="nav-links" id="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="how-it-works.html">How it works</a>
-      <a href="about.html">About</a>
-      <a href="order.html">Order</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
+    <div class="cookie-category">
+      <h3>Marketing cookies</h3>
+      <label>
+        <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+        Allow marketing cookies
+      </label>
+      <small>Used for advertising and measuring campaign effectiveness.</small>
+    </div>
+
+    <div class="cookie-modal-actions">
+      <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+      <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="bg-layer"></div>
+
+<!-- Skip link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="site-nav" aria-label="Primary">
+  <button class="nav-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <div class="nav-brand">
+    <img src="assets/favicon.png" alt="Dotty Moo icon">
+    Dotty Moo
+  </div>
+
+  <div class="nav-icon-right" aria-hidden="true">
+    🧸
+  </div>
+
+  <div class="nav-links" id="primary-nav">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html">About</a>
+    <a href="order.html">Order</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Main content -->
+<main id="main-content">
+  <div class="wrap">
+    <div class="card">
+
+      <div class="header">
+        <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+      </div>
+
+      <div class="content">
+
+        <h1>Personalised School Mascot Bears</h1>
+
+        <p>Dotty Moo creates personalised mascot bears for primary and first schools across the UK.</p>
+        <p>Keepsakes that celebrate school memories and community spirit.</p>
+        <p>Every bear is printed with your school’s logo and colours, a perfect reminder of special moments and friendships.</p>
+        <p>Orders are available exclusively through participating schools.</p>
+
+        <h3>Example School Mascots</h3>
+        <p>Each school has its own unique design. Here are a few examples of what your mascot could look like.</p>
+
+        <section class="dm-samples">
+          <div class="dm-samples-grid">
+
+            <article class="dm-sample-card">
+              <img src="assets/sample1.png"
+                   alt="Maple Coppice Primary mascot bear"
+                   loading="lazy">
+              <h3>Maple Coppice Primary</h3>
+              <p>Classic mascot bear with school logo on a white T shirt.</p>
+            </article>
+
+            <article class="dm-sample-card">
+              <img src="assets/sample2.png"
+                   alt="Silverbrook Academy School mascot bear"
+                   loading="lazy">
+              <h3>Silverbrook Academy School</h3>
+              <p>Bold colours and a bright logo that really stands out.</p>
+            </article>
+
+            <article class="dm-sample-card">
+              <img src="assets/sample3.png"
+                   alt="Willowbrook Green Primary School mascot bear"
+                   loading="lazy">
+              <h3>Willowbrook Green Primary School</h3>
+              <p>Smart, simple design that works with any school colours.</p>
+            </article>
+
+          </div>
+        </section>
+
+        <p>
+          <a class="btn btn-primary" href="how-it-works.html">How it works</a>
+          <a class="btn btn-secondary" href="order.html">Order</a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-card">
+
+    <div><strong>Dotty Moo Ltd</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
+
+    <div class="footer-meta">
+      Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+      Company No. 16877316
+    </div>
+
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a> •
+      <a href="terms.html">Terms</a> •
       <a href="contact.html">Contact</a>
     </div>
-  </nav>
 
-  <!-- Main content -->
-  <main id="main-content">
-    <div class="wrap">
-      <div class="card">
+    <small>© Dotty Moo Ltd 2025</small>
 
-        <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
-        </div>
+  </div>
+</footer>
 
-        <div class="content">
+<!-- GDPR COOKIE LOGIC SCRIPT -->
+<script>
+(function () {
+  var CONSENT_KEY = "dm_cookie_consent";
 
-          <h1>Personalised School Mascot Bears</h1>
+  function getConsent() {
+    try {
+      var stored = localStorage.getItem(CONSENT_KEY);
+      if (!stored) return null;
+      return JSON.parse(stored);
+    } catch (e) {
+      return null;
+    }
+  }
 
-          <p>Dotty Moo creates personalised mascot bears for primary and first schools across the UK.</p>
-          <p>Keepsakes that celebrate school memories and community spirit.</p>
-          <p>Every bear is printed with your school’s logo and colours, a perfect reminder of special moments and friendships.</p>
-          <p>Orders are available exclusively through participating schools.</p>
+  function setConsent(consent) {
+    localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+    applyConsent(consent);
+  }
 
-          <h3>Example School Mascots</h3>
-          <p>Each school has its own unique design. Here are a few examples of what your mascot could look like.</p>
+  function applyConsent(consent) {
+    // AdSense is still in <head> for verification purposes.
+    // Later: move into this block when marketing consent is required.
+  }
 
-          <section class="dm-samples">
-            <div class="dm-samples-grid">
+  function showBanner() {
+    var banner = document.getElementById("cookie-banner");
+    if (banner) banner.style.display = "flex";
+  }
 
-              <article class="dm-sample-card">
-                <img src="assets/sample1.png"
-                     alt="Maple Coppice Primary mascot bear"
-                     loading="lazy">
-                <h3>Maple Coppice Primary</h3>
-                <p>Classic mascot bear with school logo on a white T shirt.</p>
-              </article>
+  function hideBanner() {
+    var banner = document.getElementById("cookie-banner");
+    if (banner) banner.style.display = "none";
+  }
 
-              <article class="dm-sample-card">
-                <img src="assets/sample2.png"
-                     alt="Silverbrook Academy School mascot bear"
-                     loading="lazy">
-                <h3>Silverbrook Academy School</h3>
-                <p>Bold colours and a bright logo that really stands out.</p>
-              </article>
+  function showModal() {
+    var modal = document.getElementById("cookie-modal-backdrop");
+    if (modal) {
+      modal.style.display = "flex";
+      modal.setAttribute("aria-hidden", "false");
+    }
+  }
 
-              <article class="dm-sample-card">
-                <img src="assets/sample3.png"
-                     alt="Willowbrook Green Primary School mascot bear"
-                     loading="lazy">
-                <h3>Willowbrook Green Primary School</h3>
-                <p>Smart, simple design that works with any school colours.</p>
-              </article>
+  function hideModal() {
+    var modal = document.getElementById("cookie-modal-backdrop");
+    if (modal) {
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+    }
+  }
 
-            </div>
-          </section>
+  document.addEventListener("DOMContentLoaded", function () {
+    var consent = getConsent();
+    if (!consent) {
+      showBanner();
+    } else {
+      applyConsent(consent);
+    }
 
-          <p>
-            <a class="btn btn-primary" href="how-it-works.html">How it works</a>
-            <a class="btn btn-secondary" href="order.html">Order</a>
-          </p>
+    var btnAcceptAll = document.getElementById("cookie-accept-all");
+    var btnRejectAll = document.getElementById("cookie-reject-all");
+    var btnManage = document.getElementById("cookie-manage");
+    var btnSave = document.getElementById("cookie-save");
+    var btnCancel = document.getElementById("cookie-cancel");
 
-        </div>
+    var chkAnalytics = document.getElementById("cookie-analytics");
+    var chkMarketing = document.getElementById("cookie-marketing");
 
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-card">
-
-      <div><strong>Dotty Moo Ltd</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
-
-      <div class="footer-meta">
-        Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
-        Company No. 16877316
-      </div>
-
-      <div class="footer-links">
-        <a href="privacy.html">Privacy</a> •
-        <a href="terms.html">Terms</a> •
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <small>© Dotty Moo Ltd 2025</small>
-
-    </div>
-  </footer>
-
-  <!-- COOKIE SCRIPT -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const banner = document.getElementById("cookie-banner");
-      const btn = document.getElementById("cookie-accept");
-
-      if (localStorage.getItem("dm_cookie_consent") === "yes") {
-        banner.classList.add("hidden");
-      }
-
-      btn.addEventListener("click", () => {
-        localStorage.setItem("dm_cookie_consent", "yes");
-        banner.classList.add("hidden");
-      });
-    });
-  </script>
-  <!-- END COOKIE SCRIPT -->
-
-  <!-- Active link + aria-current -->
-  <script>
-    const here = (location.pathname.split('/').pop() || 'index.html');
-    document.querySelectorAll('.site-nav a').forEach(a => {
-      if (a.getAttribute('href') === here) {
-        a.classList.add('active');
-        a.setAttribute('aria-current', 'page');
-      }
-    });
-  </script>
-
-  <!-- Nav toggle -->
-  <script>
-    const nav = document.querySelector('.site-nav');
-    const toggle = document.querySelector('.nav-toggle');
-
-    if (nav && toggle) {
-      toggle.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (btnAcceptAll) {
+      btnAcceptAll.addEventListener("click", function () {
+        var consent = { essential: true, analytics: true, marketing: true };
+        setConsent(consent);
+        hideBanner();
       });
     }
-  </script>
+
+    if (btnRejectAll) {
+      btnRejectAll.addEventListener("click", function () {
+        var consent = { essential: true, analytics: false, marketing: false };
+        setConsent(consent);
+        hideBanner();
+      });
+    }
+
+    if (btnManage) {
+      btnManage.addEventListener("click", function () {
+        var current = getConsent();
+        if (current) {
+          if (chkAnalytics) chkAnalytics.checked = !!current.analytics;
+          if (chkMarketing) chkMarketing.checked = !!current.marketing;
+        }
+        showModal();
+      });
+    }
+
+    if (btnSave) {
+      btnSave.addEventListener("click", function () {
+        var consent = {
+          essential: true,
+          analytics: chkAnalytics ? chkAnalytics.checked : false,
+          marketing: chkMarketing ? chkMarketing.checked : false
+        };
+        setConsent(consent);
+        hideModal();
+        hideBanner();
+      });
+    }
+
+    if (btnCancel) {
+      btnCancel.addEventListener("click", function () {
+        hideModal();
+      });
+    }
+  });
+})();
+</script>
+
+<!-- Active link + aria-current -->
+<script>
+const here = (location.pathname.split('/').pop() || 'index.html');
+document.querySelectorAll('.site-nav a').forEach(a => {
+  if (a.getAttribute('href') === here) {
+    a.classList.add('active');
+    a.setAttribute('aria-current', 'page');
+  }
+});
+</script>
+
+<!-- Nav toggle -->
+<script>
+const nav = document.querySelector('.site-nav');
+const toggle = document.querySelector('.nav-toggle');
+
+if (nav && toggle) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
+</script>
 
 </body>
 </html>
