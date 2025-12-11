@@ -9,16 +9,17 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
   <link rel="icon" href="assets/favicon.ico">
 
+  <!-- Performance preloads -->
   <link rel="preload" as="image" href="assets/banner.png">
   <link rel="preload" as="image" href="assets/mega-kids-digital-hamper.png">
 
   <link rel="stylesheet" href="styles.css">
 
-  <!-- AdSense snippet kept as-is for verification -->
+  <!-- AdSense snippet kept in head for verification (matches index & blog) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319"
      crossorigin="anonymous"></script>
 
-  <!-- Cookie banner + modal styling (matches blog.html) -->
+  <!-- Cookie banner + modal styling (same as blog.html) -->
   <style>
     .cookie-banner {
       position: fixed;
@@ -135,12 +136,12 @@
 
 <body>
 
-  <!-- COOKIE BANNER (GDPR-style, matches blog.html) -->
+  <!-- COOKIE BANNER (GDPR-style, same as blog.html) -->
   <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
     <p>
-      We use cookies on this page for ads and basic analytics. You can accept all cookies, 
-      reject non essential cookies, or manage your preferences. See our 
-      <a href="privacy.html">Privacy Policy</a> for more information.
+      We use cookies on this page for ads and basic analytics.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> for more information.
     </p>
     <div class="cookie-banner-buttons">
       <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
@@ -148,7 +149,6 @@
       <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
     </div>
   </div>
-  <!-- END COOKIE BANNER -->
 
   <!-- COOKIE PREFERENCES MODAL -->
   <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
@@ -174,7 +174,7 @@
           Allow analytics cookies
         </label>
         <small>
-          These help us understand how visitors use the website so we can improve content and layout. 
+          These help us understand how visitors use the website so we can improve content and layout.
           They are set only if you accept them.
         </small>
       </div>
@@ -186,7 +186,7 @@
           Allow marketing cookies
         </label>
         <small>
-          These may be used to show relevant adverts or track the effectiveness of campaigns. 
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
           They are set only if you accept them.
         </small>
       </div>
@@ -197,22 +197,29 @@
       </div>
     </div>
   </div>
-  <!-- END COOKIE PREFERENCES MODAL -->
 
   <div class="bg-layer"></div>
 
+  <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation -->
+  <!-- Navigation (same layout as index.html) -->
   <nav class="site-nav" aria-label="Primary">
-    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="primary-nav">☰</button>
+    <button class="nav-toggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            aria-controls="primary-nav">
+      ☰
+    </button>
 
     <div class="nav-brand">
       <img src="assets/favicon.png" alt="Dotty Moo icon">
       Dotty Moo
     </div>
 
-    <div class="nav-icon-right" aria-hidden="true">🧸</div>
+    <div class="nav-icon-right" aria-hidden="true">
+      🧸
+    </div>
 
     <div class="nav-links" id="primary-nav">
       <a href="index.html">Home</a>
@@ -220,7 +227,6 @@
       <a href="about.html">About</a>
       <a href="order.html">Order</a>
       <a href="testimonials.html">Testimonials</a>
-      <a href="competition.html">Competition</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -325,11 +331,13 @@
     </div>
   </main>
 
+  <!-- Footer (standard site footer) -->
   <footer class="site-footer">
     <div class="footer-card">
       <div><strong>Dotty Moo Ltd</strong> • <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a></div>
       <div class="footer-meta">
-        Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ • Company No. 16877316
+        Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+        Company No. 16877316
       </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a> •
@@ -340,7 +348,7 @@
     </div>
   </footer>
 
-  <!-- COOKIE LOGIC SCRIPT (shared behaviour with blog.html) -->
+  <!-- COOKIE LOGIC SCRIPT (shared with blog.html) -->
   <script>
     (function () {
       var CONSENT_KEY = "dm_cookie_consent";
@@ -361,12 +369,10 @@
       }
 
       function applyConsent(consent) {
-        // This is where you can conditionally load scripts based on consent.
+        // This is where you can conditionally load scripts based on consent in future.
         // For now, AdSense is still loaded in <head> for verification.
-        // Later, you can move it here and only load when consent.marketing is true.
         //
-        // Example for later:
-        //
+        // Later, you could do:
         // if (consent.marketing) {
         //   const s = document.createElement("script");
         //   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319";
@@ -475,9 +481,8 @@
       });
     })();
   </script>
-  <!-- END COOKIE LOGIC SCRIPT -->
 
-  <!-- Active nav link -->
+  <!-- Active nav link + aria-current (same behaviour as index) -->
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
@@ -488,10 +493,11 @@
     });
   </script>
 
-  <!-- Nav toggle -->
+  <!-- Nav toggle (same as index) -->
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
+
     if (nav && toggle) {
       toggle.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('open');
