@@ -284,7 +284,7 @@ body::before{
 small{ opacity:.75; }
 
 .social-strip {
-  max-width: 140px;   /* Adjust this number to make it smaller or larger */
+  max-width: 90px;   /* Adjust this number to make it smaller or larger */
   width: 100%;        /* Ensures responsive scaling */
   height: auto;
   display: block;
