@@ -16,10 +16,14 @@
 </head>
 
 <body>
-  <!-- COOKIE BANNER -->
+
+  <!-- COOKIE BANNER (ADS + ANALYTICS CONSENT) -->
   <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
-    <button id="cookie-accept">OK</button>
+    <p>This page uses cookies for ads and basic analytics. Please choose your preference.</p>
+    <div>
+      <button id="cookie-accept">Accept</button>
+      <button id="cookie-reject">Reject</button>
+    </div>
   </div>
   <!-- END COOKIE BANNER -->
 
@@ -39,9 +43,7 @@
       Dotty Moo
     </div>
 
-    <div class="nav-icon-right" aria-hidden="true">
-      🧸
-    </div>
+    <div class="nav-icon-right" aria-hidden="true">🧸</div>
 
     <div class="nav-links" id="primary-nav">
       <a href="index.html">Home</a>
@@ -71,13 +73,13 @@
           <article>
             <h2>10 Reasons School Mascot Bears Make the Perfect Keepsake</h2>
             <p>
-              Many families like to keep something special from their child’s time at primary or first school. A school mascot bear is a simple way to capture those memories in a form that children can see and touch every day. Unlike a photograph that may stay on a phone or in a drawer, a mascot bear often lives on a bed, bookshelf, or bedroom chair, becoming part of a child’s daily routine.
+              Many families like to keep something special from their child’s time at primary or first school. A school mascot bear is a simple way to capture those memories in a form that children can see and touch every day.
             </p>
             <p>
-              A mascot bear is also very personal to the school. The uniform or T shirt can be printed with the school logo and colours, so it instantly feels familiar to pupils. When children move on to their next setting, the bear becomes a reminder of their first sports days, nativity plays, and favourite teachers. For parents and carers it can be a talking point, helping to spark conversation about school experiences long after the final day.
+              A mascot bear is personal to the school. Printed with the school logo and colours, it becomes a reminder of sports days, nativity plays, and favourite teachers.
             </p>
             <p>
-              Another benefit is how easy mascot bears are to give out. There are no sizes to consider and the bears arrive ready for pupils. This makes them suitable for pupils leaving primary or first school, welcoming new starters, or marking special occasions such as school anniversaries. Mascot bears are also durable; if looked after, they can last for many years and move with the child from one bedroom to the next. For schools looking for a keepsake that feels both fun and meaningful, mascot bears offer a dependable option.
+              They are also easy to hand out, suitable for pupils moving on or joining, and durable enough to last for many years.
             </p>
           </article>
 
@@ -87,13 +89,13 @@
           <article>
             <h2>How Schools Use Mascot Bears to Build Community Spirit</h2>
             <p>
-              Mascot bears can play a bigger role than simply sitting on a shelf. Many schools choose to weave them into everyday life to help build a sense of belonging. Some schools create a named character that appears on posters, certificates, displays, and newsletters. When pupils see the same character on a bear, it becomes part of a shared story and helps reinforce the values of the school.
+              Mascot bears can play a role in helping pupils feel connected to school life. Some schools create a named character that appears in displays, certificates, and newsletters.
             </p>
             <p>
-              Schools also use bears in assemblies and celebration events. A class might take turns to look after the “attendance bear” or “values bear” for a week when they have met a particular goal. This works particularly well for primary and first school pupils, who often respond positively to something they can physically hold and interact with. Over time, the bear becomes familiar to pupils and forms a recognisable part of school life.
+              In assemblies and classroom routines, a class may take turns looking after an “attendance bear” or “values bear” when a goal is met.
             </p>
             <p>
-              Mascot bears are also used to mark special milestones. Some schools present bears during transition periods, to welcome new pupils joining the school or to celebrate pupils moving on to their next setting. Others use them to commemorate themed days, anniversaries, or whole-school projects. In every case, the mascot bear offers a warm, consistent symbol that supports community spirit and helps pupils feel connected to their school.
+              Bears are also used to mark milestones such as new pupils joining or pupils moving on to their next setting.
             </p>
           </article>
 
@@ -103,13 +105,13 @@
           <article>
             <h2>Choosing Personalised Gifts for Children Leaving or Starting School</h2>
             <p>
-              Transitions can be important milestones for children. Moving into a new school setting or preparing to leave one often brings a mix of excitement and uncertainty. A personalised gift can help mark the occasion in a positive, memorable way. When choosing a keepsake, many parents and carers look for something meaningful that will last beyond the moment. Items such as sweets or disposable toys are easily forgotten, whereas a personalised object can stay with the child for years.
+              Transitions are important milestones. A personalised gift helps mark the moment in a positive way.
             </p>
             <p>
-              It can help to think about where the gift will live. Will it sit on a desk, be displayed on a shelf, or stay on a bed? A mascot bear works well because it naturally fits into a child’s bedroom or play space. It requires no batteries, screens, or maintenance, and can move with the child as they grow. For younger pupils, a soft bear can also bring comfort at bedtime or during periods of change.
+              Mascot bears naturally fit into a child’s bedroom and can move with them as they grow. For younger pupils, they can offer comfort at bedtime or during periods of change.
             </p>
             <p>
-              Personalisation makes the gift feel unique to the child’s experience. Including the school logo and colours creates a direct link to the memories, friendships, and routines they associate with their school. Some families like to add a small label with a date or name to help remember when it was given. Whether used to welcome new pupils, support transitions, or celebrate involvement in special groups or events, a personalised mascot can help children feel connected to their school journey and proud of their achievements.
+              Personalised with the school logo and colours, the bear becomes a symbol of memories, friendships, and routines.
             </p>
           </article>
 
@@ -134,22 +136,43 @@
     </div>
   </footer>
 
-  <!-- COOKIE SCRIPT -->
+  <!-- COOKIE / ADS CONSENT SCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const banner = document.getElementById("cookie-banner");
-      const btn = document.getElementById("cookie-accept");
+      const acceptBtn = document.getElementById("cookie-accept");
+      const rejectBtn = document.getElementById("cookie-reject");
 
-      if (localStorage.getItem("dm_cookie_consent") === "yes") {
+      const consent = localStorage.getItem("dm_cookie_ads");
+
+      if (consent === "yes") {
+        banner.classList.add("hidden");
+        loadAdScripts();
+      } else if (consent === "no") {
         banner.classList.add("hidden");
       }
 
-      btn.addEventListener("click", () => {
-        localStorage.setItem("dm_cookie_consent", "yes");
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("dm_cookie_ads", "yes");
+        banner.classList.add("hidden");
+        loadAdScripts();
+      });
+
+      rejectBtn.addEventListener("click", function () {
+        localStorage.setItem("dm_cookie_ads", "no");
         banner.classList.add("hidden");
       });
     });
+
+    function loadAdScripts() {
+      const s = document.createElement("script");
+      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319";
+      s.async = true;
+      s.crossOrigin = "anonymous";
+      document.head.appendChild(s);
+    }
   </script>
+  <!-- END COOKIE / ADS CONSENT SCRIPT -->
 
   <!-- Active nav link -->
   <script>
@@ -173,6 +196,6 @@
       });
     }
   </script>
+
 </body>
 </html>
-
