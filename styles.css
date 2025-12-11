@@ -284,6 +284,7 @@ body::before{
 small{ opacity:.75; }
 
 /* Socials block */
+/* Socials block inside footer */
 .footer-socials {
   margin: 10px 0;
   text-align: center;
@@ -294,10 +295,10 @@ small{ opacity:.75; }
   font-size: 0.95rem;
 }
 
-/* Wrapper for the image + hotspots */
+/* Wrapper for strip + hotspots */
 .social-strip-wrapper {
   position: relative;
-  width: 100px;     /* overall size of the strip */
+  width: 100px;      /* overall size of the strip – tweak 90/110/etc if you like */
   margin: 0 auto;
 }
 
@@ -313,18 +314,17 @@ small{ opacity:.75; }
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 33.33%;    /* each zone covers one third of the strip */
+  width: 33.33%;     /* each zone covers one third of the strip */
 }
 
-/* Individual target areas */
 .ss-fb { left: 0; }
 .ss-ig { left: 33.33%; }
 .ss-tiktok { left: 66.66%; }
 
-/* Optional: cursor change on hover */
 .ss-link:hover {
   cursor: pointer;
 }
+
 
 /* ------------------------- */
 /*         IMAGE SHOW          */
