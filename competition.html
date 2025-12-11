@@ -13,21 +13,191 @@
   <link rel="preload" as="image" href="assets/mega-kids-digital-hamper.png">
 
   <link rel="stylesheet" href="styles.css">
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319"
+
+  <!-- AdSense snippet kept as-is for verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319"
      crossorigin="anonymous"></script>
+
+  <!-- Cookie banner + modal styling (matches blog.html) -->
+  <style>
+    .cookie-banner {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background: rgba(0, 0, 0, 0.85);
+      color: #ffffff;
+      font-size: 0.9rem;
+      gap: 0.75rem;
+    }
+
+    .cookie-banner p {
+      margin: 0;
+      max-width: 600px;
+    }
+
+    .cookie-banner a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .cookie-banner-buttons {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    .cookie-btn-primary {
+      background-color: #f38b8b;
+      color: #000000;
+    }
+
+    .cookie-btn-secondary {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .cookie-btn-outline {
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+
+    .cookie-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+
+    .cookie-modal {
+      background: #ffffff;
+      max-width: 480px;
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      font-size: 0.95rem;
+    }
+
+    .cookie-modal h2 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    .cookie-category {
+      margin-bottom: 0.9rem;
+      border-top: 1px solid #eee;
+      padding-top: 0.7rem;
+    }
+
+    .cookie-category h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1rem;
+    }
+
+    .cookie-category small {
+      display: block;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .cookie-modal-actions {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    .cookie-toggle {
+      margin-right: 0.35rem;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- COOKIE BANNER (ADS + ANALYTICS CONSENT) -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>This page uses cookies for ads and basic analytics. Please choose your preference.</p>
-    <div>
-      <button id="cookie-accept">Accept</button>
-      <button id="cookie-reject">Reject</button>
+  <!-- COOKIE BANNER (GDPR-style, matches blog.html) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies on this page for ads and basic analytics. You can accept all cookies, 
+      reject non essential cookies, or manage your preferences. See our 
+      <a href="privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
     </div>
   </div>
   <!-- END COOKIE BANNER -->
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout. 
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns. 
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!-- END COOKIE PREFERENCES MODAL -->
 
   <div class="bg-layer"></div>
 
@@ -170,49 +340,142 @@
     </div>
   </footer>
 
-  <!-- COOKIE / ADS CONSENT SCRIPT -->
+  <!-- COOKIE LOGIC SCRIPT (shared behaviour with blog.html) -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const banner = document.getElementById("cookie-banner");
-      const acceptBtn = document.getElementById("cookie-accept");
-      const rejectBtn = document.getElementById("cookie-reject");
+    (function () {
+      var CONSENT_KEY = "dm_cookie_consent";
 
-      const consent = localStorage.getItem("dm_cookie_ads");
-
-      if (consent === "yes") {
-        banner.classList.add("hidden");
-        loadAdScripts();
-      } else if (consent === "no") {
-        banner.classList.add("hidden");
+      function getConsent() {
+        try {
+          var stored = localStorage.getItem(CONSENT_KEY);
+          if (!stored) return null;
+          return JSON.parse(stored);
+        } catch (e) {
+          return null;
+        }
       }
 
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("dm_cookie_ads", "yes");
-        banner.classList.add("hidden");
-        loadAdScripts();
-      });
+      function setConsent(consent) {
+        localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+        applyConsent(consent);
+      }
 
-      rejectBtn.addEventListener("click", function () {
-        localStorage.setItem("dm_cookie_ads", "no");
-        banner.classList.add("hidden");
-      });
-    });
+      function applyConsent(consent) {
+        // This is where you can conditionally load scripts based on consent.
+        // For now, AdSense is still loaded in <head> for verification.
+        // Later, you can move it here and only load when consent.marketing is true.
+        //
+        // Example for later:
+        //
+        // if (consent.marketing) {
+        //   const s = document.createElement("script");
+        //   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319";
+        //   s.async = true;
+        //   s.crossOrigin = "anonymous";
+        //   document.head.appendChild(s);
+        // }
+      }
 
-    function loadAdScripts() {
-      // Paste your ad / tracking scripts here so they ONLY run after consent.
-      //
-      // Example for Google AdSense (replace YOUR-CLIENT-ID):
-      //
-      // const s = document.createElement("script");
-      // s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-CLIENT-ID";
-      // s.async = true;
-      // s.crossOrigin = "anonymous";
-      // document.head.appendChild(s);
-      //
-      // Add any other ad or analytics scripts in the same way.
-    }
+      function showBanner() {
+        var banner = document.getElementById("cookie-banner");
+        if (banner) banner.style.display = "flex";
+      }
+
+      function hideBanner() {
+        var banner = document.getElementById("cookie-banner");
+        if (banner) banner.style.display = "none";
+      }
+
+      function showModal() {
+        var modal = document.getElementById("cookie-modal-backdrop");
+        if (modal) {
+          modal.style.display = "flex";
+          modal.setAttribute("aria-hidden", "false");
+        }
+      }
+
+      function hideModal() {
+        var modal = document.getElementById("cookie-modal-backdrop");
+        if (modal) {
+          modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var consent = getConsent();
+        if (!consent) {
+          showBanner();
+        } else {
+          applyConsent(consent);
+        }
+
+        var btnAcceptAll = document.getElementById("cookie-accept-all");
+        var btnRejectAll = document.getElementById("cookie-reject-all");
+        var btnManage = document.getElementById("cookie-manage");
+        var btnSave = document.getElementById("cookie-save");
+        var btnCancel = document.getElementById("cookie-cancel");
+
+        var chkAnalytics = document.getElementById("cookie-analytics");
+        var chkMarketing = document.getElementById("cookie-marketing");
+
+        if (btnAcceptAll) {
+          btnAcceptAll.addEventListener("click", function () {
+            var consent = {
+              essential: true,
+              analytics: true,
+              marketing: true
+            };
+            setConsent(consent);
+            hideBanner();
+          });
+        }
+
+        if (btnRejectAll) {
+          btnRejectAll.addEventListener("click", function () {
+            var consent = {
+              essential: true,
+              analytics: false,
+              marketing: false
+            };
+            setConsent(consent);
+            hideBanner();
+          });
+        }
+
+        if (btnManage) {
+          btnManage.addEventListener("click", function () {
+            var current = getConsent();
+            if (current) {
+              if (chkAnalytics) chkAnalytics.checked = !!current.analytics;
+              if (chkMarketing) chkMarketing.checked = !!current.marketing;
+            }
+            showModal();
+          });
+        }
+
+        if (btnSave) {
+          btnSave.addEventListener("click", function () {
+            var consent = {
+              essential: true,
+              analytics: chkAnalytics ? chkAnalytics.checked : false,
+              marketing: chkMarketing ? chkMarketing.checked : false
+            };
+            setConsent(consent);
+            hideModal();
+            hideBanner();
+          });
+        }
+
+        if (btnCancel) {
+          btnCancel.addEventListener("click", function () {
+            hideModal();
+          });
+        }
+      });
+    })();
   </script>
-  <!-- END COOKIE / ADS CONSENT SCRIPT -->
+  <!-- END COOKIE LOGIC SCRIPT -->
 
   <!-- Active nav link -->
   <script>
@@ -239,6 +502,3 @@
 
 </body>
 </html>
-
-
-
