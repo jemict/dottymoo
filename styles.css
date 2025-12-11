@@ -283,14 +283,48 @@ body::before{
 .footer-links{ margin-top:4px; opacity:.9; }
 small{ opacity:.75; }
 
-.social-strip {
-  max-width: 90px;   /* Adjust this number to make it smaller or larger */
-  width: 100%;        /* Ensures responsive scaling */
-  height: auto;
-  display: block;
+/* Socials block */
+.footer-socials {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.footer-socials p {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+}
+
+/* Wrapper for the image + hotspots */
+.social-strip-wrapper {
+  position: relative;
+  width: 100px;     /* overall size of the strip */
   margin: 0 auto;
 }
 
+/* The social strip image */
+.social-strip-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Clickable hotspots */
+.ss-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 33.33%;    /* each zone covers one third of the strip */
+}
+
+/* Individual target areas */
+.ss-fb { left: 0; }
+.ss-ig { left: 33.33%; }
+.ss-tiktok { left: 66.66%; }
+
+/* Optional: cursor change on hover */
+.ss-link:hover {
+  cursor: pointer;
+}
 
 /* ------------------------- */
 /*         IMAGE SHOW          */
