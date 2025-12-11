@@ -283,6 +283,15 @@ body::before{
 .footer-links{ margin-top:4px; opacity:.9; }
 small{ opacity:.75; }
 
+.social-strip {
+  max-width: 140px;   /* Adjust this number to make it smaller or larger */
+  width: 100%;        /* Ensures responsive scaling */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
 /* ------------------------- */
 /*         IMAGE SHOW          */
 /* ------------------------- */
