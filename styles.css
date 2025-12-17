@@ -191,6 +191,10 @@ body::before{
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   font-size: 0.95rem;
+
+  /* Added: prevent overflow on small screens */
+  max-height: 85vh;
+  overflow: auto;
 }
 
 .cookie-modal h2 {
@@ -225,6 +229,21 @@ body::before{
 
 .cookie-toggle {
   margin-right: 0.35rem;
+}
+
+/* Added: mobile cookie banner improvements */
+@media (max-width: 600px) {
+  .cookie-banner {
+    padding: 0.9rem 1rem;
+  }
+
+  .cookie-banner-buttons {
+    width: 100%;
+  }
+
+  .cookie-banner-buttons .cookie-btn {
+    width: 100%;
+  }
 }
 
 
