@@ -17,12 +17,67 @@
 
 <body>
 
-  <!-- COOKIE BANNER -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
-    <button id="cookie-accept">OK</button>
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
   </div>
-  <!-- END COOKIE BANNER -->
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
 
   <div class="bg-layer"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -69,7 +124,7 @@
           <h3>Using the site</h3>
           <ul>
             <li>This website provides information about Dotty Moo keepsakes and how to order through participating schools.</li>
-            <li>Orders are placed only via school-specific links or QR codes during official order windows.</li>
+            <li>Orders are placed only via school specific links or QR codes during official order windows.</li>
           </ul>
 
           <h3>Content</h3>
@@ -97,62 +152,45 @@
     </div>
   </main>
 
- <footer class="site-footer">
-  <div class="footer-card">
+  <footer class="site-footer">
+    <div class="footer-card">
 
-    <div>
-      <strong>Dotty Moo Ltd</strong> • 
-      <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
-    </div>
-
-    <div class="footer-meta">
-      Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
-      Company No. 16877316
-    </div>
-
-    <!-- Socials -->
-    <div class="footer-socials">
-      <p>Follow us <strong>@dottymoouk</strong></p>
-
-      <div class="social-strip-wrapper">
-        <img src="assets/social_strip.png" alt="Social media icons">
-
-        <!-- Click zones over each icon -->
-        <a class="ss-link ss-fb" href="https://www.facebook.com/dottymoouk" target="_blank" rel="noopener" aria-label="Facebook"></a>
-        <a class="ss-link ss-ig" href="https://www.instagram.com/dottymoouk" target="_blank" rel="noopener" aria-label="Instagram"></a>
-        <a class="ss-link ss-tiktok" href="https://www.tiktok.com/@dottymoouk" target="_blank" rel="noopener" aria-label="TikTok"></a>
+      <div>
+        <strong>Dotty Moo Ltd</strong> • 
+        <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
       </div>
+
+      <div class="footer-meta">
+        Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+        Company No. 16877316
+      </div>
+
+      <div class="footer-socials">
+        <p>Follow us <strong>@dottymoouk</strong></p>
+
+        <div class="social-strip-wrapper">
+          <img src="assets/social_strip.png" alt="Social media icons">
+          <a class="ss-link ss-fb" href="https://www.facebook.com/dottymoouk" target="_blank" rel="noopener" aria-label="Facebook"></a>
+          <a class="ss-link ss-ig" href="https://www.instagram.com/dottymoouk" target="_blank" rel="noopener" aria-label="Instagram"></a>
+          <a class="ss-link ss-tiktok" href="https://www.tiktok.com/@dottymoouk" target="_blank" rel="noopener" aria-label="TikTok"></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a> •
+        <a href="terms.html">Terms</a> •
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <small>© Dotty Moo Ltd 2025</small>
+
     </div>
+  </footer>
 
-    <div class="footer-links">
-      <a href="privacy.html">Privacy</a> •
-      <a href="terms.html">Terms</a> •
-      <a href="contact.html">Contact</a>
-    </div>
+  <!-- Cookie consent logic -->
+  <script src="cookie-consent.js"></script>
 
-    <small>© Dotty Moo Ltd 2025</small>
-
-  </div>
-</footer>
-
-  <!-- COOKIE SCRIPT -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const banner = document.getElementById("cookie-banner");
-      const btn = document.getElementById("cookie-accept");
-
-      if (localStorage.getItem("dm_cookie_consent") === "yes") {
-        banner.classList.add("hidden");
-      }
-
-      btn.addEventListener("click", () => {
-        localStorage.setItem("dm_cookie_consent", "yes");
-        banner.classList.add("hidden");
-      });
-    });
-  </script>
-  <!-- END COOKIE SCRIPT -->
-
+  <!-- Active nav link -->
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
@@ -163,6 +201,7 @@
     });
   </script>
 
+  <!-- Nav toggle -->
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
