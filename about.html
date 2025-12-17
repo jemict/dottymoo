@@ -17,12 +17,67 @@
 
 <body>
 
-  <!-- COOKIE BANNER -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
-    <button id="cookie-accept">OK</button>
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
   </div>
-  <!-- END COOKIE BANNER -->
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
 
   <div class="bg-layer"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -134,23 +189,124 @@
   </div>
 </footer>
 
-  <!-- COOKIE SCRIPT -->
+  <!-- COOKIE LOGIC SCRIPT (GDPR-style) -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const banner = document.getElementById("cookie-banner");
-      const btn = document.getElementById("cookie-accept");
+    (function () {
+      var CONSENT_KEY = "dm_cookie_consent";
 
-      if (localStorage.getItem("dm_cookie_consent") === "yes") {
-        banner.classList.add("hidden");
+      function getConsent() {
+        try {
+          var stored = localStorage.getItem(CONSENT_KEY);
+          if (!stored) return null;
+          return JSON.parse(stored);
+        } catch (e) {
+          return null;
+        }
       }
 
-      btn.addEventListener("click", () => {
-        localStorage.setItem("dm_cookie_consent", "yes");
-        banner.classList.add("hidden");
+      function setConsent(consent) {
+        localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+        applyConsent(consent);
+      }
+
+      function applyConsent(consent) {
+        // Add conditional script loading here later if you want.
+      }
+
+      function showBanner() {
+        var banner = document.getElementById("cookie-banner");
+        if (banner) banner.style.display = "flex";
+      }
+
+      function hideBanner() {
+        var banner = document.getElementById("cookie-banner");
+        if (banner) banner.style.display = "none";
+      }
+
+      function showModal() {
+        var modal = document.getElementById("cookie-modal-backdrop");
+        if (modal) {
+          modal.style.display = "flex";
+          modal.setAttribute("aria-hidden", "false");
+        }
+      }
+
+      function hideModal() {
+        var modal = document.getElementById("cookie-modal-backdrop");
+        if (modal) {
+          modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var consent = getConsent();
+        if (!consent) {
+          showBanner();
+        } else {
+          applyConsent(consent);
+        }
+
+        var btnAcceptAll = document.getElementById("cookie-accept-all");
+        var btnRejectAll = document.getElementById("cookie-reject-all");
+        var btnManage = document.getElementById("cookie-manage");
+        var btnSave = document.getElementById("cookie-save");
+        var btnCancel = document.getElementById("cookie-cancel");
+
+        var chkAnalytics = document.getElementById("cookie-analytics");
+        var chkMarketing = document.getElementById("cookie-marketing");
+
+        if (btnAcceptAll) {
+          btnAcceptAll.addEventListener("click", function () {
+            var consent = { essential: true, analytics: true, marketing: true };
+            setConsent(consent);
+            hideBanner();
+          });
+        }
+
+        if (btnRejectAll) {
+          btnRejectAll.addEventListener("click", function () {
+            var consent = { essential: true, analytics: false, marketing: false };
+            setConsent(consent);
+            hideBanner();
+          });
+        }
+
+        if (btnManage) {
+          btnManage.addEventListener("click", function () {
+            var current = getConsent();
+            if (current) {
+              if (chkAnalytics) chkAnalytics.checked = !!current.analytics;
+              if (chkMarketing) chkMarketing.checked = !!current.marketing;
+            } else {
+              if (chkAnalytics) chkAnalytics.checked = false;
+              if (chkMarketing) chkMarketing.checked = false;
+            }
+            showModal();
+          });
+        }
+
+        if (btnSave) {
+          btnSave.addEventListener("click", function () {
+            var consent = {
+              essential: true,
+              analytics: chkAnalytics ? chkAnalytics.checked : false,
+              marketing: chkMarketing ? chkMarketing.checked : false
+            };
+            setConsent(consent);
+            hideModal();
+            hideBanner();
+          });
+        }
+
+        if (btnCancel) {
+          btnCancel.addEventListener("click", function () {
+            hideModal();
+          });
+        }
       });
-    });
+    })();
   </script>
-  <!-- END COOKIE SCRIPT -->
 
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
