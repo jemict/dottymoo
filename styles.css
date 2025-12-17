@@ -158,9 +158,10 @@ body::before{
 }
 
 .cookie-btn-primary {
-  background-color: #f38b8b;
-  color: #000000;
+  background-color: var(--dm-coral);
+  color: #ffffff;
 }
+
 
 .cookie-btn-secondary {
   background-color: #ffffff;
