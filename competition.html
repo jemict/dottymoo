@@ -14,128 +14,14 @@
   <link rel="preload" as="image" href="assets/mega-kids-digital-hamper.png">
 
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Cookie banner + modal styling (same as blog.html) -->
-  <style>
-    .cookie-banner {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 9999;
-      display: none;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      background: rgba(0, 0, 0, 0.85);
-      color: #ffffff;
-      font-size: 0.9rem;
-      gap: 0.75rem;
-    }
-
-    .cookie-banner p {
-      margin: 0;
-      max-width: 600px;
-    }
-
-    .cookie-banner a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .cookie-banner-buttons {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .cookie-btn {
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem 0.9rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-
-    .cookie-btn-primary {
-      background-color: #f38b8b;
-      color: #000000;
-    }
-
-    .cookie-btn-secondary {
-      background-color: #ffffff;
-      color: #000000;
-    }
-
-    .cookie-btn-outline {
-      background-color: transparent;
-      color: #ffffff;
-      border: 1px solid #ffffff;
-    }
-
-    .cookie-modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 10000;
-    }
-
-    .cookie-modal {
-      background: #ffffff;
-      max-width: 480px;
-      width: 100%;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-      font-size: 0.95rem;
-    }
-
-    .cookie-modal h2 {
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
-    }
-
-    .cookie-category {
-      margin-bottom: 0.9rem;
-      border-top: 1px solid #eee;
-      padding-top: 0.7rem;
-    }
-
-    .cookie-category h3 {
-      margin: 0 0 0.25rem 0;
-      font-size: 1rem;
-    }
-
-    .cookie-category small {
-      display: block;
-      font-size: 0.8rem;
-      color: #555;
-    }
-
-    .cookie-modal-actions {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.5rem;
-    }
-
-    .cookie-toggle {
-      margin-right: 0.35rem;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- COOKIE BANNER (GDPR-style, same as blog.html) -->
+  <!-- COOKIE BANNER (GDPR-style) -->
   <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
     <p>
-      We use cookies on this page for ads and basic analytics.
+      We use cookies to improve your experience and to understand how this website is used.
       You can accept all cookies, reject non essential cookies, or manage your preferences.
       See our <a href="privacy.html">Privacy Policy</a> for more information.
     </p>
@@ -271,7 +157,7 @@
           </p>
 
           <h3>Bonus entry (optional)</h3>
-          <p>Optional bonus entry if you follow our Facebook or Instagram and comment ‘Done’ 🐮✨”</strong> on the post. One bonus entry is added per qualifying comment.</p>
+          <p>Optional bonus entry if you follow our Facebook or Instagram and comment ‘Done’ 🐮✨ on the post. One bonus entry is added per qualifying comment.</p>
 
           <h3>Where to find the competition post</h3>
           <ul>
@@ -366,7 +252,7 @@
 </footer>
 
 
-  <!-- COOKIE LOGIC SCRIPT (shared with blog.html) -->
+  <!-- COOKIE LOGIC SCRIPT (GDPR-style) -->
   <script>
     (function () {
       var CONSENT_KEY = "dm_cookie_consent";
@@ -386,19 +272,7 @@
         applyConsent(consent);
       }
 
-      function applyConsent(consent) {
-        // This is where you can conditionally load scripts based on consent in future.
-        // For now, AdSense is still loaded in <head> for verification.
-        //
-        // Later, you could do:
-        // if (consent.marketing) {
-        //   const s = document.createElement("script");
-        //   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1061546456559319";
-        //   s.async = true;
-        //   s.crossOrigin = "anonymous";
-        //   document.head.appendChild(s);
-        // }
-      }
+      function applyConsent(consent) {}
 
       function showBanner() {
         var banner = document.getElementById("cookie-banner");
@@ -445,11 +319,7 @@
 
         if (btnAcceptAll) {
           btnAcceptAll.addEventListener("click", function () {
-            var consent = {
-              essential: true,
-              analytics: true,
-              marketing: true
-            };
+            var consent = { essential: true, analytics: true, marketing: true };
             setConsent(consent);
             hideBanner();
           });
@@ -457,11 +327,7 @@
 
         if (btnRejectAll) {
           btnRejectAll.addEventListener("click", function () {
-            var consent = {
-              essential: true,
-              analytics: false,
-              marketing: false
-            };
+            var consent = { essential: true, analytics: false, marketing: false };
             setConsent(consent);
             hideBanner();
           });
@@ -526,10 +392,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
