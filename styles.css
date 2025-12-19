@@ -430,7 +430,12 @@ body::before{
     grid-template-columns:1fr;
     gap:14px;
   }
+
+  .dm-col ul{
+    margin-bottom:1.2em;
+  }
 }
+
 
 /* ------------------------- */
 /*       COMP IMAGE          */
