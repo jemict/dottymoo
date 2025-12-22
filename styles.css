@@ -373,17 +373,19 @@ body::before{
   margin-bottom: 10px;
 }
 
-.article-meta{
-  margin: .25rem 0 .25rem;
-  font-size: .95rem;
-  opacity: .75;
+.article-meta {
+  margin: 0.25rem 0 0.25rem;
+  font-size: 0.95rem;
+  opacity: 0.75;
 }
 
-.article-summary{
-  margin: 0 0 1rem;
+.article-summary {
+  margin: 0 0 1.5rem;
   font-size: 1.05rem;
   font-weight: 600;
+  line-height: 1.4;
 }
+
 
 
 /* Mobile heading sizing to prevent giant headings in narrow widths */
