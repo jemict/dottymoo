@@ -316,6 +316,17 @@ body::before{
     max-width:320px;
   }
 }
+/* ------------------------- */
+/*         BLOG IMAGES       */
+/* ------------------------- */
+.article-image {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
 
 /* ------------------------- */
 /*         CONTENT TEXT      */
