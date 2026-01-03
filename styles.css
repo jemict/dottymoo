@@ -321,7 +321,7 @@ body::before{
 /* ------------------------- */
 .article-image {
   display: block;
-  max-width: 280px;
+  max-width: 260px;
   width: 100%;
   height: auto;
   margin: 2rem auto;
