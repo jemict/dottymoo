@@ -319,18 +319,52 @@ body::before{
 /* ------------------------- */
 /*         BLOG IMAGES       */
 /* ------------------------- */
-.article-image {
+/* Blog: summary + image layout (desktop), stacked on mobile */
+.article-media {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 1.5rem 0 2rem;
+}
+
+.article-media-text .article-summary {
+  margin-top: 0;
+}
+
+.article-media-image {
+  justify-self: start;
+}
+
+.article-media-image .article-image {
   display: block;
   max-width: 260px;
   width: 100%;
   height: auto;
-  margin: 2rem auto;
+  margin: 0;
   border-radius: 12px;
   background: #fff;
-  padding: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.10);
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
+
+/* Mobile: stack neatly */
+@media (max-width: 700px) {
+  .article-media {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .article-media-image {
+    justify-self: center;
+  }
+
+  .article-media-image .article-image {
+    margin: 0 auto;
+  }
+}
+
 
 
 /* ------------------------- */
