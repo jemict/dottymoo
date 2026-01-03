@@ -24,6 +24,14 @@
   <url>
     <loc>https://dottymoo.co.uk/testimonials.html</loc>
   </url>
+  
+  <url>
+ <loc>https://dottymoo.co.uk/blog.html</loc>
+</url>
+  
+<url>
+ <loc>https://dottymoo.co.uk/competition.html</loc>
+</url>
 
   <url>
     <loc>https://dottymoo.co.uk/contact.html</loc>
@@ -38,3 +46,4 @@
   </url>
 
 </urlset>
+
