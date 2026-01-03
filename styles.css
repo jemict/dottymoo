@@ -319,7 +319,7 @@ body::before{
 /* ------------------------- */
 /*         BLOG IMAGES       */
 /* ------------------------- */
-/* Blog: summary + image layout (desktop), stacked on mobile */
+/* Blog: summary + image layout (desktop), image first on mobile */
 .article-media {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -349,21 +349,30 @@ body::before{
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-/* Mobile: stack neatly */
+/* Mobile: stack neatly with image first */
 @media (max-width: 700px) {
   .article-media {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
+    margin: 1.25rem 0 2rem;
   }
 
   .article-media-image {
-    justify-self: center;
+    order: 1;
+    align-self: center;
+  }
+
+  .article-media-text {
+    order: 2;
   }
 
   .article-media-image .article-image {
     margin: 0 auto;
+    max-width: 320px;
   }
 }
+
 
 
 
