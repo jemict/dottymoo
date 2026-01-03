@@ -371,6 +371,11 @@ body::before{
     margin: 0 auto;
     max-width: 320px;
   }
+  .article-image-inline{
+  display:block;
+  max-width:220px;
+  margin:1.2rem auto 0;
+}
 }
 
 
