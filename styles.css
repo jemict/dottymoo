@@ -325,8 +325,13 @@ body::before{
   width: 100%;
   height: auto;
   margin: 2rem auto;
-  border-radius: 8px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
+
 
 /* ------------------------- */
 /*         CONTENT TEXT      */
