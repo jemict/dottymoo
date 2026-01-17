@@ -270,6 +270,12 @@ body::before{
     padding:16px 14px;
   }
 }
+.dm-sample-card img{
+  width:100%;
+  max-height:260px;
+  height:auto;
+  object-fit:contain;
+}
 
 /* ------------------------- */
 /*          BANNER           */
