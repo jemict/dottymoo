@@ -536,7 +536,7 @@ body::before{
 
 .letter-example img {
   width: 100%;
-  filter: blur(3px);
+  filter: blur(1.5px);
   opacity: 0.85;
   border-radius: 12px;
 }
