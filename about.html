@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>About Dotty Moo | School Mascot Bears and Calm Resources</title>
 <meta name="description" content="Dotty Moo is a family-run UK brand creating personalised school mascot bears and calm visual resources for children at school and at home.">
 <link rel="canonical" href="https://dottymoo.co.uk/about.html">
@@ -81,6 +82,7 @@
   </div>
 
   <div class="bg-layer"></div>
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <nav class="site-nav" aria-label="Primary">
@@ -115,6 +117,7 @@
   <main id="main-content">
     <div class="wrap">
       <div class="card">
+
         <div class="header">
           <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
         </div>
@@ -157,6 +160,7 @@
           </p>
 
         </div>
+
       </div>
     </div>
   </main>
@@ -199,16 +203,20 @@
   <!-- Cookie consent logic (shared file) -->
   <script src="cookie-consent.js"></script>
 
+  <!-- Active nav link -->
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
-      if (a.getAttribute('href') === here) {
+      const href = a.getAttribute('href');
+      const hrefFile = (href === '/' ? 'index.html' : href);
+      if (hrefFile === here) {
         a.classList.add('active');
         a.setAttribute('aria-current', 'page');
       }
     });
   </script>
 
+  <!-- Nav toggle -->
   <script>
     const nav = document.querySelector('.site-nav');
     const toggle = document.querySelector('.nav-toggle');
