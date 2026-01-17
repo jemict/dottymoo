@@ -418,9 +418,9 @@ body::before{
 .lead{color:#5B646B}
 
 .content h1{
-  font-size:2.8rem;
-  line-height:1.2;
-  margin:1.2rem 0 1rem;
+  font-size:2.2rem;
+  line-height:1.15;
+  margin:1.1rem 0 0.9rem;
 }
 
 .content h2{
@@ -464,7 +464,7 @@ body::before{
 
 /* Mobile heading sizing to prevent giant headings in narrow widths */
 @media (max-width:600px){
-  .content h1{ font-size:2.0rem; }
+  .content h1{ font-size:1.75rem; }
   .content h2{ font-size:1.45rem; }
   .content h3{ font-size:1.1rem; }
 }
