@@ -85,34 +85,36 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="site-nav" aria-label="Primary">
-    <button class="nav-toggle"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            aria-controls="primary-nav">
-      ☰
-    </button>
+ <div id="site-nav"></div>
 
-    <div class="nav-brand">
-      <img src="assets/favicon.png" alt="Dotty Moo icon">
-      Dotty Moo
-    </div>
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("site-nav").innerHTML = html;
 
-    <div class="nav-icon-right" aria-hidden="true">
-      🧸
-    </div>
+      // Active link handling
+      const here = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.site-nav a').forEach(a => {
+        if (a.getAttribute('href') === here) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
 
-    <div class="nav-links" id="primary-nav">
-      <a href="/">Home</a>
-      <a href="how-it-works.html">Schools</a>
-      <a href="about.html">About</a>
-      <a href="order.html">Families</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="competition.html">Competition</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+      // Mobile nav toggle
+      const nav = document.querySelector('.site-nav');
+      const toggle = document.querySelector('.nav-toggle');
+
+      if (nav && toggle) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+    });
+</script>
+
 
   <main id="main-content">
     <div class="wrap">
@@ -203,31 +205,6 @@
   <!-- Cookie consent logic (shared file) -->
   <script src="cookie-consent.js"></script>
 
-  <!-- Active nav link -->
-  <script>
-    const here = (location.pathname.split('/').pop() || 'index.html');
-    document.querySelectorAll('.site-nav a').forEach(a => {
-      const href = a.getAttribute('href');
-      const hrefFile = (href === '/' ? 'index.html' : href);
-      if (hrefFile === here) {
-        a.classList.add('active');
-        a.setAttribute('aria-current', 'page');
-      }
-    });
-  </script>
-
-  <!-- Nav toggle -->
-  <script>
-    const nav = document.querySelector('.site-nav');
-    const toggle = document.querySelector('.nav-toggle');
-
-    if (nav && toggle) {
-      toggle.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
-  </script>
 
 </body>
 </html>
