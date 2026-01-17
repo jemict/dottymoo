@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact Dotty Moo | School Mascot Bears UK</title>
-<meta name="description" content="Contact Dotty Moo about school partnerships and mascot bear order windows.">
+<meta name="description" content="Contact Dotty Moo about school partnerships, mascot bears, and family resources.">
 <link rel="canonical" href="https://dottymoo.co.uk/contact.html">
 
 <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
@@ -115,62 +115,75 @@
   <main id="main-content">
     <div class="wrap">
       <div class="card">
+
         <div class="header">
           <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
         </div>
 
-        <h1>Contact</h1>
+        <div class="content">
 
-<p>
-If you’re getting in touch about Dotty Moo, you’re very welcome to contact us.
-To help your message reach the right place, please use the details below.
-</p>
+          <h1>Contact</h1>
 
-<h2>For schools</h2>
+          <p>
+            If you’re getting in touch about Dotty Moo, you’re very welcome to contact us.
+            To help your message reach the right place, please use the details below.
+          </p>
 
-<p>
-If you are a school interested in offering Dotty Moo mascot bears, or have questions
-about setting up an order window, we would love to hear from you.
-</p>
+          <h2>For schools</h2>
 
-<p>
-Email: <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a><br>
-<em>We aim to respond within two working days.</em>
-</p>
+          <p>
+            If you are a school interested in offering Dotty Moo mascot bears, or have questions
+            about setting up an order window, we would love to hear from you.
+          </p>
 
-<hr>
+          <p>
+            <strong>Email:</strong> <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a><br>
+            <em>We aim to respond within two working days.</em>
+          </p>
 
-<h2>For families</h2>
+          <hr>
 
-<p>
-If you are a parent or carer with a question about an order, a competition entry,
-or Dotty Moo resources, please get in touch and we will be happy to help.
-</p>
+          <h2>For families</h2>
 
-<p>
-If your question is about placing an order, please note that all mascot bear orders
-are made through participating schools using a school-specific link.
-</p>
+          <p>
+            If you are a parent or carer with a question about an order, a competition entry,
+            or Dotty Moo resources, please get in touch and we will be happy to help.
+          </p>
 
-<p>
-Email: <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a><br>
-<em>We aim to respond within two working days.</em>
-</p>
+          <p>
+            If your question is about placing an order, please note that all mascot bear orders
+            are made through participating schools using a school-specific link.
+          </p>
 
+          <p>
+            <strong>Email:</strong> <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a><br>
+            <em>We aim to respond within two working days.</em>
+          </p>
+
+        </div> <!-- .content -->
+
+      </div> <!-- .card -->
+    </div> <!-- .wrap -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-card">
+
+      <div>
+        <strong>Dotty Moo Ltd</strong> •
+        <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
+      </div>
 
       <div class="footer-meta">
         Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
         Company No. 16877316
       </div>
 
-      <!-- Socials -->
       <div class="footer-socials">
         <p>Follow us <strong>@dottymoouk</strong></p>
 
         <div class="social-strip-wrapper">
           <img src="assets/social_strip.png" alt="Social media icons">
-
-          <!-- Click zones over each icon -->
           <a class="ss-link ss-fb" href="https://www.facebook.com/dottymoouk" target="_blank" rel="noopener" aria-label="Facebook"></a>
           <a class="ss-link ss-ig" href="https://www.instagram.com/dottymoouk" target="_blank" rel="noopener" aria-label="Instagram"></a>
           <a class="ss-link ss-tiktok" href="https://www.tiktok.com/@dottymoouk" target="_blank" rel="noopener" aria-label="TikTok"></a>
@@ -191,11 +204,13 @@ Email: <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a><br>
   <!-- Cookie consent logic (shared file) -->
   <script src="cookie-consent.js"></script>
 
-  <!-- Active nav link + aria-current -->
+  <!-- Active nav link -->
   <script>
     const here = (location.pathname.split('/').pop() || 'index.html');
     document.querySelectorAll('.site-nav a').forEach(a => {
-      if (a.getAttribute('href') === here) {
+      const href = a.getAttribute('href');
+      const hrefFile = (href === '/' ? 'index.html' : href);
+      if (hrefFile === here) {
         a.classList.add('active');
         a.setAttribute('aria-current', 'page');
       }
