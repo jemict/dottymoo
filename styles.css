@@ -162,7 +162,6 @@ body::before{
   color: #ffffff;
 }
 
-
 .cookie-btn-secondary {
   background-color: #ffffff;
   color: #000000;
@@ -192,8 +191,6 @@ body::before{
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   font-size: 0.95rem;
-
-  /* Added: prevent overflow on small screens */
   max-height: 85vh;
   overflow: auto;
 }
@@ -246,7 +243,6 @@ body::before{
     width: 100%;
   }
 }
-
 
 /* ------------------------- */
 /*         CARD LAYOUT       */
@@ -316,6 +312,7 @@ body::before{
     max-width:320px;
   }
 }
+
 /* ------------------------- */
 /*         BLOG IMAGES       */
 /* ------------------------- */
@@ -383,9 +380,6 @@ body::before{
   }
 }
 
-
-
-
 /* ------------------------- */
 /*         CONTENT TEXT      */
 /* ------------------------- */
@@ -428,6 +422,7 @@ body::before{
   line-height:1.4;
   margin:1.2rem 0 0.6rem;
 }
+
 .competition-closing-date {
   background: #fff4d6;
   border-left: 4px solid #ffd166;
@@ -455,8 +450,6 @@ body::before{
   line-height: 1.4;
 }
 
-
-
 /* Mobile heading sizing to prevent giant headings in narrow widths */
 @media (max-width:600px){
   .content h1{ font-size:2.0rem; }
@@ -466,8 +459,6 @@ body::before{
 
 /* ------------------------- */
 /*   TWO COLUMN INFO BLOCK   */
-/*   (What we care about /   */
-/*    How we work)           */
 /* ------------------------- */
 .dm-two-col{
   display:grid;
@@ -477,7 +468,6 @@ body::before{
   margin:1.2rem 0;
 }
 
-/* Each column as its own readable card */
 .dm-col{
   background:rgba(255,255,255,.88);
   border:1px solid rgba(0,0,0,.06);
@@ -518,7 +508,6 @@ body::before{
     margin-bottom:1.2em;
   }
 }
-
 
 /* ------------------------- */
 /*       COMP IMAGE          */
@@ -658,6 +647,20 @@ small{ opacity:.75; }
   color:#555;
 }
 
+/* Add breathing room when multiple paragraphs exist in a card */
+.dm-sample-card p + p{
+  margin-top:10px;
+}
+
+/* NEW: button row/stack helper for cards */
+.btn-row{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
 /* ------------------------- */
 /*     MOBILE NAV            */
 /* ------------------------- */
@@ -723,6 +726,16 @@ small{ opacity:.75; }
   }
 
   .wrap{ padding-top:72px; }
+
+  /* NEW: stack paired buttons on mobile */
+  .btn-row{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .btn-row .btn{
+    width:100%;
+    text-align:center;
+  }
 }
 
 /* ------------------------- */
@@ -735,10 +748,12 @@ small{ opacity:.75; }
   text-decoration:none;
   font-weight:700;
 }
+
 .btn-primary{
   background:var(--dm-coral);
   color:#fff;
 }
+
 .btn-secondary{
   border:2px solid #AFC6D3;
   color:#111;
