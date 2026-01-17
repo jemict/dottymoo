@@ -525,6 +525,32 @@ body::before{
   display:block;
   margin:0 auto;
 }
+/* ------------------------- */
+/*       LETTER              */
+/* ------------------------- */
+.letter-example {
+  position: relative;
+  max-width: 360px;
+  margin: 24px auto;
+}
+
+.letter-example img {
+  width: 100%;
+  filter: blur(3px);
+  opacity: 0.85;
+  border-radius: 12px;
+}
+
+.letter-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
 
 /* ------------------------- */
 /*           FOOTER          */
