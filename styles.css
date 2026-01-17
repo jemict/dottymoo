@@ -385,7 +385,13 @@ body::before{
     max-width:260px;
   }
 }
-
+.raw-image{
+  background: none;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
 /* ------------------------- */
 /*         CONTENT TEXT      */
 /* ------------------------- */
