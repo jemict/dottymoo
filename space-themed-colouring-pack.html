@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/space-themed-colouring-pack.html">
+
+  <title>Space-Themed Colouring Pack | Dotty Moo</title>
+  <meta name="description" content="A simple, space-themed printable colouring pack designed for calm focus, creativity, and screen-free downtime.">
+
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const here = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content">
+
+          <h1>Space-Themed Colouring Pack</h1>
+
+          <p class="lead">
+            Simple, space-themed colouring pages designed for calm focus, creativity, and screen-free downtime.
+          </p>
+
+          <img
+            src="assets/dotty-moo-space-pack-cover.png"
+            alt="Cover of the Dotty Moo Space Pack colouring printable"
+            loading="lazy"
+            style="width:100%; height:auto; border-radius:16px;">
+
+          <hr>
+
+          <h2>What this resource is</h2>
+          <p>
+            This space-themed colouring pack is designed as a calm, low-prep printable for children who enjoy simple,
+            creative tasks. Many families find colouring helpful as a quiet activity after school, during transitions,
+            or when children need a gentle focus.
+          </p>
+          <p>
+            The pages are intentionally straightforward and child-friendly, supporting creativity without lots of instructions
+            or pressure to do things a certain way.
+          </p>
+
+          <h2>Who this may suit</h2>
+          <ul>
+            <li>Children who enjoy space, planets, rockets, and themed colouring</li>
+            <li>Families looking for calm, screen-free activities</li>
+            <li>Children who benefit from quiet, predictable tasks</li>
+            <li>After-school wind-down time, travel, or rainy-day moments</li>
+          </ul>
+
+          <h2>How it can be used</h2>
+          <ul>
+            <li>As a calm activity after school or before dinner</li>
+            <li>As a simple downtime option during weekends and holidays</li>
+            <li>As a quiet activity alongside a story, audiobook, or gentle music</li>
+            <li>To support focus and fine motor practice in a relaxed way</li>
+          </ul>
+
+          <h2>What is included</h2>
+          <ul>
+            <li>A printable PDF pack of space-themed colouring pages</li>
+            <li>Clear, child-friendly designs with a calm layout</li>
+            <li>A simple, low-prep activity that can be reused and reprinted</li>
+          </ul>
+
+          <h2>Practical details</h2>
+          <ul>
+            <li>Instant digital download</li>
+            <li>Printable PDF</li>
+            <li>Designed for calm, low-prep use at home</li>
+          </ul>
+
+          <p>
+            <a class="btn btn-primary"
+               href="https://www.etsy.com/uk/listing/4428052298/dotty-moo-space-colouring-pack-printable"
+               target="_blank" rel="noopener">
+              View download options
+            </a>
+          </p>
+
+          <p>
+            <a class="btn btn-secondary" href="shop.html">Back to shop</a>
+          </p>
+
+          <hr>
+
+          <p><strong>Need help choosing?</strong></p>
+          <p>
+            If you are not sure which resource fits best, you are welcome to <a href="contact.html">contact us</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-card">
+
+      <div>
+        <strong>Dotty Moo Ltd</strong> •
+        <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
+      </div>
+
+      <div class="footer-meta">
+        Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+        Company No. 16877316
+      </div>
+
+      <div class="footer-socials">
+        <p>Follow us <strong>@dottymoouk</strong></p>
+
+        <div class="social-strip-wrapper">
+          <img src="assets/social_strip.png" alt="Social media icons">
+          <a class="ss-link ss-fb" href="https://www.facebook.com/dottymoouk" target="_blank" rel="noopener" aria-label="Facebook"></a>
+          <a class="ss-link ss-ig" href="https://www.instagram.com/dottymoouk" target="_blank" rel="noopener" aria-label="Instagram"></a>
+          <a class="ss-link ss-tiktok" href="https://www.tiktok.com/@dottymoouk" target="_blank" rel="noopener" aria-label="TikTok"></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a> •
+        <a href="terms.html">Terms</a> •
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <small>© Dotty Moo Ltd 2025</small>
+
+    </div>
+  </footer>
+
+  <script src="cookie-consent.js"></script>
+
+</body>
+</html>
