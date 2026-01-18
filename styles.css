@@ -318,6 +318,40 @@ body::before{
     max-width:320px;
   }
 }
+/* ------------------------- */
+/*         SHOP GRID         */
+/* ------------------------- */
+/* Shop grid tweaks */
+.dm-shop-grid {
+  gap: 24px;
+}
+
+/* Small category label in each card */
+.dm-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  margin: 0 0 12px 0;
+}
+
+/* Make sure cards feel uniform */
+.dm-sample-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Encourage a consistent card height without forcing it */
+.dm-sample-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.dm-sample-card p:last-of-type {
+  margin-top: auto;
+}
 
 /* ------------------------- */
 /*         BLOG IMAGES       */
