@@ -426,6 +426,26 @@ body::before{
   box-shadow: none;
   border-radius: 0;
 }
+/* Product page hero image */
+.product-hero{
+  display:block;
+  width:100%;
+  max-width:520px;
+  height:auto;
+  margin:18px auto 0;
+  border-radius:16px;
+  background:#fff;
+  padding:10px;
+  border:1px solid rgba(0,0,0,0.10);
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+@media (max-width:700px){
+  .product-hero{
+    max-width:320px;
+  }
+}
+
 /* ------------------------- */
 /*         CONTENT TEXT      */
 /* ------------------------- */
