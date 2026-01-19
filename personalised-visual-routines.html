@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Personalised Visual Routines | Dotty Moo</title>
-<meta name="description" content="Personalised daily visual routine set for families. Three calm routine boards (morning, afternoon and bedtime) created for your child. One-off £35.">
+<meta name="description" content="Personalised visual routine boards for families. Choose a single routine board for £9.99 or get all three for £25. Calm, personalised, ready-to-print PDFs.">
 <link rel="canonical" href="https://dottymoo.co.uk/personalised-visual-routines.html">
 
 <script type="application/ld+json">
@@ -123,10 +123,12 @@
       const toggle = document.querySelector('.nav-toggle');
 
       if (nav && toggle) {
-        toggle.addEventListener('click', () => {
-          const isOpen = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
+        if (toggle && nav) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
       }
     });
 </script>
@@ -150,9 +152,22 @@
 </p>
 
           <div class="dm-sample-card" role="note" aria-label="Price and overview">
-            <h2>£35 one-off</h2>
-            <p><strong>Includes:</strong> three personalised routine boards (morning, afternoon / after-school, and bedtime), delivered as ready-to-print PDFs.</p>
-            <p><strong>No ongoing support</strong> and no live calls. This keeps it clear, manageable, and affordable.</p>
+            <h2>Pricing</h2>
+
+            <p><strong>£9.99 per routine board</strong></p>
+            <ul>
+              <li>Morning routine</li>
+              <li>Afternoon / after-school routine</li>
+              <li>Bedtime routine</li>
+            </ul>
+
+            <p><strong>Or £25 for all three boards</strong></p>
+
+            <p>
+              All routines are delivered as ready-to-print PDF files, emailed to you.
+              <br>
+              <strong>No ongoing support</strong> and no live calls. This keeps it clear, manageable, and affordable.
+            </p>
           </div>
 
           <h2>What is included</h2>
@@ -165,9 +180,10 @@
           </ul>
 
           <h2>How it is personalised</h2>
-          <p>To personalise your routine set, I will ask for:</p>
+          <p>To personalise your routine board(s), I will ask for:</p>
           <ul>
             <li>Your child’s first name</li>
+            <li>Which routine board you would like (morning, afternoon / after-school, bedtime), or all three</li>
             <li>Preferred visual style: illustrated icons or real-life photos</li>
             <li>Communication level: very simple words, short phrases, or simple sentences</li>
             <li>Key challenges to be aware of (for example transitions, anxiety, refusal, overwhelm)</li>
@@ -188,13 +204,14 @@
           <h2>How to request a routine set</h2>
           <p>Email <a href="mailto:hello@dottymoo.co.uk?subject=Personalised%20Visual%20Routines%20Request">hello@dottymoo.co.uk</a> with:</p>
           <ul>
+            <li>Which routine board you would like (morning, afternoon / after-school, bedtime), or all three</li>
             <li>Your child’s age</li>
             <li>Any key challenges (choose up to three)</li>
             <li>Your two non-negotiables (if needed)</li>
             <li>Whether you would prefer illustrated icons or real-life photos</li>
             <li>Your preferred communication level (words / phrases / sentences)</li>
           </ul>
-          <p>I will confirm whether this option is suitable, and what the next step is.</p>
+          <p>I will confirm the price based on your request, and what the next step is.</p>
 
           <p>
             <a class="btn btn-primary" href="mailto:hello@dottymoo.co.uk?subject=Personalised%20Visual%20Routines%20Request">Email to enquire</a>
@@ -254,8 +271,3 @@
  
 </body>
 </html>
-
-
-
-
-
