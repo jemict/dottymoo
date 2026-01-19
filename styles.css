@@ -276,6 +276,16 @@ body::before{
   height:auto;
   object-fit:contain;
 }
+.dm-price-list{
+  list-style: none;
+  margin: 10px 0 18px;
+  padding: 0;
+  text-align: center;
+}
+
+.dm-price-list li{
+  margin: 6px 0;
+}
 
 /* ------------------------- */
 /*          BANNER           */
