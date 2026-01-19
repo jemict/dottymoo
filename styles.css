@@ -365,7 +365,11 @@ body::before{
   align-items:start;
   margin:1.5rem 0 2rem;
 }
-
+.article {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
 .article-media-text .article-summary{ margin-top:0; }
 
 .article-media-image{ justify-self:start; }
