@@ -638,7 +638,7 @@ body::before{
 /*google embed form*/
 .dm-form-embed {
   max-width: 760px;
-  margin: 2.5rem auto;
+  margin: 0rem auto;
 }
 
 .dm-form-embed iframe {
