@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/download-dotty-moo-activity-pack.html">
+
+  <title>Download | Dotty Moo Activity Pack</title>
+  <meta name="description" content="Download your Dotty Moo Activity Pack.">
+
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preload" as="image" href="assets/banner.png">
+  <link rel="preload" as="image" href="assets/cover.png">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="bg-layer"></div>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const here = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content">
+
+          <h1>Your download is ready</h1>
+
+          <p class="lead">
+            Thank you for your order. You can download the <strong>Dotty Moo Activity Pack</strong> below.
+          </p>
+
+          <p>
+            <a class="btn btn-primary"
+               href="downloads/dotty-moo-activity-pack.pdf"
+               target="_blank"
+               rel="noopener">
+              Download the PDF
+            </a>
+          </p>
+
+          <p style="margin-top:14px;">
+            <strong>Tip:</strong> On phones or tablets, the file may open in your browser first.
+            You can then save it to Files or your downloads.
+          </p>
+
+          <hr>
+
+          <h2>If you cannot access the file</h2>
+
+          <p>
+            If the download does not open, please try again in a few moments.
+            If you are still having trouble, email
+            <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>.
+          </p>
+
+          <p>
+            It helps if you include the email address used at checkout and the approximate time of purchase.
+            You can also search your inbox for your Stripe receipt.
+          </p>
+
+          <hr>
+
+          <p>
+            This resource is for personal or family use only.
+            Please do not share or redistribute the files.
+          </p>
+
+          <p class="btn-row">
+            <a class="btn btn-secondary" href="dotty-moo-activity-pack.html">Back to product details</a>
+            <a class="btn btn-secondary" href="shop.html">Back to shop</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-card">
+
+      <div>
+        <strong>Dotty Moo Ltd</strong> •
+        <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
+      </div>
+
+      <div class="footer-meta">
+        Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+        Company No. 16877316
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a> •
+        <a href="terms.html">Terms</a> •
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <small>© Dotty Moo Ltd 2025</small>
+
+    </div>
+  </footer>
+
+  <script src="cookie-consent.js"></script>
+
+</body>
+</html>
+
+
+
