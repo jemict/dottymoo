@@ -1091,6 +1091,10 @@ small{ opacity:.75; }
   .shop-header{ gap:10px; padding-top:6px; }
   .shop-awning{ filter: drop-shadow(0 8px 16px rgba(0,0,0,.08)); }
 }
+.shop-header{
+  overflow:hidden;
+  padding-bottom: 6px;
+}
 
 /* ------------------------- */
 /*     ACCESSIBLE FOCUS      */
