@@ -635,6 +635,17 @@ body::before{
     grid-template-columns: 1fr;
   }
 }
+/*google embed form*/
+.dm-form-embed {
+  max-width: 760px;
+  margin: 2.5rem auto;
+}
+
+.dm-form-embed iframe {
+  width: 100%;
+  min-height: 2000px; /* important for long forms */
+  border: 0;
+}
 
 
 /* ------------------------- */
