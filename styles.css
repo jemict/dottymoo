@@ -1077,12 +1077,14 @@ small{ opacity:.75; }
 
 /* Awning image */
 .shop-awning{
-  width:min(1100px, 100%);
+  width:100%;
+  max-width:900px;
   height:auto;
   display:block;
-  margin:0 auto;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,.08));
+  margin:0 auto -8px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,.06));
 }
+
 
 /* Slightly tighten spacing on small screens */
 @media (max-width:600px){
