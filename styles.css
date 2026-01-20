@@ -643,7 +643,6 @@ body::before{
 
 .dm-form-embed iframe {
   width: 100%;
-  min-height: 800px; /* important for long forms */
   border: 0;
 }
 
