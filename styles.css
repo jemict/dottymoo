@@ -520,6 +520,49 @@ body::before{
   .dm-gallery{ grid-template-columns:1fr; }
 }
 
+/* Variations (visual style + label style) */
+.dm-variations{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.dm-variation{
+  margin:0;
+  padding: .9rem;
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 14px;
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+.dm-variation a{
+  display:block;
+  border-radius: 12px;
+  overflow:hidden;
+}
+
+.dm-variation img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.dm-variation figcaption{
+  margin-top: .7rem;
+  font-size: .95rem;
+  line-height: 1.4;
+  color: rgba(0,0,0,.75);
+}
+
+/* Mobile: stack */
+@media (max-width: 720px){
+  .dm-variations{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ------------------------- */
 /*         CONTENT TEXT      */
