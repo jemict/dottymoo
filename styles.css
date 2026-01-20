@@ -1053,6 +1053,19 @@ small{ opacity:.75; }
   border:2px solid #AFC6D3;
   color:#111;
 }
+/* Mobile button spacing */
+@media (max-width: 600px) {
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .btn:last-child {
+    margin-bottom: 0;
+  }
+}
 
 /* ------------------------- */
 /*     ACCESSIBLE FOCUS      */
