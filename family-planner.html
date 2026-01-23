@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Family Planner | Dotty Moo</title>
+<meta name="description" content="A calm weekly family planner in a simple grid format. Choose a blank version (£1.99) or a personalised version with your family names added (£2.99).">
+<link rel="canonical" href="https://dottymoo.co.uk/family-planner.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dotty Moo Ltd",
+  "url": "https://dottymoo.co.uk/",
+  "description": "Dotty Moo creates personalised mascot bears for UK schools, plus calm visual resources for families to support routines and everyday moments.",
+  "email": "mailto:hello@dottymoo.co.uk",
+  "image": "https://dottymoo.co.uk/assets/banner.png",
+  "logo": "https://dottymoo.co.uk/assets/favicon.png",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  }
+}
+</script>
+
+<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+<link rel="icon" href="favicon.ico">
+
+<link rel="preload" as="image" href="assets/banner.png">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("site-nav").innerHTML = html;
+
+      // Active link handling
+      const here = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.site-nav a').forEach(a => {
+        if (a.getAttribute('href') === here) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+
+      // Mobile nav toggle
+      const nav = document.querySelector('.site-nav');
+      const toggle = document.querySelector('.nav-toggle');
+
+      if (nav && toggle) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+    });
+</script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+        </div>
+
+        <div class="content">
+
+          <h1>Family Planner</h1>
+
+          <p>
+            A calm weekly family planner in a simple grid layout, designed to keep plans visible without clutter.
+            It includes columns for up to five family members, with colour coded day labels down the side.
+          </p>
+
+          <h2>Simple, calm layout</h2>
+          <p>
+            This planner is intentionally clean and low distraction.
+            The title reads “Family Planner” with the subtitle “Weekly planner for busy families”, and the grid layout
+            shows Monday to Sunday with space to write plans for each family member.
+          </p>
+
+          <p>
+            The current design includes five “Family Member” headings across the top, with pastel day blocks down the left. :contentReference[oaicite:0]{index=0}
+          </p>
+
+          <h3>Preview</h3>
+          <p>
+            This is the exact style and layout you will receive as a high quality PDF. :contentReference[oaicite:1]{index=1}
+          </p>
+
+          <div class="dm-gallery" role="list" aria-label="Family planner preview">
+            <figure class="dm-shot" role="listitem">
+              <!-- Save a PNG preview (recommended) and update the paths below -->
+              <a href="assets/family-planner/family-planner-preview.png" target="_blank" rel="noopener">
+                <img src="assets/family-planner/family-planner-preview.png" alt="Dotty Moo Family Planner weekly grid with five family member columns and Monday to Sunday rows">
+              </a>
+              <figcaption>Family Planner (preview)</figcaption>
+            </figure>
+          </div>
+
+          <section class="dm-pricing" aria-label="Pricing">
+            <h2>Pricing</h2>
+
+            <div class="dm-pricing-grid">
+              <article class="dm-price-card">
+                <h3 class="dm-price-title">Blank family planner</h3>
+                <p class="dm-price-figure">£1.99</p>
+                <p class="dm-price-note">Write names by hand.</p>
+                <ul class="dm-price-bullets">
+                  <li>Instant digital download</li>
+                  <li>High quality PDF</li>
+                  <li>Print as many times as you need</li>
+                </ul>
+              </article>
+
+              <article class="dm-price-card dm-price-card-featured">
+                <div class="dm-badge" aria-label="Most popular">Most popular</div>
+                <h3 class="dm-price-title">Personalised family planner</h3>
+                <p class="dm-price-figure">£2.99</p>
+                <p class="dm-price-note">Your family names added for you.</p>
+                <ul class="dm-price-bullets">
+                  <li>Personalised headings (up to 5 names)</li>
+                  <li>High quality PDF</li>
+                  <li>Emailed to you</li>
+                </ul>
+              </article>
+            </div>
+
+            <p class="dm-pricing-small">
+              Personalised turnaround time: up to <strong>2 working days</strong>.
+            </p>
+          </section>
+
+          <h2>What is included</h2>
+          <ul>
+            <li>1 page weekly family planner (Monday to Sunday)</li>
+            <li>Up to five columns for family members</li>
+            <li>High quality PDF file, ready to print</li>
+          </ul>
+
+          <h2>Personalisation details</h2>
+          <p>If you choose the personalised version, I will ask for:</p>
+          <ul>
+            <li>Up to five first names (or labels like Mum, Dad, Nan)</li>
+            <li>Your email address (so I can send the finished PDF)</li>
+          </ul>
+
+          <h2>How to use</h2>
+          <ul>
+            <li>Print at home on A4</li>
+            <li>Fill in using pen, pencil, or a fine liner</li>
+            <li>Optional: laminate for reuse with a whiteboard marker</li>
+          </ul>
+
+          <section class="dm-order" aria-labelledby="dm-order-title">
+            <h2 id="dm-order-title">How to order</h2>
+
+            <p>
+              Choose your option below and complete payment.
+              After payment, you will receive your download (blank) or a link to the personalisation form (personalised).
+            </p>
+
+            <div class="dm-order-buttons" role="group" aria-label="Purchase options">
+              <!-- Replace these Stripe links with your real ones -->
+              <a class="btn btn-primary" href="https://buy.stripe.com/REPLACE_WITH_BLANK_PLANNER_LINK" target="_blank" rel="noopener">
+                Buy blank planner (£1.99)
+              </a>
+
+              <a class="btn btn-secondary" href="https://buy.stripe.com/REPLACE_WITH_PERSONALISED_PLANNER_LINK" target="_blank" rel="noopener">
+                Buy personalised planner (£2.99)
+              </a>
+            </div>
+
+            <p>
+              <a class="btn btn-secondary" href="shop.html">Back to shop</a>
+            </p>
+
+            <p class="dm-order-note">
+              <small>Personalisation details are collected after payment via a secure form.</small>
+            </p>
+          </section>
+
+          <hr>
+
+          <p><small>
+            Please note: Dotty Moo provides practical visual resources. This page does not offer medical, therapeutic, or diagnostic advice.
+          </small></p>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-card">
+
+      <div>
+        <strong>Dotty Moo Ltd</strong> •
+        <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
+      </div>
+
+      <div class="footer-meta">
+        Registered Office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ<br>
+        Company No. 16877316
+      </div>
+
+      <div class="footer-socials">
+        <p>Follow us <strong>@dottymoouk</strong></p>
+
+        <div class="social-strip-wrapper">
+          <img src="assets/social_strip.png" alt="Social media icons">
+          <a class="ss-link ss-fb" href="https://www.facebook.com/dottymoouk" target="_blank" rel="noopener" aria-label="Facebook"></a>
+          <a class="ss-link ss-ig" href="https://www.instagram.com/dottymoouk" target="_blank" rel="noopener" aria-label="Instagram"></a>
+          <a class="ss-link ss-tiktok" href="https://www.tiktok.com/@dottymoouk" target="_blank" rel="noopener" aria-label="TikTok"></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a> •
+        <a href="terms.html">Terms</a> •
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <small>© Dotty Moo Ltd 2025</small>
+
+    </div>
+  </footer>
+
+  <!-- Cookie consent logic (shared file) -->
+  <script src="cookie-consent.js"></script>
+
+</body>
+</html>
