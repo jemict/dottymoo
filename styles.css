@@ -1159,3 +1159,45 @@ blockquote{
  line-height: 1.5;
  font-weight: 600;
 }
+.range { margin-top: 28px; }
+.range-intro { margin-top: 8px; }
+
+.range-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:16px;
+  margin-top:14px;
+}
+
+.range-card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:14px;
+  padding:12px;
+  text-align:center;
+}
+
+.range-card img{
+  width:100%;
+  height:160px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+}
+
+.range-card h3{
+  margin:10px 0 6px;
+  font-size:1.02rem;
+}
+
+.range-card p{
+  margin:0;
+  font-size:0.95rem;
+  line-height:1.35;
+  color:#333;
+}
+
+.range-note{
+  margin-top:14px;
+  font-size:0.95rem;
+}
