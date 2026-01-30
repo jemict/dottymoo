@@ -1,3 +1,25 @@
+/* =====================================================
+   DOTTY MOO – STYLES
+   Last tidied: 2026-01-30
+   =====================================================
+
+   01. Variables & base
+   02. Background layers
+   03. Accessibility
+   04. Navigation
+   05. Cookie banner & modal
+   06. Layout (wrap + card)
+   07. Header & banner images
+   08. Shop & pricing
+   09. Blog & media
+   10. Forms & embeds
+   11. Typography & content
+   12. Components (two-col, galleries, samples)
+   13. Footer
+   14. Utilities & enhancements
+
+   ===================================================== */
+
 :root{
   --dm-black:#121212;
   --dm-white:#fff;
@@ -10,6 +32,10 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 
+
+/* =====================================================
+   02. Background layers
+   ===================================================== */
 /* Plain body background, dots now handled by .bg-layer */
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -36,9 +62,11 @@ body::before{
   z-index:-1;
 }
 
-/* ------------------------- */
-/*        SKIP LINK          */
-/* ------------------------- */
+
+/* =====================================================
+   03. Accessibility
+   ===================================================== */
+
 .skip-link{
   position:absolute;
   left:-999px;
@@ -54,9 +82,11 @@ body::before{
   top:10px;
 }
 
-/* ------------------------- */
-/*        TOP NAV BAR        */
-/* ------------------------- */
+
+/* =====================================================
+   04. Navigation
+   ===================================================== */
+
 .site-nav{
   position:fixed;
   top:0;
@@ -113,9 +143,11 @@ body::before{
   color:#000;
 }
 
-/* ------------------------- */
-/*   COOKIE BANNER + MODAL   */
-/* ------------------------- */
+
+/* =====================================================
+   05. Cookie banner & modal
+   ===================================================== */
+
 .cookie-banner {
   position: fixed;
   left: 0;
@@ -244,9 +276,11 @@ body::before{
   }
 }
 
-/* ------------------------- */
-/*         CARD LAYOUT       */
-/* ------------------------- */
+
+/* =====================================================
+   06. Layout (wrap + card)
+   ===================================================== */
+
 .wrap{
   min-height:100vh;
   padding:86px 16px 100px;
@@ -287,9 +321,11 @@ body::before{
   margin: 6px 0;
 }
 
-/* ------------------------- */
-/*          BANNER           */
-/* ------------------------- */
+
+/* =====================================================
+   07. Header & banner images
+   ===================================================== */
+
 .header{
   display:flex;
   flex-direction:column;
@@ -328,9 +364,12 @@ body::before{
     max-width:320px;
   }
 }
-/* ------------------------- */
-/*         SHOP GRID         */
-/* ------------------------- */
+
+
+/* =====================================================
+   08. Shop & pricing
+   ===================================================== */
+
 /* Shop grid tweaks */
 .dm-shop-grid {
   gap: 24px;
@@ -357,6 +396,25 @@ body::before{
 .dm-sample-card {
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding-top: 1.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+}
+
+.dm-sample-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  background: rgba(238, 107, 96, 0.55);
+}
+.dm-sample-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
 .dm-sample-card p:last-of-type {
@@ -404,9 +462,11 @@ body::before{
   margin: 6px 0;
 }
 
-/* ------------------------- */
-/*         BLOG IMAGES       */
-/* ------------------------- */
+
+/* =====================================================
+   09. Blog & media
+   ===================================================== */
+
 
 /* Blog: summary + image layout (desktop), image first on mobile */
 .article-media{
@@ -676,7 +736,12 @@ body::before{
     grid-template-columns: 1fr;
   }
 }
-/*google embed form*/
+
+
+/* =====================================================
+   10. Forms & embeds
+   ===================================================== */
+/* Google embed form */
 .dm-form-embed{
   max-width: 760px;
   margin: 2.5rem auto; 
@@ -690,9 +755,10 @@ body::before{
 }
 
 
-/* ------------------------- */
-/*         CONTENT TEXT      */
-/* ------------------------- */
+/* =====================================================
+   11. Typography & content
+   ===================================================== */
+
 .content{
   padding-right:6px;
   overflow-x:hidden;
@@ -767,9 +833,11 @@ body::before{
   .content h3{ font-size:1.1rem; }
 }
 
-/* ------------------------- */
-/*   TWO COLUMN INFO BLOCK   */
-/* ------------------------- */
+
+/* =====================================================
+   12. Components
+   ===================================================== */
+/* Two-column info block */
 .dm-two-col{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -819,9 +887,7 @@ body::before{
   }
 }
 
-/* ------------------------- */
-/*       COMP IMAGE          */
-/* ------------------------- */
+/* Competition image */
 .dm-competition-hero img{
   max-width:600px;
   width:100%;
@@ -829,9 +895,7 @@ body::before{
   display:block;
   margin:0 auto;
 }
-/* ------------------------- */
-/*       LETTER              */
-/* ------------------------- */
+/* Letter preview */
 .letter-example {
   position: relative;
   max-width: 360px;
@@ -856,9 +920,11 @@ body::before{
   border-radius: 6px;
 }
 
-/* ------------------------- */
-/*           FOOTER          */
-/* ------------------------- */
+
+/* =====================================================
+   13. Footer
+   ===================================================== */
+
 .site-footer{ position:relative; }
 
 .footer-card{
@@ -924,9 +990,7 @@ small{ opacity:.75; }
   cursor:pointer;
 }
 
-/* ------------------------- */
-/*         IMAGE SHOW        */
-/* ------------------------- */
+/* Samples / image grid */
 .dm-samples{
   padding:48px 16px;
   max-width:1100px;
@@ -947,6 +1011,27 @@ small{ opacity:.75; }
   margin:0;
   font-size:0.98rem;
   color:#555;
+}
+
+
+/* Utilities for homepage 'Start here' cards */
+.section-intro {
+  margin-top: 0.5rem;
+  max-width: 60ch;
+}
+.card-icon {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+  line-height: 1;
+}
+.card-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+  margin-bottom: 0.4rem;
 }
 
 .dm-samples-grid{
@@ -997,9 +1082,7 @@ small{ opacity:.75; }
   flex-wrap:wrap;
 }
 
-/* ------------------------- */
-/*     MOBILE NAV            */
-/* ------------------------- */
+/* Navigation: mobile overrides */
 @media (max-width:600px){
 
   .site-nav{
@@ -1074,9 +1157,11 @@ small{ opacity:.75; }
   }
 }
 
-/* ------------------------- */
-/*      BUTTONS / MISC       */
-/* ------------------------- */
+
+/* =====================================================
+   09. Buttons & links
+   ===================================================== */
+
 .btn{
   display:inline-block;
   padding:.6rem .9rem;
@@ -1136,9 +1221,7 @@ small{ opacity:.75; }
   padding-bottom: 6px;
 }
 
-/* ------------------------- */
-/*     ACCESSIBLE FOCUS      */
-/* ------------------------- */
+/* Focus styles */
 .site-nav a:focus-visible,
 .footer-card a:focus-visible,
 .btn:focus-visible,
@@ -1201,46 +1284,8 @@ blockquote{
   margin-top:14px;
   font-size:0.95rem;
 }
-.section-intro {
-  margin-top: 0.5rem;
-  max-width: 60ch;
-}
 
-.dm-sample-card {
-  position: relative;
-  padding-top: 1.25rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.dm-sample-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 6px;
-  width: 100%;
-  border-radius: 18px 18px 0 0;
-  background: rgba(238, 107, 96, 0.55);
-}
-
-.dm-sample-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-}
-
-.card-icon {
-  font-size: 1.35rem;
-  margin-bottom: 0.4rem;
-  line-height: 1;
-}
-
-.card-eyebrow {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.55);
-  margin-bottom: 0.4rem;
-}
-
+/* =====================================================
+   14. Utilities & enhancements
+   ===================================================== */
+/* (Intentionally left for future utility helpers.) */
