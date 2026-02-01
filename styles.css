@@ -461,6 +461,35 @@ body::before{
 .price-list li{
   margin: 6px 0;
 }
+/* =========================
+   SHOP: OUT OF STOCK CARD
+   ========================= */
+.dm-sample-card.is-out-of-stock{
+  position: relative;
+}
+
+.dm-sample-card.is-out-of-stock img{
+  opacity: 0.6;
+  filter: grayscale(35%);
+}
+
+.dm-stock-badge{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(18,18,18,.80);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.dm-stock-note{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: rgba(18,18,18,.72);
+}
 
 
 /* =====================================================
