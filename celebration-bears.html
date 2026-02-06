@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="https://dottymoo.co.uk/celebration-bears.html">
+
+  <title>Celebration Bear | Dotty Moo</title>
+  <meta name="description" content="A personalised celebration bear with a printed T-shirt design. Ideal for birthdays, achievements, milestones, and special events.">
+
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="product-page">
+
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+  <script>
+    fetch("nav.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("site-nav").innerHTML = html);
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="content">
+
+          <h1>Celebration Bear</h1>
+
+          <p class="lead">
+            A personalised keepsake bear made for celebrations, milestones, and proud moments.
+          </p>
+
+          <img
+            class="product-hero"
+            src="assets/products/celebration-bear.png"
+            alt="Personalised celebration bear"
+            loading="lazy">
+
+          <hr>
+
+          <h2>What this is</h2>
+          <p>
+            The Celebration Bear is designed for moments worth marking, such as birthdays, achievements,
+            graduations, new jobs, or personal milestones.
+          </p>
+
+          <h2>Personalisation options</h2>
+          <ul>
+            <li>Name on the T-shirt</li>
+            <li>Occasion wording (for example: “Happy Birthday”, “Well done”, “Class of 2026”)</li>
+            <li>Date or short message</li>
+            <li>Choice of bear base (where available)</li>
+          </ul>
+
+          <h2>Who this may suit</h2>
+          <ul>
+            <li>Birthday gifts and milestones</li>
+            <li>Rewards, recognition, and achievements</li>
+            <li>School and club celebration keepsakes</li>
+          </ul>
+
+          <h2>Pricing</h2>
+          <section class="pricing-grid" aria-label="Pricing">
+            <article class="price-card">
+              <h3>Celebration Bear</h3>
+              <p class="price-amount">From £XX.XX</p>
+              <p>UK delivery available.</p>
+              <p class="price-note">Physical product. Made to order.</p>
+
+              <ul class="price-list">
+                <li>Personalised printed T-shirt design</li>
+                <li>Occasion wording options</li>
+                <li>CE and UKCA marked, EN71 compliant (base dependent)</li>
+              </ul>
+            </article>
+          </section>
+
+          <p>
+            <button class="btn btn-primary" type="button" disabled aria-disabled="true">
+              Buy now
+            </button>
+          </p>
+
+          <p>
+            <a class="btn btn-secondary" href="shop.html">Back to shop</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="footer-loader.js"></script>
+  <script src="cookie-consent.js"></script>
+</body>
+</html>
