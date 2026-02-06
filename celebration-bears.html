@@ -18,9 +18,6 @@
 <body class="product-page">
 
   <div class="bg-layer" aria-hidden="true"></div>
-<div class="header">
-  <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
-</div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -31,15 +28,15 @@
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
 
-  <main id="main-content">
-    <div class="wrap">
-      <div class="card">
+ <main id="main-content">
+  <div class="wrap">
+    <div class="card">
 
-        <div class="content">
+      <div class="header">
+        <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+      </div>
 
-         <!-- Remove the separate image strip at the top.
-     Use ONE set of “celebration on each base” images as the chooser. -->
-
+      <div class="content">
 <h1>Celebration Bears</h1>
 <p class="lead">A personalised keepsake bear made for celebrations, milestones, and proud moments.</p>
 <p class="small-note">Available on multiple bear styles. Choose your base below.</p>
@@ -283,6 +280,7 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
+
 
 
 
