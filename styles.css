@@ -518,6 +518,9 @@ body::before{
   font-size: 0.95rem;
   color: #555;
 }
+.dm-sample-card .btn {
+  margin-top: 1rem;
+}
 
 /* =========================
    SHOP: OUT OF STOCK CARD
