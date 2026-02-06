@@ -506,6 +506,12 @@ body::before{
 @media (max-width: 560px){
   .multi-preview-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.dm-sample-card .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0.25rem 0 0.5rem;
+  color: #333;
+}
 
 /* =========================
    SHOP: OUT OF STOCK CARD
