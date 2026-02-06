@@ -512,6 +512,11 @@ body::before{
   margin: 0.25rem 0 0.5rem;
   color: #333;
 }
+.product-detail{
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+}
 
 /* =========================
    SHOP: OUT OF STOCK CARD
