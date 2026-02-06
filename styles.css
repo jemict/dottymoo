@@ -461,6 +461,14 @@ body::before{
 .price-list li{
   margin: 6px 0;
 }
+.dm-availability{
+  margin-top: 0.5rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
 /* =========================
    SHOP: OUT OF STOCK CARD
    ========================= */
