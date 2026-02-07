@@ -124,6 +124,17 @@
 
         <div class="content">
         <h1>Schools & Organisations</h1>
+<div id="page-notice"></div>
+
+<script>
+  fetch("notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
 
 <p class="lead">
   For schools and organisations who want to place a single bulk order at wholesale pricing.
@@ -282,6 +293,7 @@ Each item can be personalised with your logo, with size and colour options confi
 <script src="cookie-consent.js"></script>
 </body>
 </html>
+
 
 
 
