@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="en-GB">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="canonical" href="https://dottymoo.co.uk/get-well-soon-bears.html">
 
-  <title>Get Well Soon Bears | Personalised Comfort Gifts | Dotty Moo</title>
-  <meta name="description" content="Personalised get well soon bears designed as gentle comfort gifts for recovery, hospital stays, and quiet rest days at home.">
+  <title>Get Well Soon Bears | Dotty Moo</title>
+  <meta name="description" content="Personalised get well soon bears and soft toys. Choose your base, then add a calm message, name, and optional icons for a thoughtful comfort gift.">
 
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="icon" href="favicon.ico">
@@ -33,30 +32,33 @@
     <div class="wrap">
       <div class="card">
 
+        <!-- Banner INSIDE the card -->
+        <div class="header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
         <div class="content">
 
           <h1>Get Well Soon Bears</h1>
-<div id="page-notice"></div>
 
-<script>
-  fetch("notice.html")
-    .then(r => r.text())
-    .then(html => {
-      if (html.trim()) {
-        document.getElementById("page-notice").innerHTML = html;
-      }
-    });
-</script>
+          <div id="page-notice"></div>
+          <script>
+            fetch("notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 
           <p class="lead">
             A personalised comfort bear designed to help someone feel cared for during recovery, rest, or a tough week.
           </p>
 
-          <img
-            class="product-hero"
-            src="assets/products/get-well-soon-bear.png"
-            alt="Personalised get well soon bear with printed T-shirt design"
-            loading="lazy">
+          <p class="small-note">
+            Available on multiple bear styles. Choose your base below.
+          </p>
 
           <hr>
 
@@ -69,6 +71,13 @@
             They are not medical products, but they can be a gentle keepsake to help someone feel remembered and supported.
           </p>
 
+          <h2>Personalisation</h2>
+          <ul>
+            <li><strong>Get well message</strong> (for example: “Get well soon”, “Thinking of you”, or your own wording)</li>
+            <li><strong>Name</strong> (optional)</li>
+            <li><strong>Font, colour and optional icon</strong> chosen after selecting your bear style</li>
+          </ul>
+
           <h2>Who this may suit</h2>
           <ul>
             <li>Children or adults who are unwell or recovering</li>
@@ -76,42 +85,95 @@
             <li>Friends and family looking for a meaningful “thinking of you” gift</li>
           </ul>
 
-          <h2>How it is personalised</h2>
-          <ul>
-            <li>Short message, for example “Get well soon” or “Thinking of you”</li>
-            <li>Name (optional)</li>
-            <li>Optional small icons (hearts, stars, smiley, rainbow)</li>
-          </ul>
+          <hr>
 
-          <h2>Product details</h2>
-          <ul>
-            <li><strong>Product size:</strong> 20cm sitting height (sits unaided)</li>
-            <li><strong>Materials:</strong> made from recycled plastics</li>
-            <li><strong>Safety:</strong> CE and UKCA marked, conforms to EN71 toy safety standards</li>
-          </ul>
+          <h2>Choose your bear style</h2>
+          <p class="lead">
+            Select a base bear below to continue. The next page will guide you through personalisation and checkout.
+          </p>
 
-          <h2>Pricing</h2>
-          <section class="pricing-grid" aria-label="Pricing">
-            <article class="price-card">
-              <h3>Get Well Soon Bear</h3>
-              <p class="price-amount">From £13.99</p>
-              <p>Free UK delivery included.</p>
-              <p class="price-note">Physical product.</p>
+          <section class="dm-samples" aria-label="Choose a get well soon bear base">
+            <div class="dm-samples-grid dm-shop-grid">
 
-              <ul class="price-list">
-                <li>Personalised printed T-shirt</li>
-                <li>20cm sitting height</li>
-                <li>Made from recycled plastics</li>
-                <li>CE & UKCA marked (EN71 compliant)</li>
-              </ul>
-            </article>
+              <!-- Classic bear -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/get-well-soon-bear.png"
+                  alt="Get well soon design on classic bear"
+                  loading="lazy">
+                <h3>Classic bear</h3>
+                <p class="price">£14.99</p>
+                <p class="product-detail">(20cm sitting height)</p>
+                <p>A traditional teddy bear base for a gentle comfort gift.</p>
+                <p>
+                  <a class="btn btn-primary" href="get-well-soon-classic.html">Choose this bear</a>
+                </p>
+              </article>
+
+              <!-- Dog soft toy -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/get-well-soon-dog.png"
+                  alt="Get well soon design on dog soft toy"
+                  loading="lazy">
+                <h3>Dog soft toy</h3>
+                <p class="price">£13.99</p>
+                <p class="product-detail">(20cm sitting height)</p>
+                <p>A friendly dog character base, comforting and easy to cuddle.</p>
+                <p>
+                  <a class="btn btn-primary" href="get-well-soon-dog.html">Choose this bear</a>
+                </p>
+              </article>
+
+              <!-- Eco bear -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/get-well-soon-eco.png"
+                  alt="Get well soon design on eco bear"
+                  loading="lazy">
+                <h3>Eco bear</h3>
+                <p class="price">£14.99</p>
+                <p class="product-detail">(20cm sitting height)</p>
+                <p>A soft eco bear option made using recycled materials (where available).</p>
+                <p>
+                  <a class="btn btn-primary" href="get-well-soon-eco.html">Choose this bear</a>
+                </p>
+              </article>
+
+              <!-- Lion soft toy -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/get-well-soon-lion.png"
+                  alt="Get well soon design on lion soft toy"
+                  loading="lazy">
+                <h3>Lion soft toy</h3>
+                <p class="price">£13.99</p>
+                <p class="product-detail">(20cm sitting height)</p>
+                <p>A bold lion character base, great for a brave recovery message.</p>
+                <p>
+                  <a class="btn btn-primary" href="get-well-soon-lion.html">Choose this bear</a>
+                </p>
+              </article>
+
+              <!-- Monkey soft toy -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/get-well-soon-monkey.png"
+                  alt="Get well soon design on monkey soft toy"
+                  loading="lazy">
+                <h3>Monkey soft toy</h3>
+                <p class="price">£13.99</p>
+                <p class="product-detail">(20cm sitting height)</p>
+                <p>A playful monkey character base, for a bright and uplifting gift.</p>
+                <p>
+                  <a class="btn btn-primary" href="get-well-soon-monkey.html">Choose this bear</a>
+                </p>
+              </article>
+
+            </div>
           </section>
 
-          <p>
-            <button class="btn btn-primary" type="button" disabled aria-disabled="true">
-              Buy now
-            </button>
-          </p>
+          <hr>
 
           <p>
             <a class="btn btn-secondary" href="personalised-bears.html">Back to personalised bears</a>
@@ -126,6 +188,3 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
-
-
-
