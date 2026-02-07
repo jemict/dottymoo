@@ -521,6 +521,15 @@ body::before{
 .dm-sample-card .btn {
   margin-top: 1rem;
 }
+.stock-note {
+  font-weight: 600;
+  color: #d36b6b;
+  margin: 0.3rem 0 0.6rem;
+}
+
+.dm-unavailable {
+  opacity: 0.95;
+}
 
 /* =========================
    SHOP: OUT OF STOCK CARD
