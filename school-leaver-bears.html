@@ -39,6 +39,17 @@
         <div class="content">
 
           <h1>School Leaver Bears</h1>
+<div id="page-notice"></div>
+
+<script>
+  fetch("notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
 
           <p class="lead">
             A personalised keepsake bear designed to mark the end of a school chapter and celebrate moving on.
@@ -129,5 +140,6 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
+
 
 
