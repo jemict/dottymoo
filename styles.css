@@ -530,6 +530,17 @@ body::before{
 .dm-unavailable {
   opacity: 0.95;
 }
+.notice {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.notice-warning {
+  background: #fff3e8;
+  color: #9a4a2a;
+}
 
 /* =========================
    SHOP: OUT OF STOCK CARD
