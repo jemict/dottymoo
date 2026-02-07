@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="https://dottymoo.co.uk/classic-bear.html">
+
+  <title>Classic Bear | Create Your Own | Dotty Moo</title>
+  <meta name="description" content="Classic teddy bear base (20cm sitting height) for Create Your Own personalised bears. Choose your wording, then select a font, colour, and optional icon using the guides.">
+
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="product-page">
+
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+  <script>
+    fetch("nav.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("site-nav").innerHTML = html);
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <!-- Banner INSIDE the card -->
+        <div class="header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content">
+
+          <h1>Classic bear</h1>
+
+          <div id="page-notice"></div>
+          <script>
+            fetch("notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
+
+          <p class="lead">
+            A traditional teddy bear base for your Create Your Own personalised bear.
+          </p>
+
+          <!-- Update this image path if your classic base image lives elsewhere -->
+          <img
+            class="product-hero"
+            src="assets/products/classic-bear.png"
+            alt="Classic teddy bear wearing a plain white T-shirt ready for personalisation"
+            loading="lazy">
+
+          <p class="product-detail">(20cm sitting height)</p>
+
+          <hr>
+
+          <h2>What you can personalise</h2>
+          <ul>
+            <li><strong>Name</strong> (optional)</li>
+            <li><strong>Message</strong> (short and readable works best)</li>
+            <li><strong>Design choices</strong> (font, colour, and optional icon)</li>
+          </ul>
+
+          <h2>Price</h2>
+          <section class="pricing-grid" aria-label="Pricing">
+            <article class="price-card">
+              <h3>Classic bear</h3>
+              <p class="price-amount">£14.99</p>
+              <p>UK delivery available.</p>
+              <p class="price-note">Physical product. Made to order.</p>
+
+              <ul class="price-list">
+                <li>Classic teddy bear base</li>
+                <li>20cm sitting height</li>
+                <li>Personalised printed T-shirt design</li>
+                <li>CE and UKCA marked, EN71 compliant (base dependent)</li>
+              </ul>
+            </article>
+          </section>
+
+          <hr>
+
+          <h2>Choose your font, colour and icon</h2>
+          <p>
+            At checkout, you will be asked to type your design choices. Use the guides below to pick the
+            <strong>font</strong>, <strong>colour</strong>, and an <strong>optional icon</strong>.
+          </p>
+
+          <p class="small-note">
+            Tip: you can copy this format into the design choices box:
+            <br><strong>Font: Playful | Colour: Blue | Icon: N1</strong>
+          </p>
+
+          <!-- Guides -->
+          <section class="dm-samples" aria-label="Design choice guides">
+            <div class="dm-samples-grid dm-shop-grid">
+
+              <article class="dm-sample-card">
+                <!-- Update path to where you store these images on your site -->
+                <img src="assets/products/fonts.png" alt="Font guide showing Playful and Handwritten Script options" loading="lazy">
+                <h3>Fonts</h3>
+                <p>Choose: <strong>Playful</strong> or <strong>Handwritten Script</strong>.</p>
+              </article>
+
+              <article class="dm-sample-card">
+                <img src="assets/products/colours.png" alt="Colour guide showing Pink, Blue, Green, Red and Grey options" loading="lazy">
+                <h3>Colours</h3>
+                <p>Choose: <strong>Pink</strong>, <strong>Blue</strong>, <strong>Green</strong>, <strong>Red</strong>, or <strong>Grey</strong>.</p>
+              </article>
+
+              <article class="dm-sample-card">
+                <img src="assets/products/name-icons.png" alt="Icon guide with code labels for optional icons" loading="lazy">
+                <h3>Icons (optional)</h3>
+                <p>Pick one icon code (for example: <strong>N1</strong>) or leave blank.</p>
+              </article>
+
+            </div>
+          </section>
+
+          <hr>
+
+          <h2>Ready to order</h2>
+          <p>
+            When you are ready, continue to checkout and enter your name/message plus your design choices.
+          </p>
+
+          <!-- Link this to your actual Stripe link/page when ready -->
+          <p>
+            <button class="btn btn-primary" type="button" disabled aria-disabled="true">
+              Continue to checkout
+            </button>
+          </p>
+
+          <p>
+            <a class="btn btn-secondary" href="create-your-own-bear.html">Back to Create your own</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="footer-loader.js"></script>
+  <script src="cookie-consent.js"></script>
+</body>
+</html>
