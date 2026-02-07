@@ -6,8 +6,8 @@
 
   <link rel="canonical" href="https://dottymoo.co.uk/seasonal-bears.html">
 
-  <title>Seasonal Bear | Dotty Moo</title>
-  <meta name="description" content="A personalised seasonal bear with a printed T-shirt design. Ideal for events, holidays, and limited edition themes.">
+  <title>Seasonal Bears | Dotty Moo</title>
+  <meta name="description" content="Personalised seasonal bears with limited edition designs for events and holidays. Choose a design, then personalise with a name and optional message.">
 
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="icon" href="favicon.ico">
@@ -31,82 +31,99 @@
   <main id="main-content">
     <div class="wrap">
       <div class="card">
-<!-- Banner INSIDE the card -->
+
+        <!-- Banner INSIDE the card -->
         <div class="header">
           <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
         </div>
+
         <div class="content">
 
-          <h1>Seasonal Bear</h1>
-<div id="page-notice"></div>
+          <h1>Seasonal Bears</h1>
 
-<script>
-  fetch("notice.html")
-    .then(r => r.text())
-    .then(html => {
-      if (html.trim()) {
-        document.getElementById("page-notice").innerHTML = html;
-      }
-    });
-</script>
+          <div id="page-notice"></div>
+          <script>
+            fetch("notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 
           <p class="lead">
-            A personalised bear designed around seasonal moments and limited edition themes.
+            Limited edition designs for seasonal moments, events, and special dates throughout the year.
           </p>
-
-          <img
-            class="product-hero"
-            src="assets/products/seasonal-bear.png"
-            alt="Personalised seasonal bear"
-            loading="lazy">
 
           <hr>
 
-          <h2>What this is</h2>
-          <p>
-            The Seasonal Bear is designed for themed moments throughout the year. This could include seasonal holidays,
-            local events, sports tournaments, or limited edition designs.
+          <h2>How it works</h2>
+          <ul>
+            <li>Choose a seasonal design below</li>
+            <li>Personalise with a <strong>name</strong> (and an optional short message if offered)</li>
+            <li>Select <strong>font, colour and optional icon</strong> at checkout using the codes provided</li>
+          </ul>
+
+          <hr>
+
+          <h2>Choose a seasonal design</h2>
+          <p class="lead">
+            These designs are offered as shown (no base bear selection on this page).
           </p>
 
-          <h2>Personalisation options</h2>
-          <ul>
-            <li>Name on the T-shirt</li>
-            <li>Theme based design (seasonal, sports, event style)</li>
-            <li>Optional date or short message</li>
-            <li>Choice of bear base (where available)</li>
-          </ul>
+          <section class="dm-samples" aria-label="Seasonal bear designs">
+            <div class="dm-samples-grid dm-shop-grid">
 
-          <h2>Who this may suit</h2>
-          <ul>
-            <li>Seasonal gifts</li>
-            <li>Event keepsakes</li>
-            <li>Collectors of limited edition designs</li>
-          </ul>
+              <!-- World Cup / Event Lion -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/seasonal-bear.png"
+                  alt="World Cup / event themed lion"
+                  loading="lazy">
+                <h3>World Cup / Event lion</h3>
+                <p class="price">£13.99</p>
+                <p>A sporty seasonal design, ideal for tournaments, match days and special events.</p>
+                <p>
+                  <a class="btn btn-primary" href="seasonal-world-cup-lion.html">View details</a>
+                </p>
+              </article>
 
-          <h2>Pricing</h2>
-          <section class="pricing-grid" aria-label="Pricing">
-            <article class="price-card">
-              <h3>Seasonal Bear</h3>
-              <p class="price-amount">From £13.99</p>
-              <p>UK delivery available.</p>
-              <p class="price-note">Physical product. Made to order.</p>
+              <!-- Christmas -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/christmas-bear.jpg"
+                  alt="Christmas bear"
+                  loading="lazy">
+                <h3>Christmas bear</h3>
+                <p class="price">£13.99</p>
+                <p>A festive keepsake bear personalised with a name and optional short message.</p>
+                <p>
+                  <a class="btn btn-primary" href="christmas-bears.html">View details</a>
+                </p>
+              </article>
 
-              <ul class="price-list">
-                <li>Personalised printed T-shirt design</li>
-                <li>Seasonal theme options</li>
-                <li>CE and UKCA marked, EN71 compliant (base dependent)</li>
-              </ul>
-            </article>
+              <!-- Graduation -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/school-leaver-bear.png"
+                  alt="Graduation / school leavers bear"
+                  loading="lazy">
+                <h3>Graduation / School Leavers</h3>
+                <p class="price">£13.99</p>
+                <p>A keepsake bear for leavers, personalised with a name and short message on the T-shirt.</p>
+                <p>
+                  <a class="btn btn-primary" href="school-leaver-bears.html">View details</a>
+                </p>
+              </article>
+
+            </div>
           </section>
 
-          <p>
-            <button class="btn btn-primary" type="button" disabled aria-disabled="true">
-              Buy now
-            </button>
-          </p>
+          <hr>
 
           <p>
-            <a class="btn btn-secondary" href="personalised-bears.html">Back to personalised-bears</a>
+            <a class="btn btn-secondary" href="personalised-bears.html">Back to personalised bears</a>
           </p>
 
         </div>
@@ -118,9 +135,3 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
-
