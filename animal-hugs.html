@@ -40,6 +40,17 @@
         <div class="content">
 
           <h1>Animal Hugs</h1>
+<div id="page-notice"></div>
+
+<script>
+  fetch("notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
 
           <p class="lead">
             Personalised animal soft toys for animal lovers, thoughtful everyday gifting, and comfort keepsakes.
@@ -175,5 +186,6 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
+
 
 
