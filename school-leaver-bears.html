@@ -32,24 +32,26 @@
   <main id="main-content">
     <div class="wrap">
       <div class="card">
-<!-- Banner INSIDE the card -->
+
+        <!-- Banner INSIDE the card -->
         <div class="header">
           <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
         </div>
+
         <div class="content">
 
           <h1>School Leaver Bears</h1>
-<div id="page-notice"></div>
 
-<script>
-  fetch("notice.html")
-    .then(r => r.text())
-    .then(html => {
-      if (html.trim()) {
-        document.getElementById("page-notice").innerHTML = html;
-      }
-    });
-</script>
+          <div id="page-notice"></div>
+          <script>
+            fetch("notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 
           <p class="lead">
             A personalised keepsake bear designed to mark the end of a school chapter and celebrate moving on.
@@ -60,16 +62,18 @@
             src="assets/products/school-leaver-bear.png"
             alt="Personalised school leaver bear with printed T-shirt"
             loading="lazy">
-  <p class="product-detail">(22cm sitting height)</p>
+
+          <p class="product-detail">(17cm sitting height)</p>
+
           <hr>
 
           <h2>What this is</h2>
           <p>
             School Leaver Bears are personalised soft toys created as a meaningful keepsake for children
-            leaving a nursery, primary school, or other educational setting.
+            leaving nursery, primary school, or another educational setting.
           </p>
           <p>
-            Each bear is designed to feel familiar, comforting, and special — something children can keep
+            Each bear is designed to feel familiar, comforting, and special, something children can keep
             as they move on to their next stage.
           </p>
 
@@ -80,19 +84,30 @@
             <li>Schools, PTAs or settings organising leaver gifts</li>
           </ul>
 
-          <h2>How it is personalised</h2>
+          <hr>
+
+          <h2>Personalisation</h2>
+          <p>
+            You can personalise the T-shirt with the child’s details and either a <strong>school name</strong> or a <strong>school logo</strong>.
+          </p>
+
+          <h3>What you will enter at checkout</h3>
           <ul>
-            <li>Child’s name</li>
-            <li>School name or logo</li>
-            <li>Year</li>
+            <li><strong>Child’s name</strong></li>
+            <li><strong>Year</strong> (for example: 2026)</li>
+            <li><strong>School name OR school logo</strong></li>
           </ul>
 
-          <h2>Product details</h2>
-          <ul>
-            <li><strong>Product size:</strong> 20cm sitting height (sits unaided)</li>
-            <li><strong>Materials:</strong> made from recycled plastics</li>
-            <li><strong>Safety:</strong> CE and UKCA marked, conforms to EN71 toy safety standards</li>
-          </ul>
+          <p class="small-note">
+            If you choose <strong>school name</strong>, just type the school name at checkout.
+          </p>
+
+          <p class="small-note">
+            If you choose <strong>school logo</strong>, place your order first, then email the logo to
+            <strong>hello@dottymoo.co.uk</strong>. Please include your <strong>order name</strong> (and order number if available).
+          </p>
+
+          <hr>
 
           <h2>How they are used</h2>
           <p>
@@ -103,17 +118,24 @@
             They work equally well as individual gifts or as part of a coordinated school or class order.
           </p>
 
+          <h2>Product details</h2>
+          <ul>
+            <li><strong>Product size:</strong> 17cm sitting height (sits unaided)</li>
+            <li><strong>Materials:</strong> made from recycled plastics</li>
+            <li><strong>Safety:</strong> CE and UKCA marked, conforms to EN71 toy safety standards</li>
+          </ul>
+
           <h2>Pricing</h2>
           <section class="pricing-grid" aria-label="Pricing">
             <article class="price-card">
               <h3>School Leaver Bear</h3>
               <p class="price-amount">From £14.99</p>
               <p>Free UK delivery included.</p>
-              <p class="price-note">Physical product.</p>
+              <p class="price-note">Physical product. Made to order.</p>
 
               <ul class="price-list">
                 <li>Personalised printed T-shirt</li>
-                <li>20cm sitting height</li>
+                <li>17cm sitting height</li>
                 <li>Made from recycled plastics</li>
                 <li>CE & UKCA marked (EN71 compliant)</li>
               </ul>
@@ -139,10 +161,3 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
