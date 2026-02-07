@@ -36,6 +36,17 @@
         <div class="content">
 
           <h1>Mascot, Club and Team Bears</h1>
+<div id="page-notice"></div>
+
+<script>
+  fetch("notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
 
           <p class="lead">
             A personalised bear designed for clubs, teams and organisations who want a keepsake that represents their identity.
@@ -117,3 +128,4 @@
   <script src="cookie-consent.js"></script>
 </body>
 </html>
+
