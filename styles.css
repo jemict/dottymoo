@@ -1286,6 +1286,11 @@ small{ opacity:.75; }
   }
 }
 
+.price-list {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+}
 
 /* =====================================================
    09. Buttons & links
