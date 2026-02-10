@@ -14,7 +14,8 @@
     // Attach onload BEFORE setting src (important for cached images)
     modalImg.onload = () => {
       viewport.scrollLeft = 0;
-      viewport.scrollTop = 0;
+const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
+viewport.scrollTop = Math.round(maxY * 0.45); // 0.35–0.55 works well
     };
 
     modalImg.src = imgEl.currentSrc || imgEl.src;
@@ -60,3 +61,4 @@
     if (e.key === "Escape") closeModal();
   });
 })();
+
