@@ -542,6 +542,65 @@ body::before{
   background: #fff3e8;
   color: #9a4a2a;
 }
+.zoomable { cursor: zoom-in; }
+
+.image-hint{
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Modal */
+.img-modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.img-modal.is-open{ display: block; }
+
+.img-modal__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.img-modal__card{
+  position: relative;
+  max-width: min(92vw, 900px);
+  max-height: 90vh;
+  margin: 5vh auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+.img-modal__card img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(90vh - 24px);
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.img-modal__close{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.95);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
 /* =========================
    SHOP: OUT OF STOCK CARD
