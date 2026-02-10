@@ -7,32 +7,32 @@
     };
   }
 
-  function openModal(imgEl) {
-    const { modal, modalImg, viewport } = getEls();
-    if (!modal || !modalImg || !viewport || !imgEl) return;
+ function openModal(imgEl) {
+  const { modal, modalImg, viewport } = getEls();
+  if (!modal || !modalImg || !viewport || !imgEl) return;
 
-    // Attach onload BEFORE setting src (important for cached images)
-    modalImg.onload = () => {
-      viewport.scrollLeft = 0;
-const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
-viewport.scrollTop = Math.round(maxY * 0.45); // 0.35–0.55 works well
-    };
+  modalImg.onload = () => {
+    viewport.scrollLeft = 0;
 
-    modalImg.src = imgEl.currentSrc || imgEl.src;
-    modalImg.alt = imgEl.alt || "";
+    const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
+    viewport.scrollTop = Math.round(maxY * 0.45); // halfway-ish
+  };
 
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+  modalImg.src = imgEl.currentSrc || imgEl.src;
+  modalImg.alt = imgEl.alt || "";
 
-    // Fallback: if the image is already loaded from cache, onload may not fire
-    // so we also reset scroll on the next frame
-    requestAnimationFrame(() => {
-     viewport.scrollLeft = 0;
-const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
-viewport.scrollTop = Math.round(maxY * 0.45); // 0.35–0.55 works well
-    });
-  }
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+
+  // extra nudge for cached images/layout timing
+  requestAnimationFrame(() => {
+    viewport.scrollLeft = 0;
+    const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
+    viewport.scrollTop = Math.round(maxY * 0.45);
+  });
+}
+
 
   function closeModal() {
     const { modal, modalImg } = getEls();
@@ -62,5 +62,6 @@ viewport.scrollTop = Math.round(maxY * 0.45); // 0.35–0.55 works well
     if (e.key === "Escape") closeModal();
   });
 })();
+
 
 
