@@ -608,6 +608,9 @@ width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
 /* stop the close button being covered by the image */
 .img-modal__viewport {
   overflow: auto;
+   display: block;       /* not flex */
+  align-items: unset;
+  justify-content: unset;
 }
 
 .img-modal__card{
