@@ -608,13 +608,12 @@ body::before{
   border-radius: 12px;
 }
 
-/* Zoomed image */
+/* Zoomed image: make it genuinely larger so scrollbars work */
 .img-modal__viewport img{
   display: block;
-  max-width: 100%;
+  width: 200%;       /* 2x zoom */
   height: auto;
-  transform: scale(2);
-  transform-origin: top left;
+  max-width: none;   /* important, otherwise it clamps to 100% */
 }
 
 
