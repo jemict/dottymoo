@@ -606,6 +606,41 @@ body::before{
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+/* Zoom modal card: scrollable */
+.img-modal__card{
+  position: relative;
+  width: min(96vw, 1000px);
+  height: min(86vh, 820px);
+  margin: 6vh auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* Inner scroll area */
+.img-modal__viewport{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  cursor: grab;
+}
+
+.img-modal__viewport:active{
+  cursor: grabbing;
+}
+
+/* Zoomed image */
+.img-modal__viewport img{
+  display: block;
+  transform: scale(2);
+  transform-origin: 50% 35%; /* slightly above centre helps focus on chest */
+  will-change: transform;
+}
+
 /* =========================
    SHOP: OUT OF STOCK CARD
    ========================= */
