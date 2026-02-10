@@ -1495,12 +1495,14 @@ blockquote{
 /*very bottom*/
 @media (max-width: 600px) {
   .img-modal__card {
-    width: 92vw;
-    height: 90vh;
+     height: auto;
+   max-height: 85vh;
   }
 
   .img-modal__viewport img {
-    width: 140%;   /* was 200% */
+     height: auto;
+     max-height: calc(85vh - 24px);
+     overflow: auto;
   }
 }
 
