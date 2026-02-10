@@ -1492,6 +1492,17 @@ blockquote{
   margin-top:14px;
   font-size:0.95rem;
 }
+/*very bottom*/
+@media (max-width: 600px) {
+  .img-modal__card {
+    width: 92vw;
+    height: 90vh;
+  }
+
+  .img-modal__viewport img {
+    width: 140%;   /* was 200% */
+  }
+}
 
 /* =====================================================
    14. Utilities & enhancements
