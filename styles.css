@@ -606,10 +606,10 @@ width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
 }
 
 /* stop the close button being covered by the image */
-.img-modal__viewport{
-  position: relative;
-  z-index: 1;
+.img-modal__viewport {
+  overflow: auto;
 }
+
 .img-modal__card{
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -642,12 +642,14 @@ width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
 }
 
 /* Zoomed image */
-.img-modal__viewport img{
+
+.img-modal__viewport img {
   display: block;
-  transform: scale(2);
-  transform-origin: 50% 35%; /* slightly above centre helps focus on chest */
-  will-change: transform;
+  height: auto;
+  width: 200%;          /* 2x zoom, but real layout size */
+  max-width: none;      /* important */
 }
+
 
 /* =========================
    SHOP: OUT OF STOCK CARD
