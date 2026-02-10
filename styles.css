@@ -570,9 +570,9 @@ body::before{
 
 .img-modal__card{
   position: relative;
-  max-width: min(92vw, 900px);
-  max-height: 90vh;
-  margin: 5vh auto;
+width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
+  max-height: 85vh;
+  margin: auto;
   background: #fff;
   border-radius: 18px;
   padding: 12px;
