@@ -23,10 +23,10 @@ function openModal(imgEl) {
  modalImg.onload = () => {
   // Always start hard-left
   viewport.scrollLeft = 0;
-viewport.scrollTop = 0.5;
+viewport.scrollTop = 0;
    
 };
-
+  }
 
 
   function closeModal() {
@@ -59,6 +59,7 @@ viewport.scrollTop = 0.5;
     }
   });
 })();
+
 
 
 
