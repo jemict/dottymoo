@@ -22,14 +22,8 @@
 
   
   modalImg.onload = () => {
-    const vW = viewport.clientWidth;
-    const vH = viewport.clientHeight;
 
-    const imgW = modalImg.offsetWidth * 2; // because scale(2)
-    const imgH = modalImg.offsetHeight * 2;
-
-    // Centre horizontally, slightly above centre vertically (shirt area)
-    viewport.scrollLeft = 0;   // hard left
+    viewport.scrollLeft = 0;  
  viewport.scrollTop = 0;
   };
 }
@@ -65,6 +59,7 @@
     }
   });
 })();
+
 
 
 
