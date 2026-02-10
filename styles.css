@@ -551,6 +551,7 @@ body::before{
   text-align: center;
 }
 
+
 /* Modal */
 .img-modal{
   position: fixed;
@@ -601,7 +602,8 @@ body::before{
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
-
+/* TEMP TEST */
+.img-modal { display: block !important; }
 /* =========================
    SHOP: OUT OF STOCK CARD
    ========================= */
