@@ -23,14 +23,8 @@ function openModal(imgEl) {
  modalImg.onload = () => {
   // Always start hard-left
   viewport.scrollLeft = 0;
-
-  // After layout has settled, jump the vertical scrollbar to halfway down
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      const maxY = viewport.scrollHeight - viewport.clientHeight;
-      viewport.scrollTop = Math.max(0, maxY * 0.5); // 0.5 = halfway
-    });
-  });
+viewport.scrollTop = 0.5;
+   
 };
 
 
@@ -65,6 +59,7 @@ function openModal(imgEl) {
     }
   });
 })();
+
 
 
 
