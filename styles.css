@@ -602,7 +602,10 @@ body::before{
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
-
+.img-modal__card{
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
 /* =========================
    SHOP: OUT OF STOCK CARD
    ========================= */
