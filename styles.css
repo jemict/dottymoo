@@ -552,14 +552,13 @@ body::before{
 }
 
 
-/* Modal */
+/* Modal base */
 .img-modal{
   position: fixed;
   inset: 0;
   display: none;
   z-index: 9999;
 }
-
 .img-modal.is-open{ display: block; }
 
 .img-modal__backdrop{
@@ -568,31 +567,26 @@ body::before{
   background: rgba(0,0,0,0.55);
 }
 
+/* Card */
 .img-modal__card{
   position: relative;
-width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
-  max-height: 85vh;
-  margin: auto;
+  width: min(66vw, 900px);
+  height: min(86vh, 820px);
+  margin: 6vh auto;
   background: #fff;
   border-radius: 18px;
   padding: 12px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+
+  overflow: hidden; /* IMPORTANT: card should not scroll */
 }
 
-.img-modal__card img{
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: calc(90vh - 24px);
-  object-fit: contain;
-  border-radius: 12px;
-}
-
+/* Close button */
 .img-modal__close{
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 10;
+  z-index: 20;
   width: 44px;
   height: 44px;
   border: 0;
@@ -605,75 +599,22 @@ width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
   box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
-/* stop the close button being covered by the image */
-.img-modal__viewport {
-  overflow: auto;
-   display: block;       /* not flex */
-  align-items: unset;
-  justify-content: unset;
-}
-
-.img-modal__card{
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-/* Zoom modal card: scrollable */
-.img-modal__card{
-  position: relative;
-  width: min(96vw, 1000px);
-  height: min(86vh, 820px);
-  margin: 6vh auto;
-  background: #fff;
-  border-radius: 18px;
-  padding: 12px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-  overflow: hidden;
-}
-
-/* Inner scroll area */
+/* Scroll area */
 .img-modal__viewport{
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: auto;                 /* ONLY this scrolls */
   -webkit-overflow-scrolling: touch;
   border-radius: 12px;
-  cursor: grab;
-}
-
-.img-modal__viewport:active{
-  cursor: grabbing;
 }
 
 /* Zoomed image */
-
-.img-modal__viewport img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  transform: scale(2);
-  transform-origin: top center;
-}
-/* Modal hidden by default */
-.img-modal { 
-  display: none;
-}
-
-.img-modal.is-open { 
-  display: block;
-}
-
-/* Your viewport should scroll */
-.img-modal__viewport{
-  overflow: auto;
-}
-
-/* Zoom using transform (your old behaviour) */
 .img-modal__viewport img{
   display: block;
-  height: auto;
   max-width: 100%;
+  height: auto;
   transform: scale(2);
-  transform-origin: top center;
+  transform-origin: top left;
 }
 
 
