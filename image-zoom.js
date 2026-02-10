@@ -7,27 +7,30 @@
     };
   }
 
-function openModal(imgEl) {
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("imgModalImage");
-  const viewport = document.getElementById("imgModalViewport");
-  if (!modal || !modalImg || !viewport || !imgEl) return;
+  function openModal(imgEl) {
+    const { modal, modalImg, viewport } = getEls();
+    if (!modal || !modalImg || !viewport || !imgEl) return;
 
-  modalImg.src = imgEl.currentSrc || imgEl.src;
-  modalImg.alt = imgEl.alt || "";
+    // Attach onload BEFORE setting src (important for cached images)
+    modalImg.onload = () => {
+      viewport.scrollLeft = 0;
+      viewport.scrollTop = 0;
+    };
 
-  modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
+    modalImg.src = imgEl.currentSrc || imgEl.src;
+    modalImg.alt = imgEl.alt || "";
 
- modalImg.onload = () => {
-  // Always start hard-left
-  viewport.scrollLeft = 0;
-viewport.scrollTop = 0;
-   
-};
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    // Fallback: if the image is already loaded from cache, onload may not fire
+    // so we also reset scroll on the next frame
+    requestAnimationFrame(() => {
+      viewport.scrollLeft = 0;
+      viewport.scrollTop = 0;
+    });
   }
-
 
   function closeModal() {
     const { modal, modalImg } = getEls();
@@ -35,8 +38,9 @@ viewport.scrollTop = 0;
 
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
-    modalImg.removeAttribute("src");
+    modalImg.src = "";
     modalImg.alt = "";
+    modalImg.onload = null;
     document.body.style.overflow = "";
   }
 
@@ -47,24 +51,12 @@ viewport.scrollTop = 0;
       return;
     }
 
-    const closeTarget = e.target.closest("[data-close='true']");
-    if (closeTarget) {
+    if (e.target.closest("[data-close='true']")) {
       closeModal();
     }
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeModal();
-    }
+    if (e.key === "Escape") closeModal();
   });
 })();
-
-
-
-
-
-
-
-
-
