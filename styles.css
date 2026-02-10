@@ -649,8 +649,31 @@ width: min(66vw, 900px);   /* ~2/3 of viewport, capped */
 .img-modal__viewport img {
   display: block;
   height: auto;
-  width: 200%;          /* 2x zoom, but real layout size */
-  max-width: none;      /* important */
+  max-width: 100%;
+  transform: scale(2);
+  transform-origin: top center;
+}
+/* Modal hidden by default */
+.img-modal { 
+  display: none;
+}
+
+.img-modal.is-open { 
+  display: block;
+}
+
+/* Your viewport should scroll */
+.img-modal__viewport{
+  overflow: auto;
+}
+
+/* Zoom using transform (your old behaviour) */
+.img-modal__viewport img{
+  display: block;
+  height: auto;
+  max-width: 100%;
+  transform: scale(2);
+  transform-origin: top center;
 }
 
 
