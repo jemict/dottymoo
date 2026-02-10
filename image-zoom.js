@@ -30,7 +30,7 @@
 
     // Centre horizontally, slightly above centre vertically (shirt area)
     viewport.scrollLeft = 0;   // hard left
-    viewport.scrollTop  = Math.max(0, (imgH - vH) * 0.35);
+ viewport.scrollTop = 0;
   };
 }
 
@@ -65,5 +65,6 @@
     }
   });
 })();
+
 
 
