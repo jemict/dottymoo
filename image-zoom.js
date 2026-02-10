@@ -7,32 +7,51 @@
     };
   }
 
- function openModal(imgEl) {
-  const { modal, modalImg, viewport } = getEls();
-  if (!modal || !modalImg || !viewport || !imgEl) return;
+  function setInitialScroll(viewport) {
+    if (!viewport) return;
 
-  modalImg.onload = () => {
-    viewport.scrollLeft = 0;
+    const maxLeft = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    const maxTop = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
 
-    const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
-    viewport.scrollTop = Math.round(maxY * 0.45); // halfway-ish
-  };
+    // Halfway across + halfway down
+    viewport.scrollLeft = Math.round(maxLeft * 0.5);
+    viewport.scrollTop = Math.round(maxTop * 0.45); // slightly above exact middle
+  }
 
-  modalImg.src = imgEl.currentSrc || imgEl.src;
-  modalImg.alt = imgEl.alt || "";
+  function openModal(imgEl) {
+    const { modal, modalImg, viewport } = getEls();
+    if (!modal || !modalImg || !viewport || !imgEl) return;
 
-  modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
+    // Clear any previous handler so we don't stack onload events
+    modalImg.onload = null;
 
-  // extra nudge for cached images/layout timing
-  requestAnimationFrame(() => {
-    viewport.scrollLeft = 0;
-    const maxY = Math.max(0, viewport.scrollHeight - viewport.clientHeight);
-    viewport.scrollTop = Math.round(maxY * 0.45);
-  });
-}
+    // Set src/alt first so onload can fire reliably
+    modalImg.src = imgEl.currentSrc || imgEl.src;
+    modalImg.alt = imgEl.alt || "";
 
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    // When image loads, set scroll positions
+    modalImg.onload = () => {
+      // 1) first paint/layout tick
+      requestAnimationFrame(() => {
+        setInitialScroll(viewport);
+
+        // 2) second tick helps with cached images and some mobile browsers
+        requestAnimationFrame(() => setInitialScroll(viewport));
+      });
+    };
+
+    // If the image is already cached and complete, onload may not fire
+    if (modalImg.complete) {
+      requestAnimationFrame(() => {
+        setInitialScroll(viewport);
+        requestAnimationFrame(() => setInitialScroll(viewport));
+      });
+    }
+  }
 
   function closeModal() {
     const { modal, modalImg } = getEls();
@@ -62,6 +81,3 @@
     if (e.key === "Escape") closeModal();
   });
 })();
-
-
-
