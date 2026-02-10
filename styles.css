@@ -1492,17 +1492,22 @@ blockquote{
   margin-top:14px;
   font-size:0.95rem;
 }
-/*very bottom*/
-@media (max-width: 600px) {
-  .img-modal__card {
-     height: auto;
-   max-height: 85vh;
+
+/* Modal sizing on mobile */
+@media (max-width: 600px){
+  .img-modal__card{
+    width: 92vw;
+    height: 70svh;
+    margin: 12svh auto;
+    padding: 10px;
   }
 
-  .img-modal__viewport img {
-     height: auto;
-     max-height: calc(85vh - 24px);
-     overflow: auto;
+  /* fallback for browsers that don’t support svh */
+  @supports not (height: 70svh){
+    .img-modal__card{
+      height: 70vh;
+      margin: 12vh auto;
+    }
   }
 }
 
