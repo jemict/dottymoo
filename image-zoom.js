@@ -22,7 +22,7 @@ function openModal(imgEl) {
 
   modalImg.onload = () => {
     viewport.scrollLeft = 0;
-    viewport.scrollTop = 0; // back to “as was”
+    viewport.scrollTop = 0.3; // back to “as was”
   };
 }
 
@@ -58,6 +58,7 @@ function openModal(imgEl) {
     }
   });
 })();
+
 
 
 
