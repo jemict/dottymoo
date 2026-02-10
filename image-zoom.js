@@ -7,29 +7,32 @@
     };
   }
 
-  function openModal(imgEl) {
-    const { modal, modalImg, viewport } = getEls();
-    if (!modal || !modalImg || !viewport || !imgEl) return;
+ function openModal(imgEl) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("imgModalImage");
+  const viewport = document.getElementById("imgModalViewport");
+  if (!modal || !modalImg || !viewport || !imgEl) return;
 
-    modalImg.src = imgEl.currentSrc || imgEl.src;
-    modalImg.alt = imgEl.alt || "";
+  modalImg.src = imgEl.currentSrc || imgEl.src;
+  modalImg.alt = imgEl.alt || "";
 
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
 
-    // Centre the scroll after the image is ready
-    modalImg.onload = () => {
-      const rect = modalImg.getBoundingClientRect();
-      const vRect = viewport.getBoundingClientRect();
+  modalImg.onload = () => {
+    const vW = viewport.clientWidth;
+    const vH = viewport.clientHeight;
 
-      const targetX = Math.max(0, (rect.width - vRect.width) / 2);
-      const targetY = Math.max(0, (rect.height - vRect.height) * 0.35);
+    const imgW = modalImg.offsetWidth * 2; // because scale(2)
+    const imgH = modalImg.offsetHeight * 2;
 
-      viewport.scrollLeft = targetX;
-      viewport.scrollTop = targetY;
-    };
-  }
+    // Centre horizontally, slightly above centre vertically (shirt area)
+    viewport.scrollLeft = Math.max(0, (imgW - vW) / 2);
+    viewport.scrollTop  = Math.max(0, (imgH - vH) * 0.35);
+  };
+}
+
 
   function closeModal() {
     const { modal, modalImg } = getEls();
@@ -61,3 +64,4 @@
     }
   });
 })();
+
