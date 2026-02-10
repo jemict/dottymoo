@@ -20,6 +20,7 @@
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 
+  
   modalImg.onload = () => {
     const vW = viewport.clientWidth;
     const vH = viewport.clientHeight;
@@ -28,7 +29,7 @@
     const imgH = modalImg.offsetHeight * 2;
 
     // Centre horizontally, slightly above centre vertically (shirt area)
-    viewport.scrollLeft = Math.max(0, (imgW - vW) / 2);
+    viewport.scrollLeft = 0;   // hard left
     viewport.scrollTop  = Math.max(0, (imgH - vH) * 0.35);
   };
 }
@@ -64,4 +65,5 @@
     }
   });
 })();
+
 
