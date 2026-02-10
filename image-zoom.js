@@ -7,7 +7,7 @@
     };
   }
 
- function openModal(imgEl) {
+function openModal(imgEl) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("imgModalImage");
   const viewport = document.getElementById("imgModalViewport");
@@ -20,13 +20,12 @@
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 
-  
   modalImg.onload = () => {
-
-    viewport.scrollLeft = 0;  
- viewport.scrollTop = 0;
+    viewport.scrollLeft = 0;
+    viewport.scrollTop = 0; // back to “as was”
   };
 }
+
 
 
   function closeModal() {
@@ -59,6 +58,7 @@
     }
   });
 })();
+
 
 
 
