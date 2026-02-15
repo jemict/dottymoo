@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/leavers.html">
+
+  <title>Leavers’ Graduation Bears for Schools | Dotty Moo</title>
+  <meta name="description" content="Personalised leavers’ graduation bears for schools. Choose wholesale bulk ordering or a fully managed parent ordering window with delivery to school.">
+
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preload" as="image" href="assets/banner.png">
+  <link rel="preload" as="image" href="assets/cover.png">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        // Active link handling
+        const here = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        // Mobile nav toggle
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header shop-header">
+          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content">
+
+          <h1>Leavers’ Graduation Bears</h1>
+
+          <div id="page-notice"></div>
+          <script>
+            fetch("notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
+
+          <p>
+            A simple, personalised keepsake to celebrate school leavers.
+            Each bear is printed with your school logo and optional year group, then supplied ready for end-of-year events.
+          </p>
+
+          <p class="lead">
+            Schools can choose either a single wholesale bulk order, or a fully managed parent ordering window with delivery to school.
+          </p>
+
+          <hr>
+
+          <h2>Two ways to order</h2>
+
+          <section class="dm-samples" aria-label="Leavers ordering options">
+            <div class="dm-samples-grid dm-shop-grid">
+
+              <!-- Wholesale option -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/school-leaver-bear.png"
+                  alt="Leavers bear printed with a school logo"
+                  loading="lazy">
+
+                <h3>Option 1: Wholesale bulk order</h3>
+                <p>
+                  One simple school order, supplied in a single batch, ready for your ceremony or leavers’ events.
+                </p>
+
+                <p class="dm-availability">
+                  No artwork fees, no delivery charges, no VAT
+                </p>
+
+                <p>
+                  <strong>Wholesale pricing per bear:</strong><br>
+                  20–49 bears – £7.30<br>
+                  50–99 bears – £6.40<br>
+                  100+ bears – £5.90<br>
+                  <small>Minimum order: 20 bears</small>
+                </p>
+
+                <p>
+                  <a class="btn btn-primary" href="contact.html">Enquire for your school</a>
+                </p>
+              </article>
+
+              <!-- Parent ordering option -->
+              <article class="dm-sample-card">
+                <img
+                  src="assets/products/bedtime-bear.png"
+                  alt="A keepsake bear delivered to school as a single batch"
+                  loading="lazy">
+
+                <h3>Option 2: Parent direct ordering</h3>
+                <p>
+                  We create a dedicated ordering page for your school with an ordering window.
+                  Families order and pay Dotty Moo directly, then we deliver to school as one batch.
+                </p>
+
+                <ul>
+                  <li>No cash handling</li>
+                  <li>No forms</li>
+                  <li>No office administration</li>
+                </ul>
+
+                <p class="dm-availability">
+                  Parent ordering pages are accessed via a link shared by your school.
+                </p>
+
+                <p>
+                  <a class="btn btn-primary" href="#parents">I am a parent</a>
+                  <a class="btn btn-secondary" href="contact.html">I am a school</a>
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+          <hr>
+
+          <h2>Examples of the finished style</h2>
+          <p class="lead">
+            Below are example mock-ups to show the overall finish. Each school receives a personalised layout using their own logo.
+          </p>
+
+          <section class="dm-samples" aria-label="Example mock-ups">
+            <div class="dm-samples-grid dm-shop-grid">
+
+              <article class="dm-sample-card">
+                <img src="assets/products/sample-school-1.png" alt="Example school mock-up 1" loading="lazy">
+                <h3>Example mock-up</h3>
+                <p>Logo placement and print style preview.</p>
+              </article>
+
+              <article class="dm-sample-card">
+                <img src="assets/products/sample-school-2.png" alt="Example school mock-up 2" loading="lazy">
+                <h3>Example mock-up</h3>
+                <p>Optional year group layout preview.</p>
+              </article>
+
+              <article class="dm-sample-card">
+                <img src="assets/products/sample-school-3.png" alt="Example school mock-up 3" loading="lazy">
+                <h3>Example mock-up</h3>
+                <p>Alternative logo shape and spacing preview.</p>
+              </article>
+
+            </div>
+
+            <p class="stock-note">
+              Replace these example images with your preferred mock-up previews when ready.
+              Keep them generic rather than naming schools publicly.
+            </p>
+          </section>
+
+          <hr>
+
+          <h2 id="parents">Parents</h2>
+          <p>
+            If your school is running a parent ordering window, you will receive a direct link from school.
+            Please use that link to access your school’s ordering page.
+          </p>
+
+          <h3>Have your school link already?</h3>
+          <p class="lead">
+            Paste the link below and we will take you straight to the correct page.
+          </p>
+
+          <form class="dm-form" id="school-link-form" aria-label="Paste your school link">
+            <label for="schoolLink"><strong>School link</strong></label>
+            <input
+              id="schoolLink"
+              name="schoolLink"
+              type="url"
+              placeholder="Paste the link your school shared"
+              autocomplete="off"
+              inputmode="url"
+              style="width: 100%; max-width: 680px;">
+
+            <p>
+              <button type="submit" class="btn btn-primary">Go to school page</button>
+            </p>
+
+            <p class="stock-note" id="schoolLinkHelp" style="display:none;"></p>
+          </form>
+
+          <script>
+            (function () {
+              const form = document.getElementById('school-link-form');
+              const input = document.getElementById('schoolLink');
+              const help = document.getElementById('schoolLinkHelp');
+
+              function showHelp(msg) {
+                help.textContent = msg;
+                help.style.display = 'block';
+              }
+
+              form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const raw = (input.value || '').trim();
+                if (!raw) {
+                  showHelp('Please paste the link your school shared, then click Go to school page.');
+                  return;
+                }
+
+                // Accept full URLs or simple paths
+                // Examples:
+                // https://dottymoo.co.uk/leavers/your-school.html
+                // /leavers/your-school.html
+                // leavers/your-school.html
+                let url = raw;
+
+                // If they pasted a path without protocol, normalise it
+                if (!/^https?:\/\//i.test(url)) {
+                  url = url.replace(/^\/+/, ''); // remove leading slashes
+                  url = location.origin + '/' + url;
+                }
+
+                try {
+                  const parsed = new URL(url);
+
+                  // Only allow dottymoo.co.uk links for safety
+                  if (!/dottymoo\.co\.uk$/i.test(parsed.hostname)) {
+                    showHelp('That link does not look like a Dotty Moo school page. Please use the link shared by your school.');
+                    return;
+                  }
+
+                  location.href = parsed.href;
+                } catch (err) {
+                  showHelp('That link does not look quite right. Please paste the full link shared by your school.');
+                }
+              });
+            })();
+          </script>
+
+          <hr>
+
+          <h2>Schools</h2>
+          <p>
+            If you are a school interested in leavers’ bears, please get in touch and we can confirm availability, timelines, and next steps.
+            If helpful, we can also prepare a draft mock-up using your school logo.
+          </p>
+
+          <p>
+            <a class="btn btn-primary" href="contact.html">Contact Dotty Moo</a>
+            <a class="btn btn-secondary" href="schools.html">Schools & Organisations</a>
+          </p>
+
+          <hr>
+
+          <h2>Quick questions</h2>
+
+          <h3>Do you deliver to home addresses?</h3>
+          <p>
+            Leavers’ ordering is normally delivered to school in one batch for simplicity. If you need an alternative arrangement, please contact us.
+          </p>
+
+          <h3>How long does it take?</h3>
+          <p>
+            We confirm timings when your order is agreed. Parent ordering pages include a closing date and an estimated delivery week.
+          </p>
+
+          <h3>Can we use a different year group name?</h3>
+          <p>
+            Yes. The print can be adapted to suit your leavers year group and wording.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="footer-loader.js"></script>
+  <script src="cookie-consent.js"></script>
+</body>
+</html>
