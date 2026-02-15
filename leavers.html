@@ -8,13 +8,13 @@
   <title>Leavers’ Graduation Bears for Schools | Dotty Moo</title>
   <meta name="description" content="Personalised leavers’ graduation bears for schools. Choose wholesale bulk ordering or a fully managed parent ordering window with delivery to school.">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="preload" as="image" href="assets/banner.png">
-  <link rel="preload" as="image" href="assets/cover.png">
+  <link rel="preload" as="image" href="/assets/banner.png">
+  <link rel="preload" as="image" href="/assets/cover.png">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <p>
       We use cookies to improve your experience and to understand how this website is used.
       You can accept all cookies, reject non essential cookies, or manage your preferences.
-      See our <a href="privacy.html">Privacy Policy</a> for more information.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
     </p>
     <div class="cookie-banner-buttons">
       <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
@@ -89,8 +89,11 @@
   <div id="site-nav"></div>
 
   <script>
-    fetch("nav.html")
-      .then(response => response.text())
+    fetch("/nav.html")
+      .then(r => {
+        if (!r.ok) throw new Error("nav.html not found");
+        return r.text();
+      })
       .then(html => {
         document.getElementById("site-nav").innerHTML = html;
 
@@ -113,6 +116,9 @@
             toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
           });
         }
+      })
+      .catch(() => {
+        // Fail quietly so a GitHub 404 page isn't injected into the page
       });
   </script>
 
@@ -122,7 +128,7 @@
       <div class="card">
 
         <div class="header shop-header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -131,13 +137,17 @@
 
           <div id="page-notice"></div>
           <script>
-            fetch("notice.html")
-              .then(r => r.text())
+            fetch("/notice.html")
+              .then(r => {
+                if (!r.ok) return "";
+                return r.text();
+              })
               .then(html => {
-                if (html.trim()) {
+                if (html && html.trim()) {
                   document.getElementById("page-notice").innerHTML = html;
                 }
-              });
+              })
+              .catch(() => {});
           </script>
 
           <p>
@@ -159,7 +169,7 @@
               <!-- Wholesale option -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/grad1.jpg"
+                  src="/assets/grad1.jpg"
                   alt="Leavers bear printed with a school logo"
                   loading="lazy">
 
@@ -181,14 +191,14 @@
                 </p>
 
                 <p>
-                  <a class="btn btn-primary" href="contact.html">Enquire for your school</a>
+                  <a class="btn btn-primary" href="/contact.html">Enquire for your school</a>
                 </p>
               </article>
 
               <!-- Parent ordering option -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/grad2.jpg"
+                  src="/assets/grad2.jpg"
                   alt="A keepsake bear delivered to school as a single batch"
                   loading="lazy">
 
@@ -198,11 +208,11 @@
                   Families order and pay Dotty Moo directly, then we deliver to school as one batch.
                 </p>
 
-      <p class="feature-list">
-  No cash handling<br>
-  No forms<br>
-  No office administration
-</p>
+                <p class="feature-list">
+                  No cash handling<br>
+                  No forms<br>
+                  No office administration
+                </p>
 
                 <p class="dm-availability">
                   Parent ordering pages are accessed via a link shared by your school.
@@ -210,7 +220,7 @@
 
                 <p>
                   <a class="btn btn-primary" href="#parents">I am a parent</a>
-                  <a class="btn btn-secondary" href="contact.html">I am a school</a>
+                  <a class="btn btn-secondary" href="/contact.html">I am a school</a>
                 </p>
               </article>
 
@@ -219,34 +229,33 @@
 
           <hr>
 
-          <h2>Print Layout Options</h2>
+          <h2>Print layout options</h2>
           <p class="lead">
-            Choose from the layout styles below. Each is printed with your school logo and preferred wording.</p>
+            Choose from the layout styles below. Each is printed with your school logo and preferred wording.
+          </p>
 
-          <section class="dm-samples" aria-label="Example mock-ups">
+          <section class="dm-samples" aria-label="Print layout options">
             <div class="dm-samples-grid dm-shop-grid">
 
               <article class="dm-sample-card">
-                <img src="assets/leavers-year.jpg" alt="Leavers print layout: Leavers 2025–26" loading="lazy">
+                <img src="/assets/leavers-year.jpg" alt="Leavers print layout: Leavers 2025–26" loading="lazy">
                 <h3>Academic year format</h3>
                 <p>Logo and academic year style.</p>
               </article>
 
               <article class="dm-sample-card">
-                <img src="assets/class-of.jpg" alt="Leavers print layout: Class of 2026" loading="lazy">
+                <img src="/assets/class-of.jpg" alt="Leavers print layout: Class of 2026" loading="lazy">
                 <h3>Class format</h3>
-                <p>Logo and 'Class of' style.</p>
+                <p>Logo and ‘Class of’ style.</p>
               </article>
 
               <article class="dm-sample-card">
-                <img src="assets/leavers-banner.jpg" alt="Leavers print layout: Custom wording option" loading="lazy">
+                <img src="/assets/leavers-banner.jpg" alt="Leavers print layout: Custom wording option" loading="lazy">
                 <h3>Banner format</h3>
                 <p>Alternative style with banner.</p>
               </article>
 
             </div>
-
-        
           </section>
 
           <hr>
@@ -300,23 +309,17 @@
                   return;
                 }
 
-                // Accept full URLs or simple paths
-                // Examples:
-                // https://dottymoo.co.uk/leavers/your-school.html
-                // /leavers/your-school.html
-                // leavers/your-school.html
                 let url = raw;
 
                 // If they pasted a path without protocol, normalise it
                 if (!/^https?:\/\//i.test(url)) {
-                  url = url.replace(/^\/+/, ''); // remove leading slashes
+                  url = url.replace(/^\/+/, '');
                   url = location.origin + '/' + url;
                 }
 
                 try {
                   const parsed = new URL(url);
 
-                  // Only allow dottymoo.co.uk links for safety
                   if (!/dottymoo\.co\.uk$/i.test(parsed.hostname)) {
                     showHelp('That link does not look like a Dotty Moo school page. Please use the link shared by your school.');
                     return;
@@ -339,8 +342,8 @@
           </p>
 
           <p>
-            <a class="btn btn-primary" href="contact.html">Contact Dotty Moo</a>
-            <a class="btn btn-secondary" href="schools.html">Schools & Organisations</a>
+            <a class="btn btn-primary" href="/contact.html">Contact Dotty Moo</a>
+            <a class="btn btn-secondary" href="/schools.html">Schools & Organisations</a>
           </p>
 
           <hr>
@@ -367,14 +370,7 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
