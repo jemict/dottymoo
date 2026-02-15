@@ -10,97 +10,132 @@
   <!-- Prevent indexing -->
   <meta name="robots" content="noindex, nofollow">
 
+  <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+  <link rel="icon" href="../favicon.ico">
+
+  <link rel="preload" as="image" href="../assets/banner.png">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 
 <body>
 
-<div class="bg-layer"></div>
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="bg-layer"></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div id="site-nav"></div>
+  <div id="site-nav"></div>
 
-<script>
-  fetch("../nav.html")
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("site-nav").innerHTML = html;
-    });
-</script>
+  <script>
+    fetch("../nav.html")
+      .then(r => {
+        if (!r.ok) throw new Error("nav.html not found");
+        return r.text();
+      })
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
 
-<main id="main-content">
-  <div class="wrap">
-    <div class="card">
+        // Active link handling (optional)
+        const here = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
 
-      <div class="content">
+        // Mobile nav toggle
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      })
+      .catch(() => {
+        // Fail quietly so a GitHub 404 page isn't injected into the layout
+      });
+  </script>
 
-        <h1>SCHOOL NAME</h1>
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
 
-        <p class="lead">
-          Personalised Leavers’ Graduation Bear – ORDERING NOW OPEN
-        </p>
+        <div class="header shop-header">
+          <img class="banner" src="../assets/banner.png" alt="Dotty Moo banner">
+        </div>
 
-        <hr>
+        <div class="content">
 
-        <img src="../assets/leavers-example.jpg"
-             alt="SCHOOL NAME leavers bear preview"
-             style="max-width: 380px; width: 100%; display:block; margin: 0 auto;">
+          <h1>SCHOOL NAME</h1>
 
-        <hr>
+          <p class="lead">
+            Personalised Leavers’ Graduation Bear – ORDERING NOW OPEN
+          </p>
 
-        <h2>Product details</h2>
+          <hr>
 
-        <p>
-          • Personalised with SCHOOL NAME logo<br>
-          • Printed with: PRINT WORDING (e.g. Class of 2026)<br>
-          • Graduation outfit included<br>
-          • Delivered to school in one batch
-        </p>
+          <img
+            src="../assets/leavers-example.jpg"
+            alt="SCHOOL NAME leavers bear preview"
+            loading="lazy"
+            style="max-width: 380px; width: 100%; display:block; margin: 0 auto;">
 
-        <p>
-          <strong>Price: £14.99</strong><br>
-          Delivery to school included.
-        </p>
+          <hr>
 
-        <hr>
+          <h2>Product details</h2>
 
-        <h2>Important information</h2>
+          <p>
+            • Personalised with SCHOOL NAME logo<br>
+            • Printed with: PRINT WORDING (e.g. Class of 2026)<br>
+            • Graduation outfit included<br>
+            • Delivered to school in one batch
+          </p>
 
-        <p>
-          Ordering closes: <strong>CLOSING DATE</strong><br>
-          Estimated delivery to school: <strong>DELIVERY WEEK</strong>
-        </p>
+          <p>
+            <strong>Price: £14.99</strong><br>
+            Delivery to school included.
+          </p>
 
-        <p>
-          Orders will proceed once a minimum of <strong>10 bears</strong> has been reached.
-          If this number is not met, ordering window may be extended or payments will be refunded in full.
-        </p>
+          <hr>
 
-        <hr>
+          <h2>Important information</h2>
 
-        <h2>Place your order</h2>
+          <p>
+            Ordering closes: <strong>CLOSING DATE</strong><br>
+            Estimated delivery to school: <strong>DELIVERY WEEK</strong>
+          </p>
 
-        <!-- STRIPE PAYMENT BUTTON -->
-        <p style="text-align:center;">
-          <a class="btn btn-primary" href="STRIPE_PAYMENT_LINK">
-            Order
-          </a>
-        </p>
+          <p>
+            Orders will proceed once a minimum of <strong>10 bears</strong> has been reached.
+            If this number is not met, the ordering window may be extended or payments will be refunded in full.
+          </p>
 
-        <hr>
+          <hr>
 
-        <h3>Questions?</h3>
-        <p>
-          Please contact hello@dottymoo.co.uk and include your school name in the subject line.
-        </p>
+          <h2>Place your order</h2>
 
+          <p style="text-align:center;">
+            <a class="btn btn-primary" href="STRIPE_PAYMENT_LINK">Order</a>
+          </p>
+
+          <hr>
+
+          <h3>Questions?</h3>
+          <p>
+            Please contact hello@dottymoo.co.uk and include your school name in the subject line.
+          </p>
+
+          <p>
+            <a class="btn btn-secondary" href="../leavers.html">Back to leavers information</a>
+          </p>
+
+        </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<script src="../footer-loader.js"></script>
+  <script src="../footer-loader.js"></script>
+  <script src="../cookie-consent.js"></script>
 </body>
 </html>
-
-
