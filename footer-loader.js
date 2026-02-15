@@ -1,4 +1,4 @@
-fetch("footer.html")
+fetch("/footer.html")
   .then(response => response.text())
   .then(html => {
     document.body.insertAdjacentHTML("beforeend", html);
@@ -8,3 +8,4 @@ fetch("footer.html")
       yearSpan.textContent = new Date().getFullYear();
     }
   });
+
