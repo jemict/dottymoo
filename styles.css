@@ -615,6 +615,11 @@ body::before{
   height: auto;
   max-width: none;   /* important, otherwise it clamps to 100% */
 }
+.feature-list {
+  margin: 0.5rem 0 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
 
 
 /* =========================
