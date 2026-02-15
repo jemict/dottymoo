@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SCHOOL NAME – Leavers’ Graduation Bear | Dotty Moo</title>
+  <meta name="description" content="Order your SCHOOL NAME leavers’ graduation bear. Personalised keepsake delivered to school.">
+
+  <!-- Prevent indexing -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+<div class="bg-layer"></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div id="site-nav"></div>
+
+<script>
+  fetch("../nav.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("site-nav").innerHTML = html;
+    });
+</script>
+
+<main id="main-content">
+  <div class="wrap">
+    <div class="card">
+
+      <div class="content">
+
+        <h1>SCHOOL NAME</h1>
+
+        <p class="lead">
+          Personalised Leavers’ Graduation Bear – ORDERING NOW OPEN
+        </p>
+
+        <hr>
+
+        <img src="../assets/leavers-example.jpg"
+             alt="SCHOOL NAME leavers bear preview"
+             style="max-width: 380px; width: 100%; display:block; margin: 0 auto;">
+
+        <hr>
+
+        <h2>Product details</h2>
+
+        <p>
+          • Personalised with SCHOOL NAME logo<br>
+          • Printed with: PRINT WORDING (e.g. Class of 2026)<br>
+          • Graduation outfit included<br>
+          • Delivered to school in one batch
+        </p>
+
+        <p>
+          <strong>Price: £14.99</strong><br>
+          Delivery to school included.
+        </p>
+
+        <hr>
+
+        <h2>Important information</h2>
+
+        <p>
+          Ordering closes: <strong>CLOSING DATE</strong><br>
+          Estimated delivery to school: <strong>DELIVERY WEEK</strong>
+        </p>
+
+        <p>
+          Orders will proceed once a minimum of <strong>10 bears</strong> has been reached.
+          If this number is not met, payments will be refunded in full.
+        </p>
+
+        <hr>
+
+        <h2>Place your order</h2>
+
+        <!-- STRIPE PAYMENT BUTTON -->
+        <p style="text-align:center;">
+          <a class="btn btn-primary" href="STRIPE_PAYMENT_LINK">
+            Personalise & Order
+          </a>
+        </p>
+
+        <hr>
+
+        <h3>Questions?</h3>
+        <p>
+          Please contact hello@dottymoo.co.uk and include your school name in the subject line.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="../footer-loader.js"></script>
+</body>
+</html>
