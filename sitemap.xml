@@ -171,13 +171,6 @@
     <priority>0.75</priority>
   </url>
 
-  <url>
-    <loc>https://dottymoo.co.uk/school-leaver-bears.html</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
     <!-- Animal Hugs -->
 
   <url>
@@ -362,3 +355,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
