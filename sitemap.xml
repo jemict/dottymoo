@@ -1,54 +1,364 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
+
   <url>
     <loc>https://dottymoo.co.uk/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://dottymoo.co.uk/about.html</loc>
+    <loc>https://dottymoo.co.uk/personalised-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://dottymoo.co.uk/school-mascots.html</loc>
+    <loc>https://dottymoo.co.uk/schools.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://dottymoo.co.uk/families.html</loc>
-  </url>
-  <url>
- <loc>https://dottymoo.co.uk/direct-orders.html</loc>
-</url>
-  <url>
-    <loc>https://dottymoo.co.uk/bear-details.html</loc>
+    <loc>https://dottymoo.co.uk/blog.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://dottymoo.co.uk/testimonials.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
+
   <url>
- <loc>https://dottymoo.co.uk/blog.html</loc>
-</url>
-  
-<url>
- <loc>https://dottymoo.co.uk/competition.html</loc>
-</url>
+    <loc>https://dottymoo.co.uk/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
   <url>
     <loc>https://dottymoo.co.uk/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
-    <url>
-    <loc>https://dottymoo.co.uk/shop.html</loc>
+
+
+  <!-- Create Your Own Bears -->
+
+
+  <url>
+    <loc>https://dottymoo.co.uk/create-your-own-bear.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
- 
-</urlset>
 
+  <url>
+    <loc>https://dottymoo.co.uk/classic-bear.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
+    <loc>https://dottymoo.co.uk/eco-bear.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
+    <loc>https://dottymoo.co.uk/lion-soft-toy.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 
+  <url>
+    <loc>https://dottymoo.co.uk/monkey-soft-toy.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 
+  <url>
+    <loc>https://dottymoo.co.uk/dog-soft-toy.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 
+   <!-- Bedtime Bears -->
 
+  <url>
+    <loc>https://dottymoo.co.uk/bedtime-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+    <!-- Celebration Bears -->
 
+  <url>
+    <loc>https://dottymoo.co.uk/celebration-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/celebration-classic.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/celebration-eco.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/celebration-lion.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/celebration-dog.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/celebration-monkey.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+    <!-- Seasonal Bears -->
+
+  <url>
+    <loc>https://dottymoo.co.uk/seasonal-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/seasonal-world-cup-lion.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/christmas-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/school-leaver-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+    <!-- Animal Hugs -->
+
+  <url>
+    <loc>https://dottymoo.co.uk/animal-hugs.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/animal-hugs-classic.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/animal-hugs-eco.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/animal-hugs-lion.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/animal-hugs-dog.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/animal-hugs-monkey.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- School Leaver Bears -->
+
+  <url>
+    <loc>https://dottymoo.co.uk/school-leaver-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+    <!-- Get Well Soon Bears -->
+
+  <url>
+    <loc>https://dottymoo.co.uk/get-well-soon-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/get-well-soon-classic.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/get-well-soon-eco.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/get-well-soon-lion.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/get-well-soon-dog.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/get-well-soon-monkey.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+    <!-- Newborn Baby Bears -->
+
+  <url>
+    <loc>https://dottymoo.co.uk/newborn-baby-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/newborn-classic.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/newborn-eco.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/newborn-lion.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/newborn-dog.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/newborn-monkey.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+    <!-- Memorial Bears -->
+
+  <url>
+    <loc>https://dottymoo.co.uk/memorial-bears.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/memorial-classic.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/memorial-eco.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/memorial-lion.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/memorial-dog.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dottymoo.co.uk/memorial-monkey.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
