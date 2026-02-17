@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/ten-reasons-mascot-bears-keepsake.html">
+
+  <title>10 Reasons Mascot Bears Make the Perfect School Keepsake | Dotty Moo</title>
+
+  <meta name="description" content="Ten reasons why personalised mascot bears are popular keepsakes for leavers, new starters and school milestones, with lasting comfort and belonging." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const path = location.pathname || "";
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content articles-page">
+          <article class="article" id="ten-reasons-mascot-bears-perfect-keepsake">
+
+            <h1>10 Reasons Mascot Bears Make the Perfect School Keepsake</h1>
+
+            <p class="article-meta">
+              <time datetime="2025-12-04">Published 4 December 2025</time>
+            </p>
+
+            <p class="article-summary">
+              Ten reasons why personalised mascot bears are popular keepsakes for leavers, new starters and school milestones.
+            </p>
+
+            <p>
+              School transitions are important milestones.
+              Whether children are moving to a new class, starting Reception or finishing Year 6,
+              families often look for a meaningful way to mark the moment.
+            </p>
+
+            <p>
+              A personalised mascot bear offers a simple but lasting reminder of friendships,
+              shared experiences and time spent together.
+              Below are ten reasons mascot bears continue to be a popular choice.
+            </p>
+
+            <ol>
+              <li><strong>Personal to the school.</strong> A mascot bear printed with the school logo or colours feels unique to that community rather than a generic gift.</li>
+              <li><strong>A lasting keepsake.</strong> Unlike novelty items, a teddy bear is something children are more likely to keep for years.</li>
+              <li><strong>Perfect for leavers.</strong> A bear provides a comforting reminder of primary school as children move on to their next stage.</li>
+              <li><strong>Reassuring for new starters.</strong> For younger children, a mascot bear can offer comfort during the early days of settling in.</li>
+              <li><strong>Durable and long lasting.</strong> Quality mascot bears are designed to be hugged, displayed and treasured over time.</li>
+              <li><strong>Easy to personalise.</strong> Adding names, year groups or a short message turns the bear into a meaningful memento.</li>
+              <li><strong>Supports shared identity.</strong> Having the same mascot across a year group strengthens a sense of belonging.</li>
+              <li><strong>Works beautifully in photos.</strong> Bears look great in leavers’ pictures and milestone celebrations.</li>
+              <li><strong>Suitable for all children.</strong> Soft toys are universally appealing and age-appropriate across primary settings.</li>
+              <li><strong>A gift that feels thoughtful.</strong> A personalised bear feels chosen with care, not simply purchased for convenience.</li>
+            </ol>
+
+            <p>
+              When a school or family chooses a mascot bear,
+              they are choosing more than a toy.
+              They are giving a child something tangible to hold onto
+              during a time of change.
+            </p>
+
+            <p>
+              If you are exploring leavers’ or graduation keepsakes,
+              you can learn more about our
+              <a href="/graduation.html">graduation and leavers’ bears</a>
+              or visit our
+              <a href="/schools.html">Schools &amp; Organisations page</a>.
+            </p>
+
+            <hr />
+
+            <p>
+              <a href="/blog.html">← Back to Articles &amp; Ideas</a>
+            </p>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>
