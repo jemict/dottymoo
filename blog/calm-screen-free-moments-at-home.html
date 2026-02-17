@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="630">
 
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" ="/favicon.ico">
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -74,7 +74,7 @@
 
   <div class="bg-layer"></div>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a ="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
 
@@ -86,8 +86,8 @@
 
         const path = location.pathname || "";
         document.querySelectorAll('.site-nav a').forEach(a => {
-          const href = (a.getAttribute('href') || '').split('?')[0];
-          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+          const  = (a.getAttribute('') || '').split('?')[0];
+          if (path.startsWith('/blog/') && ( === '/blog.html' || .endsWith('/blog.html'))) {
             a.classList.add('active');
             a.setAttribute('aria-current', 'page');
           }
@@ -193,7 +193,7 @@
             <p>
               If you are looking for a meaningful comfort companion,
               you can explore our
-              <a href="/bedtime.html">bedtime bears</a>
+              <a href="/bedtime-bears.html">bedtime bears</a>
               or browse the full
               <a href="/personalised-bears.html">personalised teddy bear collection</a>.
             </p>
@@ -215,3 +215,4 @@
   <script src="/cookie-consent.js"></script>
 </body>
 </html>
+
