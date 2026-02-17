@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/why-teddy-bear-still-most-loved-toy.html">
+
+  <title>Why the Teddy Bear Is Still the Most Loved Toy | Dotty Moo</title>
+
+  <meta name="description" content="A gentle look at why teddy bears continue to offer comfort, imagination and familiarity to children across generations." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+  <link rel="icon" href="../favicon.ico">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+  <div class="bg-layer"></div>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("../nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const here = location.pathname.split('/').pop();
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+        <div class="content blog-post">
+
+          <article>
+
+            <header>
+              <h1>Why the Teddy Bear Is Still the Most Loved Toy</h1>
+              <p class="article-meta">
+                <time datetime="2026-01-19">Published 19 January 2026</time>
+              </p>
+              <p class="article-summary">
+                A gentle look at why teddy bears continue to offer comfort, imagination and familiarity to children across generations.
+              </p>
+            </header>
+
+            <p>
+              There are many toys that come and go. Trends change, characters fade, and gadgets are quickly replaced by the next new thing.
+              Yet one toy has quietly remained at the heart of childhood for generations: the teddy bear.
+            </p>
+
+            <p>
+              From nursery shelves to bedside tables, quiet evenings to big life moments, bears have a unique way of staying with children as they grow.
+            </p>
+
+            <h2>A familiar source of comfort</h2>
+
+            <p>
+              Teddy bears are often one of the first toys a child truly connects with. Soft, friendly and reassuring, they offer comfort in a way few other toys can.
+            </p>
+
+            <p>
+              For many children, a bear becomes a constant companion during times of change: starting nursery, visiting unfamiliar places, or navigating big feelings.
+              Bears do not rush or judge. They simply stay.
+            </p>
+
+            <h2>Imagination without limits</h2>
+
+            <p>
+              Unlike toys that come with rules, screens or fixed storylines, teddy bears invite open-ended play.
+            </p>
+
+            <p>
+              One day a bear might be a brave explorer. Another day, a teacher, a patient, or a quiet listener at bedtime.
+              Children decide who their bear is and what role it plays.
+            </p>
+
+            <p>
+              This kind of imaginative play supports storytelling, confidence and emotional development, helping children explore the world in a way that feels safe and familiar.
+            </p>
+
+            <h2>A bridge between home and the wider world</h2>
+
+            <p>
+              For younger children especially, teddy bears can act as a gentle link between home and new experiences.
+            </p>
+
+            <p>
+              Bringing a familiar bear along can help ease separation worries and support children as they settle into new routines.
+              It is a small piece of home that travels with them, whether that is a day out, a first club, a trip to relatives, or a new bedtime setup.
+            </p>
+
+            <h2>Memories that last</h2>
+
+            <p>
+              Many adults can still remember their childhood bear in detail. The name, the worn fur, or the small repairs that tell a story of years of love.
+            </p>
+
+            <p>
+              Teddy bears are rarely just toys. They become part of family memories, often kept long after they are played with daily, quietly holding moments of comfort and care.
+            </p>
+
+            <h2>Why bears still matter</h2>
+
+            <p>
+              In a world filled with fast-paced entertainment and changing trends, the teddy bear remains reassuringly simple.
+            </p>
+
+            <p>
+              It does not need charging, updating or replacing. It offers connection, comfort and creativity in a way that feels timeless.
+            </p>
+
+            <p>
+              At Dotty Moo, our love for bears comes from this very idea. Bears are not just toys.
+              They are quiet companions that support comfort, confidence and connection at home and beyond.
+            </p>
+
+            <p>
+              Sometimes, the simplest things really do mean the most.
+            </p>
+
+            <hr />
+
+            <section class="blog-cta">
+              <h2>Explore personalised bears</h2>
+              <p>
+                Looking for a thoughtful keepsake? Explore our personalised bears, made to feel extra special with a name, a message or a meaningful design.
+              </p>
+              <p>
+                <a class="btn btn-primary" href="/personalised-bears.html">Shop personalised bears</a>
+              </p>
+            </section>
+
+            <p style="margin-top:16px;">
+              <a href="/blog.html">← Back to Articles & Ideas</a>
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../footer-loader.js"></script>
+</body>
+</html>
