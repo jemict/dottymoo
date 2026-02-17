@@ -21,6 +21,20 @@
 
 <body>
 
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
   <div class="bg-layer"></div>
 
   <!-- Skip link -->
@@ -29,14 +43,16 @@
   <div id="site-nav"></div>
 
   <script>
-    fetch("../nav.html")
+    fetch("/nav.html")
       .then(response => response.text())
       .then(html => {
         document.getElementById("site-nav").innerHTML = html;
 
-        const here = location.pathname.split('/').pop();
+        const here = location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('.site-nav a').forEach(a => {
-          if (a.getAttribute('href') === here) {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          const file = href.split('/').pop();
+          if (file === here) {
             a.classList.add('active');
             a.setAttribute('aria-current', 'page');
           }
@@ -58,10 +74,13 @@
   <main id="main-content">
     <div class="wrap">
       <div class="card">
-        <div class="content blog-post">
 
-          <article>
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
 
+        <div class="content articles-page">
+          <article class="article">
             <header>
               <h1>Why the Teddy Bear Is Still the Most Loved Toy</h1>
               <p class="article-meta">
@@ -173,3 +192,4 @@
   <script src="../footer-loader.js"></script>
 </body>
 </html>
+
