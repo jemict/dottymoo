@@ -7,13 +7,15 @@
 
   <title>Articles &amp; Ideas | Dotty Moo</title>
 
+  <meta name="description" content="Gentle, practical articles with gifting ideas, bedtime comfort tips and thoughtful inspiration for families, plus behind-the-scenes from Dotty Moo." />
+
   <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-<link rel="icon" href="favicon.ico">
-  
+  <link rel="icon" href="favicon.ico">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -86,36 +88,35 @@
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div id="site-nav"></div>
+  <div id="site-nav"></div>
 
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("site-nav").innerHTML = html;
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
 
-      // Active link handling
-      const here = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.site-nav a').forEach(a => {
-        if (a.getAttribute('href') === here) {
-          a.classList.add('active');
-          a.setAttribute('aria-current', 'page');
+        // Active link handling
+        const here = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        // Mobile nav toggle
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
         }
       });
-
-      // Mobile nav toggle
-      const nav = document.querySelector('.site-nav');
-      const toggle = document.querySelector('.nav-toggle');
-
-      if (nav && toggle) {
-        toggle.addEventListener('click', () => {
-          const isOpen = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-      }
-    });
-</script>
-
+  </script>
 
   <!-- MAIN CONTENT -->
   <main id="main-content">
@@ -131,652 +132,108 @@
           <section class="articles-intro">
             <h1>Articles &amp; Ideas</h1>
             <p>
-              Short, practical articles for parents and schools, with calm activities, gentle support,
-              and simple ideas to help children both at home and in UK schools.
+              Gentle, practical articles with gifting ideas, comfort tips and thoughtful inspiration for family life.
+              You will also find Dotty Moo updates and behind-the-scenes as new bears and designs are released.
             </p>
-            <p>Looking for Dotty Moo resources?</p>
-<p>You can browse all printable packs and personalised items in the Dotty Moo shop.</p>
-                 <a href="https://dottymoo.co.uk/shop.html">Visit the Dotty Moo shop</a>
+
+            <div class="articles-cta" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+              <a class="btn btn-primary" href="/personalised-bears.html">Shop personalised bears</a>
+              <a class="btn btn-secondary" href="/shop.html">Shop printables &amp; activities</a>
+            </div>
           </section>
-<hr />
 
-        <!-- 24 JAN 2026 -->
-<article class="article" id="when-words-arent-enough-visuals-support-understanding">
-  <h2>When Words Aren’t Enough: How Visuals Can Support Understanding</h2>
-
-  <p class="article-meta">
-    <time datetime="2026-01-22">Published 22 January 2026</time>
-  </p>
-
-  <p class="article-summary">
-    A gentle look at how visual supports can help children process information, reduce overwhelm, and feel more confident in everyday situations.
-  </p>
-
-  <p>
-    Children are often expected to understand and respond to spoken instructions quickly. For some, this comes easily. For others, especially when they are tired, anxious or overwhelmed, words alone can feel like too much.
-  </p>
-
-  <p>
-    This is where visual supports can make a meaningful difference. Not as a replacement for communication, but as an additional layer of clarity and reassurance.
-  </p>
-
-  <h3>Why spoken language can feel overwhelming</h3>
-
-  <p>
-    Spoken instructions disappear as soon as they are said. Children have to listen, process, remember and act, often all at once.
-  </p>
-
-  <p>
-    When emotions are high or environments are busy, this can be particularly challenging. A child may understand the words, but struggle to hold onto them long enough to respond.
-  </p>
-
-  <h3>How visuals support understanding</h3>
-
-  <p>
-    Visuals stay in place. They give children time to look, return to information, and process at their own pace.
-  </p>
-
-  <p>
-    Simple visual cues, such as pictures, symbols or step-by-step routines, can reduce the pressure on working memory and help children understand what is expected without repeated verbal prompts.
-  </p>
-
-  <p>
-    This can support independence and confidence, particularly during transitions or unfamiliar routines.
-  </p>
-
-  <h3>Reducing verbal overload</h3>
-
-  <p>
-    In moments of stress, children may find it hard to take in spoken language, even when it is calm and well intentioned.
-  </p>
-
-  <p>
-    Visuals offer a quieter form of communication. They allow adults to step back, giving children space to engage without feeling rushed or overwhelmed.
-  </p>
-
-  <h3>Visual routines in everyday life</h3>
-
-  <p>
-    Visual routines can be particularly helpful for everyday activities such as getting ready in the morning, transitioning between activities, or preparing for changes in the day.
-  </p>
-
-  <p>
-    Knowing what comes next can help children feel more secure and reduce anxiety around uncertainty. Visuals act as a steady reference point, offering reassurance throughout the day.
-  </p>
-
-  <h3>A calm, supportive approach</h3>
-
-  <p>
-    At Dotty Moo, we see visual supports as gentle tools. They are not about control or compliance, but about helping children feel understood and supported.
-  </p>
-
-  <p>
-    When words feel like too much, visuals can provide clarity, comfort and a sense of calm, helping children navigate their world with greater confidence.
-  </p>
-
-  <p>
-    If you would like to explore visual routines further, you can view the Dotty Moo shop here:
-    <a href="https://dottymoo.co.uk/shop.html">Visit the Dotty Moo shop</a>.
-  </p>
-
-  <img
-    src="assets/routines/full_set_preview.png"
-    alt="Example of personalised visual routines to support calm daily transitions"
-    class="article-image article-image-inline">
-</article>
-
-
-<!-- 19 JAN 2026 -->
-<article class="article" id="why-teddy-bear-most-loved-toy">
-  <h2>Why the Teddy Bear Is Still the Most Loved Toy</h2>
-
-  <p class="article-meta">
-    <time datetime="2026-01-19">Published 19 January 2026</time>
-  </p>
-
-  <p class="article-summary">
-    A gentle look at why teddy bears continue to offer comfort, imagination and familiarity to children across generations.
-  </p>
-
-  <p>
-    There are many toys that come and go. Trends change, characters fade, and gadgets are quickly replaced by the next new thing. Yet one toy has quietly remained at the heart of childhood for generations: the teddy bear.
-  </p>
-
-  <p>
-    From nursery shelves to school bags, bedtime routines to big life moments, bears have a unique way of staying with children as they grow.
-  </p>
-
-  <h3>A familiar source of comfort</h3>
-
-  <p>
-    Teddy bears are often one of the first toys a child truly connects with. Soft, friendly and reassuring, they offer comfort in a way few other toys can.
-  </p>
-
-  <p>
-    For many children, a bear becomes a constant companion during times of change. Starting nursery, beginning school, visiting unfamiliar places, or navigating big feelings. Bears do not rush or judge. They simply stay.
-  </p>
-
-  <h3>Imagination without limits</h3>
-
-  <p>
-    Unlike toys that come with rules, screens or fixed storylines, teddy bears invite open-ended play.
-  </p>
-
-  <p>
-    One day a bear might be a brave explorer. Another day, a teacher, a patient, or a quiet listener at bedtime. Children decide who their bear is and what role it plays.
-  </p>
-
-  <p>
-    This kind of imaginative play supports storytelling, confidence and emotional development, helping children explore the world in a way that feels safe and familiar.
-  </p>
-
-  <h3>A bridge between home and school</h3>
-
-  <p>
-    For younger children especially, teddy bears can act as a gentle link between home and school.
-  </p>
-
-  <p>
-    Bringing a familiar bear into a new environment can help ease separation anxiety and support children as they settle into new routines. It is a small piece of home that travels with them.
-  </p>
-
-  <p>
-    In school settings, bears are often used to support reading, wellbeing activities and calm classroom spaces, helping children feel secure and included.
-  </p>
-
-  <h3>Memories that last</h3>
-
-  <p>
-    Many adults can still remember their childhood bear in detail. The name, the worn fur, or the small repairs that tell a story of years of love.
-  </p>
-
-  <p>
-    Teddy bears are rarely just toys. They become part of family memories, often kept long after they are played with daily, quietly holding moments of comfort and care.
-  </p>
-
-  <h3>Why bears still matter</h3>
-
-  <p>
-    In a world filled with fast-paced entertainment and changing trends, the teddy bear remains reassuringly simple.
-  </p>
-
-  <p>
-    It does not need charging, updating or replacing. It offers connection, comfort and creativity in a way that feels timeless.
-  </p>
-
-  <p>
-    At Dotty Moo, our love for bears comes from this very idea. Bears are not just toys. They are quiet companions that support comfort, confidence and connection, whether at home or as part of a wider school community.
-  </p>
-
-  <p>
-    Sometimes, the simplest things really do mean the most.
-  </p>
-</article>
-
-<!-- 16 JAN 2026 -->
-<article class="article" id="small-gestures-big-difference-schools">
-  <h2>How Small Gestures Can Make a Big Difference to Schools</h2>
-
-  <p class="article-meta">
-    <time datetime="2026-01-16">Published 16 January 2026</time>
-  </p>
-
-  <p class="article-summary">
-    Why thoughtful, low-pressure support from families and communities can have a meaningful impact on schools and the children they serve.
-  </p>
-
-  <p>
-    Schools do an incredible amount with limited time and resources. Alongside teaching and learning, they support wellbeing, community, enrichment activities and those small extras that help children feel settled and included.
-  </p>
-
-  <p>
-    Supporting schools is not always about large campaigns or complex initiatives. Often, it is the quieter, more thoughtful gestures that have the greatest impact.
-  </p>
-
-  <h3>The value of small, thoughtful support</h3>
-
-  <p>
-    Small contributions, whether of time, resources or goodwill, can help schools enhance everyday experiences for children. This might be adding something new to a reading space, supporting creative activities, or contributing towards shared resources that children use together.
-  </p>
-
-  <p>
-    These gestures may seem modest, but they are often the ones children notice most. They show care, connection and community support without adding pressure.
-  </p>
-
-  <h3>Community involvement, without pressure</h3>
-
-  <p>
-    Many families want to feel connected to their child’s school, but not every family has the time or capacity to take part in traditional fundraising or organised events.
-  </p>
-
-  <p>
-    Gentle, community-led opportunities allow families to support schools in ways that feel manageable and optional. There is no expectation to take part, no obligation placed on schools, and no need for additional administration.
-  </p>
-
-  <p>
-    At their best, these moments are about shared goodwill rather than outcomes or targets.
-  </p>
-
-  <h3>Building connection beyond resources</h3>
-
-  <p>
-    Support for schools is not only about funding or materials. Children also benefit from shared symbols that help them feel they belong.
-  </p>
-
-  <p>
-    School mascot bears are one example of this. They are familiar, recognisable and often woven into school life through assemblies, reading time or celebrations. For children, a school mascot is about identity and comfort, not transactions or fundraising.
-  </p>
-
-  <p>
-    When a child talks about their school mascot at home, it naturally strengthens the connection between school and family life.
-  </p>
-
-  <h3>Keeping things calm and respectful</h3>
-
-  <p>
-    At Dotty Moo, we believe schools should always feel comfortable and in control. Any involvement with families should be clear, optional and handled with care.
-  </p>
-
-  <p>
-    Our focus is on supporting schools in ways that feel calm, respectful and manageable, whether that is through a mascot bear that becomes part of school routines or through wider community activity that families may choose to engage with independently.
-  </p>
-
-  <h3>A gentle way to support school communities</h3>
-
-  <p>
-    Not every form of support needs to be visible or complex to be meaningful. Sometimes it is the combination of small gestures and strong community connection that makes the biggest difference.
-  </p>
-
-  <p>
-    When schools and families are supported in ways that feel thoughtful and pressure-free, everyone benefits, especially the children at the heart of it all.
-  </p>
-</article>
-
-          <!-- 03 JAN 2026 -->
-          <article class="article" id="dotty-moo-gets-ready-for-school">
-            <h2>Dotty Moo Gets Ready for School: Supporting Calm Mornings Through Predictable Routines</h2>
-
-            <p class="article-meta">
-              <time datetime="2026-01-03">Published 3 January 2026</time>
-            </p>
-
-            <!-- Desktop: text + image side-by-side, Mobile: stacked -->
-            <div class="article-media">
-              <div class="article-media-text">
-                <p class="article-summary">
-                  How a gentle social story can support calmer, more predictable school mornings by helping children understand routines, sensory challenges, and what to expect.
-                </p>
-                <p>
-      Mornings can feel overwhelming for some children. Getting dressed, brushing teeth, leaving the house,
-      and arriving at school can all bring sensory discomfort, worry, or big emotions before the day has even begun.
-    </p>
-
-    <p>
-      For children who find transitions tricky, mornings are not just busy. They can feel unpredictable,
-      uncomfortable, and emotionally demanding.
-    </p>
-        <p>
-              <em>Dotty Moo Gets Ready for School</em> was created as a calm social story to gently support children
-              through these moments, helping them understand what happens in the morning and how they can feel safer
-              and more settled as the routine unfolds.
-              </div>
-
-              <div class="article-media-image">
-                <img
-                  src="assets/dotty-moo-gets-ready-for-school-cover.png"
-                  alt="Cover of Dotty Moo Gets Ready for School, a calm social story supporting children with morning routines"
-                  class="article-image">
-              </div>
+          <hr />
+
+          <!-- Browse by theme -->
+          <section class="articles-themes" aria-label="Browse articles by theme">
+            <h2>Browse by theme</h2>
+
+            <div class="theme-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px;">
+              <a class="theme-card" href="#gifting-ideas">Gifting ideas</a>
+              <a class="theme-card" href="#bedtime-comfort">Bedtime &amp; comfort</a>
+              <a class="theme-card" href="#personalisation-tips">Personalisation tips</a>
+              <a class="theme-card" href="#printables">Printables &amp; calm activities</a>
+              <a class="theme-card" href="#brand-updates">Dotty Moo updates</a>
             </div>
 
-                       
+            <p style="margin-top:10px;">
+              Tip: new posts are now published as individual pages so they are easier to browse and find.
             </p>
-
-            <h3>Why mornings can feel so hard</h3>
-
-            <p>
-              Many children experience heightened sensory sensitivity in the morning. Clothes can feel scratchy,
-              toothpaste can feel overwhelming, and shoes might suddenly feel “wrong”. These sensations are very real
-              to the child, even if they seem small to adults.
-            </p>
-
-            <p>
-              Alongside sensory challenges, children may also feel anxious about leaving home, separating from familiar
-              adults, or facing the demands of school. When several of these factors come together, mornings can quickly
-              become stressful for both children and parents.
-            </p>
-
-            <h3>The power of predictable routines</h3>
-
-            <p>
-              One of the key ideas in the story is predictability. Visual routines and clear sequences help children
-              understand what is coming next, reducing the feeling that mornings are “too big” or out of control.
-            </p>
-
-            <p>
-              By showing Dotty Moo following a simple morning routine, the story reinforces that each step will end,
-              there is a clear order to the morning, and support is available if something feels difficult.
-            </p>
-
-            <h3>Sensory support without pressure</h3>
-
-            <p>
-              The story gently models common sensory supports, such as choosing more comfortable clothes, using
-              non-foaming toothpaste, soft face cloths, and calm pacing from adults.
-            </p>
-
-            <p>
-              These supports are shown as options rather than rules. This mirrors real life. Not every strategy works
-              for every child, and what helps one day may change the next.
-            </p>
-
-            <h3>Calm adults make a difference</h3>
-
-            <p>
-              Throughout the story, adults are shown staying calm, responsive, and supportive. Children often borrow
-              regulation from the adults around them, especially when they feel overwhelmed.
-            </p>
-
-            <p>
-              Calm voices, reassurance, and gentle help can make a significant difference during challenging moments.
-              The story supports adults as much as children by modelling this approach.
-            </p>
-
-            <h3>Using the story at home</h3>
-
-            <p>
-              This social story is designed to be read when the child is calm, not during a moment of distress.
-              Many families find it helpful to read the story regularly, revisit specific pages, or personalise
-              elements to match their child’s routine.
-            </p>
-
-            <p>
-              Over time, the familiar wording and images can become reassuring in themselves, helping mornings feel
-              more manageable.
-            </p>
-
-            <p>
-              Some families choose to use printable social stories to support routines at home.
-              <em>Dotty Moo Gets Ready for School</em> is available via the Dotty Moo shop if you would like to explore it alongside other calm support resources
-             <a href="https://dottymoo.co.uk/shop.html">Visit the Dotty Moo shop</a>
-          </a>.
-            </p>
-          </article>
-
-         
-
-          <!-- 21 DEC 2025 -->
-          <article class="article" id="supporting-emotional-awareness-simple-activities">
-            <h2>Supporting Emotional Awareness Through Simple Activities</h2>
-
-            <p class="article-meta">
-              <time datetime="2025-12-21">Published 21 December 2025</time>
-            </p>
-            <p class="article-summary">
-              Gentle, low-pressure ways to help children recognise and talk about feelings through simple, calm activities.
-            </p>
-
-            <p>
-              Understanding and talking about feelings can be challenging for many children. Emotional awareness develops gradually, and for some children it needs to be supported in a very concrete, visual way.
-            </p>
-
-            <p>
-              Simple activities can provide a safe starting point for exploring emotions without putting children on the spot. Colouring, matching, and gentle prompts allow children to engage with feelings at a distance, which can feel much more manageable than direct questioning.
-            </p>
-
-            <p>
-              Activities focused on emotions can help children recognise and name common feelings, build emotional vocabulary, and understand that all emotions are valid. Over time, this can support calmer communication and better self-understanding.
-            </p>
-
-            <p>
-              It is important that resources exploring emotions feel calm rather than overwhelming. Clear visuals, minimal wording, and familiar formats often work best, especially for children who benefit from predictability and low sensory load.
-            </p>
-
-            <p>
-              If you would like an optional printable to support this at home, the Emotions and Feelings Pack is available via the Dotty Moo shop.
-         <a href="https://dottymoo.co.uk/shop.html">Visit the Dotty Moo shop</a>
-  
-              </a>.
-            </p>
-            <img
-  src="assets/dotty-moo-emotions-feelings-cover.png"
-  alt="Dotty Moo Emotions and Feelings colouring pack for calm emotional support"
-  class="article-image article-image-inline">
-          </article>
-
-        
-
-          <!-- 20 DEC 2025 -->
-          <article class="article" id="space-themed-colouring-calm-creative-outlet">
-            <h2>Space-Themed Colouring as a Calm and Creative Outlet</h2>
-
-            <p class="article-meta">
-              <time datetime="2025-12-20">Published 20 December 2025</time>
-            </p>
-            <p class="article-summary">
-              Why simple space-themed colouring pages can support calm focus, creativity, and screen-free downtime.
-            </p>
-
-            <p>
-              Colouring is often thought of as a creative activity, but for many children it can also support calm focus. The repetitive motion of colouring can help children slow down, settle, and stay with one task for longer.
-            </p>
-
-            <p>
-              Space themes are particularly popular because they feel imaginative without being emotionally demanding. Planets, stars, rockets, and astronauts offer enough interest to hold attention while still allowing children to work at their own pace.
-            </p>
-
-            <p>
-              Black-and-white colouring pages can be especially helpful for children who prefer clear outlines, feel overwhelmed by busy designs, or benefit from predictable, low-pressure activities.
-            </p>
-
-            <p>
-              Colouring does not need to be about staying in the lines or finishing quickly. For many children, it is about the process. Space colouring can also spark quiet conversation, storytelling, or independent play, depending on the child.
-            </p>
-
-            <p>
-              If you would like an optional printable for calm, screen-free colouring time, the Space-Themed Colouring Pack is available via the Dotty Moo shop.
-                <a href="https://dottymoo.co.uk/shop.html">Visit the Dotty Moo shop</a>
-            
-              </a>.
-            </p>
-            <img
-  src="assets/dotty-moo-space-pack-cover.png"
-  alt="Cover of the Dotty Moo Space Pack colouring printable"
-  class="article-image-inline">
-
-          </article>
-
-        
-
-          <!-- 19 DEC 2025 -->
-          <article class="article" id="calm-screen-free-activities-quiet-moments">
-            <h2>Calm, Screen-Free Activities for Quiet Moments at Home</h2>
-
-            <p class="article-meta">
-              <time datetime="2025-12-19">Published 19 December 2025</time>
-            </p>
-            <p class="article-summary">
-              Simple, low-prep activity ideas that help children wind down at home, especially after school and during holidays.
-            </p>
-
-            <p>
-              Finding calm moments at home can feel surprisingly difficult, especially during busy weeks, school holidays, or transitions between activities. Many families are trying to reduce screen time, but still need something that feels engaging and genuinely calming.
-            </p>
-
-            <p>
-              Screen-free activities do not need to be complicated. Often, children benefit from simple, predictable tasks that allow them to focus without pressure. Colouring, tracing, matching, and gentle mark-making activities can support concentration while giving children a sense of completion and control.
-            </p>
-
-            <p>
-              For some children, busy or overly detailed activities can feel overwhelming. Calm activity packs that use clear layouts, minimal clutter, and plenty of white space can help children settle more easily.
-            </p>
-
-            <p>
-              These kinds of activities are often useful after school, during quiet time, on rainy days, and throughout school holidays. They can also support routines by giving children something familiar to return to.
-            </p>
-
-            <p>
-              If you would like an optional printable for calm, screen-free fun, the Dotty Moo Activity Pack is available via the Dotty Moo shop.
-                 <a href="https://dottymoo.co.uk/shop.html">Visit the Dotty Moo shop</a>
-               
-              </a>.
-            </p>
-          </article>
-      <img
-  src="assets/dotty-moo-activity-pack-cover.png"
-  alt="Cover of the Dotty Moo Activity Pack printable"
-  class="article-image-inline">
-
-
-
-         
-
-          <!-- 12 DEC 2025 -->
-          <article class="article" id="choosing-personalised-gifts-school-transitions">
-            <h2>Choosing Personalised Gifts for Children Leaving or Starting School</h2>
-
-            <p class="article-meta">
-              <time datetime="2025-12-12">Published 12 December 2025</time>
-            </p>
-            <p class="article-summary">
-              A simple guide to choosing thoughtful, practical personalised gifts that mark school transitions positively.
-            </p>
-
-            <p>
-              Transitions are important milestones. A personalised gift helps mark the moment in a positive way, especially when pupils are leaving a familiar setting or joining a new one.
-              Many schools like to choose something that feels thoughtful but is also practical to organise.
-            </p>
-
-            <p>
-              Mascot bears naturally fit into a child’s bedroom and can move with them as they grow.
-              For younger pupils, they can offer comfort at bedtime or during periods of change. For older pupils, they often become a reminder of favourite teachers, friends, and events.
-            </p>
-
-            <p>
-              When selecting a gift, schools often look for items that can carry the school logo, are suitable for all pupils, and do not create extra workload for staff.
-              Bears, notebooks, mugs, and hoodies are all popular options, but soft toys are usually the easiest to distribute and store.
-            </p>
-
-            <p>
-              Personalised with the school logo and colours, a bear becomes a symbol of memories, friendships, and routines.
-              Families appreciate a gift that has clearly been chosen with care, and pupils are more likely to keep something that feels personal to their time at school.
-            </p>
-
-            <p>
-              Whether used for leavers, new starters, or special groups such as pupil leaders, personalised mascot bears offer a simple, consistent way to celebrate pupils’ journeys through school.
-            </p>
-          </article>
-
-      
-
-          <!-- 9 DEC 2025 -->
-          <article class="article" id="schools-use-mascot-bears-community-spirit">
-            <h2>How Schools Use Mascot Bears to Build Community Spirit</h2>
-
-            <p class="article-meta">
-              <time datetime="2025-12-09">Published 9 December 2025</time>
-            </p>
-            <p class="article-summary">
-              Practical, real-world ways schools use mascot bears in routines, celebrations, and milestones to build belonging.
-            </p>
-
-            <p>
-              Mascot bears can play a real role in helping pupils feel connected to school life. Some schools create a named character that appears in displays, certificates, and newsletters.
-              Others use bears more quietly, as part of class routines or milestone events.
-            </p>
-
-            <p>
-              In assemblies and classroom routines, a class may take turns looking after an “attendance bear” or “values bear” when a goal is met.
-              The bear might sit on the table of the week, go home with a pupil who has tried especially hard, or appear in photos when the class achieves something together.
-            </p>
-
-            <p>
-              Bears are also used to mark milestones such as new pupils joining or pupils moving on to their next setting.
-              A welcome bear can help a child feel part of the group from day one, while a leavers’ bear can acknowledge the contribution they have made over time.
-            </p>
-
-            <p>
-              Some schools include their mascot bear on flyers, posters, or social media posts to give communication a friendly and familiar face.
-              When pupils see the same bear on displays, certificates, and keepsakes, it reinforces the idea that they belong to something bigger than one class or year group.
-            </p>
-
-            <p>
-              However schools choose to use them, mascot bears work best when they are woven into everyday life, not just handed out once and forgotten.
-              A simple soft toy can help build community spirit when it is linked to shared routines, celebrations, and values.
-            </p>
-          </article>
-
-        
-
-          <!-- 4 DEC 2025 -->
-          <article class="article" id="ten-reasons-school-mascot-bears-keepsake">
-            <h2>10 Reasons School Mascot Bears Make the Perfect Keepsake</h2>
-
-            <p class="article-meta">
-              <time datetime="2025-12-04">Published 4 December 2025</time>
-            </p>
-            <p class="article-summary">
-              Ten simple reasons why schools and families love mascot bears as meaningful keepsakes for leavers and new starters.
-            </p>
-
-            <p>
-              Many families like to keep something special from their child’s time at primary or first school.
-              A school mascot bear is a simple way to capture those memories in a form that pupils can see and touch every day.
-            </p>
-
-            <p>
-              Printed with the school logo and colours, a mascot bear quickly becomes a reminder of sports days, nativity plays,
-              favourite teachers, and friendship groups. Below are ten reasons schools choose mascot bears as a keepsake for leavers or new starters.
-            </p>
-
-            <ol>
-              <li><strong>Personal to the school.</strong> The bear carries the school logo and colours, so it feels unique to that community rather than a generic toy.</li>
-              <li><strong>A daily reminder.</strong> Pupils can keep the bear on a bed or shelf, so memories of their time at school stay close.</li>
-              <li><strong>Perfect for leavers.</strong> A bear is an easy way to mark the end of Year 6 or Year 4 in first schools, particularly alongside yearbooks or certificates.</li>
-              <li><strong>Reassuring for new starters.</strong> For younger pupils joining Reception or Year 1, a bear can offer comfort at bedtime or during big transitions.</li>
-              <li><strong>Durable and long lasting.</strong> Quality mascot bears are designed to be hugged, squashed into bags, and still look good years later.</li>
-              <li><strong>Easy to hand out.</strong> Bears can be distributed in assemblies, class parties, or leavers’ events without extra wrapping or packaging.</li>
-              <li><strong>Supports school identity.</strong> Having the same bear across a year group reinforces a sense of belonging and pride in the school.</li>
-              <li><strong>Works with photos and displays.</strong> Bears look great in leavers’ photos, classroom displays, or social media posts celebrating milestones.</li>
-              <li><strong>Simple for families.</strong> Parents and carers do not need to hunt for gifts; they can order directly through school with everything organised for them.</li>
-              <li><strong>A keepsake pupils actually keep.</strong> Many families already have plenty of keyrings and mugs. A soft toy is something most children will keep for years.</li>
-            </ol>
-
-            <p>
-              When schools choose a mascot bear, they are choosing more than a toy. They are giving each pupil a small but meaningful reminder of their primary or first school years.
-            </p>
-          </article>
+          </section>
+
+          <hr />
+
+          <!-- Latest articles -->
+          <section class="articles-list" aria-label="Latest articles">
+            <h2 id="latest-articles">Latest articles</h2>
+
+            <!-- Card 1 -->
+            <article class="post-card" id="gifting-ideas">
+              <h3>
+                <a href="/blog/best-personalised-teddy-bears-for-children-uk.html">
+                  Best Personalised Teddy Bears for Children in the UK
+                </a>
+              </h3>
+              <p class="article-meta"><time datetime="2026-02-17">Published 17 February 2026</time></p>
+              <p class="article-summary">
+                A practical guide to choosing a personalised teddy bear gift, with ideas for birthdays, new babies, get well soon wishes and meaningful occasions.
+              </p>
+              <p><a href="/blog/best-personalised-teddy-bears-for-children-uk.html">Read more →</a></p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="post-card" id="bedtime-comfort">
+              <h3>
+                <a href="/blog/why-teddy-bear-still-most-loved-toy.html">
+                  Why the Teddy Bear Is Still the Most Loved Toy
+                </a>
+              </h3>
+              <p class="article-meta"><time datetime="2026-01-19">Published 19 January 2026</time></p>
+              <p class="article-summary">
+                A gentle look at why teddy bears continue to offer comfort, imagination and familiarity to children across generations.
+              </p>
+              <p><a href="/blog/why-teddy-bear-still-most-loved-toy.html">Read more →</a></p>
+            </article>
+
+            <!-- Card 3 (placeholder) -->
+            <article class="post-card" id="personalisation-tips">
+              <h3>
+                <a href="/blog/how-to-choose-the-perfect-photo-for-a-personalised-teddy.html">
+                  How to Choose the Perfect Photo for a Personalised Teddy Bear
+                </a>
+              </h3>
+              <p class="article-meta"><time datetime="2026-02-00">Coming soon</time></p>
+              <p class="article-summary">
+                Simple tips to help your photo print clearly, plus what to avoid for the best results.
+              </p>
+              <p><a href="/blog/how-to-choose-the-perfect-photo-for-a-personalised-teddy.html">Read more →</a></p>
+            </article>
+
+            <!-- You can add more cards here as you create post pages -->
+
+          </section>
+
+          <hr />
+
+          <!-- Quick links to categories (optional but helpful for SEO + users) -->
+          <section class="articles-shop-links" aria-label="Explore bear categories">
+            <h2>Explore bear categories</h2>
+            <div class="theme-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px;">
+              <a class="theme-card" href="/bedtime.html">Bedtime bears</a>
+              <a class="theme-card" href="/get-well-soon.html">Get well soon bears</a>
+              <a class="theme-card" href="/newborn.html">Newborn bears</a>
+              <a class="theme-card" href="/graduation.html">Graduation bears</a>
+              <a class="theme-card" href="/seasonal.html">Seasonal bears</a>
+              <a class="theme-card" href="/memorial.html">Memorial bears</a>
+            </div>
+          </section>
 
         </div>
       </div>
     </div>
   </main>
 
- <script src="footer-loader.js"></script>
-<script src="cookie-consent.js"></script>
+  <script src="footer-loader.js"></script>
+  <script src="cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
