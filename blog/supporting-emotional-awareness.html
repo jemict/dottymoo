@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/supporting-emotional-awareness.html">
+
+  <title>Supporting Emotional Awareness in Children | Dotty Moo</title>
+
+  <meta name="description" content="Gentle, low-pressure ways to help children recognise and talk about feelings with confidence, supported by familiar comfort objects." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const path = location.pathname || "";
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content articles-page">
+          <article class="article" id="supporting-emotional-awareness-in-children">
+
+            <h1>Supporting Emotional Awareness in Children</h1>
+
+            <p class="article-meta">
+              <time datetime="2025-12-21">Published 21 December 2025</time>
+            </p>
+
+            <p class="article-summary">
+              Gentle, low-pressure ways to help children recognise and talk about feelings with confidence.
+            </p>
+
+            <p>
+              Understanding and talking about feelings can be challenging for many children.
+              Emotional awareness develops gradually, and for some children it needs to be supported in a concrete and reassuring way.
+            </p>
+
+            <p>
+              Children often find it easier to explore emotions when there is less direct pressure.
+              Quiet moments, shared play and familiar comfort objects can provide a safe starting point for conversation.
+            </p>
+
+            <h2>Creating space for emotional conversations</h2>
+
+            <p>
+              Some children struggle to answer direct questions such as “How are you feeling?”
+              They may not yet have the vocabulary or confidence to respond clearly.
+            </p>
+
+            <p>
+              Sitting alongside a child during play, reading or bedtime routines can create a more relaxed setting.
+              When conversation happens naturally, children are more likely to open up.
+            </p>
+
+            <h2>The role of comfort objects</h2>
+
+            <p>
+              A familiar teddy bear can act as a bridge during emotional conversations.
+              Children often find it easier to talk about how their bear feels before talking about themselves.
+            </p>
+
+            <p>
+              For example, asking “Do you think your bear feels worried today?” can feel much safer than asking the child directly.
+              This gentle shift allows children to project feelings outward, making them easier to explore.
+            </p>
+
+            <h2>Building emotional vocabulary over time</h2>
+
+            <p>
+              Emotional awareness grows through repetition and reassurance.
+              Naming feelings during everyday situations helps children connect words to experiences.
+            </p>
+
+            <p>
+              Over time, children begin to recognise patterns in their emotions.
+              This can lead to calmer communication and greater self-understanding.
+            </p>
+
+            <h2>Keeping support calm and predictable</h2>
+
+            <p>
+              Emotional support works best when it feels steady and predictable.
+              Familiar routines, gentle tone and consistent reassurance help children feel secure.
+            </p>
+
+            <p>
+              A personalised teddy bear can become part of that routine.
+              Whether used during bedtime chats or quiet moments after a busy day,
+              a comfort companion offers stability while emotions are being processed.
+            </p>
+
+            <p>
+              If you are looking for a meaningful comfort companion,
+              you can explore our
+              <a href="/bedtime.html">bedtime bears</a>,
+              our
+              <a href="/get-well-soon.html">get well soon bears</a>,
+              or browse the full
+              <a href="/personalised-bears.html">personalised teddy bear collection</a>.
+            </p>
+
+            <hr />
+
+            <p>
+              <a href="/blog.html">← Back to Articles &amp; Ideas</a>
+            </p>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>

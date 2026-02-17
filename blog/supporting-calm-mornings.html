@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/supporting-calm-mornings.html">
+
+  <title>Supporting Calm Mornings Through Predictable Routines | Dotty Moo</title>
+
+  <meta name="description" content="How predictable routines and familiar comfort objects can help children feel safer and more settled during busy mornings." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const path = location.pathname || "";
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content articles-page">
+          <article class="article" id="supporting-calm-mornings-through-predictable-routines">
+
+            <h1>Supporting Calm Mornings Through Predictable Routines</h1>
+
+            <p class="article-meta">
+              <time datetime="2026-01-03">Published 3 January 2026</time>
+            </p>
+
+            <p class="article-summary">
+              How predictable routines and familiar comfort objects can help children feel safer and more settled during busy mornings.
+            </p>
+
+            <p>
+              Mornings can feel overwhelming for some children. Getting dressed, brushing teeth, leaving the house,
+              and starting the day can all bring sensory discomfort, worry or big emotions before the day has even begun.
+            </p>
+
+            <p>
+              For children who find transitions tricky, mornings are not just busy.
+              They can feel unpredictable, uncomfortable and emotionally demanding.
+            </p>
+
+            <h2>Why mornings can feel so hard</h2>
+
+            <p>
+              Many children experience heightened sensory sensitivity in the morning.
+              Clothes can feel scratchy, toothpaste can feel overwhelming, and shoes might suddenly feel “wrong”.
+              These sensations are very real to the child, even if they seem small to adults.
+            </p>
+
+            <p>
+              Alongside sensory challenges, children may also feel anxious about leaving home
+              or separating from familiar adults.
+              When several of these factors come together, mornings can quickly become stressful
+              for both children and parents.
+            </p>
+
+            <h2>The power of predictable routines</h2>
+
+            <p>
+              Predictability can make a meaningful difference.
+              Clear, consistent steps help children understand what comes next,
+              reducing the feeling that mornings are “too big” or out of control.
+            </p>
+
+            <p>
+              Simple repetition builds familiarity.
+              When a child knows the order of the morning,
+              they are less likely to feel rushed or uncertain.
+            </p>
+
+            <h2>The role of comfort objects</h2>
+
+            <p>
+              A familiar comfort object, such as a favourite teddy bear,
+              can act as a steady anchor during transitions.
+              Holding something soft and reassuring can help regulate emotions
+              and create a sense of security before leaving home.
+            </p>
+
+            <p>
+              Some families find that a dedicated bedtime or comfort bear
+              becomes part of the morning routine itself.
+              It might sit on the bed during dressing,
+              travel in a bag for reassurance,
+              or simply be there as a reminder of home.
+            </p>
+
+            <h2>Sensory support without pressure</h2>
+
+            <p>
+              Small adjustments can also help.
+              Choosing softer clothing, allowing extra time,
+              or offering gentle choices rather than instructions
+              can reduce morning stress significantly.
+            </p>
+
+            <p>
+              Not every strategy works for every child.
+              What helps one day may change the next.
+              The key is keeping the approach calm and flexible.
+            </p>
+
+            <h2>Calm adults make a difference</h2>
+
+            <p>
+              Children often borrow regulation from the adults around them.
+              Calm voices, reassurance and steady pacing
+              can create a sense of safety during challenging moments.
+            </p>
+
+            <p>
+              When adults remain grounded,
+              children are more likely to settle more quickly.
+            </p>
+
+            <h2>Creating a gentle start to the day</h2>
+
+            <p>
+              Predictable routines, sensory awareness and familiar comfort objects
+              can work together to create calmer mornings.
+              Small, consistent adjustments often make the biggest difference.
+            </p>
+
+            <p>
+              If you are looking for a meaningful comfort companion,
+              you can explore our
+              <a href="/bedtime.html">bedtime bears</a>
+              or browse the full
+              <a href="/personalised-bears.html">personalised teddy bear collection</a>.
+            </p>
+
+            <hr />
+
+            <p>
+              <a href="/blog.html">← Back to Articles &amp; Ideas</a>
+            </p>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>

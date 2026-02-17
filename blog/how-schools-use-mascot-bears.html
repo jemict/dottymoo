@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/how-schools-use-mascot-bears.html">
+
+  <title>How Schools Use Mascot Bears to Build Community Spirit | Dotty Moo</title>
+
+  <meta name="description" content="Real-world ways school mascot bears strengthen belonging, celebrate milestones and build shared identity across school communities." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const path = location.pathname || "";
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content articles-page">
+          <article class="article" id="how-schools-use-mascot-bears">
+
+            <h1>How Schools Use Mascot Bears to Build Community Spirit</h1>
+
+            <p class="article-meta">
+              <time datetime="2025-12-09">Published 9 December 2025</time>
+            </p>
+
+            <p class="article-summary">
+              Real-world ways school mascot bears are used to strengthen belonging, celebrate milestones and build shared identity.
+            </p>
+
+            <p>
+              A school mascot is more than a soft toy.
+              When used thoughtfully, it becomes a symbol of shared identity and belonging.
+            </p>
+
+            <p>
+              Many schools introduce a named mascot bear that appears in assemblies, certificates, newsletters or classroom displays.
+              Over time, children begin to associate the mascot with encouragement, celebration and routine.
+            </p>
+
+            <h2>Supporting everyday routines</h2>
+
+            <p>
+              In some settings, a class may take turns looking after an attendance bear or values bear.
+              The mascot might sit with the class during reading time, appear in celebration photos,
+              or go home with a child who has shown kindness or perseverance.
+            </p>
+
+            <p>
+              These small rituals help children feel recognised and connected to something bigger than themselves.
+            </p>
+
+            <h2>Marking important milestones</h2>
+
+            <p>
+              Mascot bears are also used to acknowledge milestones such as new starters joining the school
+              or pupils moving on to their next stage of education.
+            </p>
+
+            <p>
+              A welcome bear can help a child feel included from the very beginning.
+              A leavers’ bear can serve as a keepsake that carries memories forward.
+            </p>
+
+            <h2>Creating a shared symbol</h2>
+
+            <p>
+              When pupils see the same mascot across displays, certificates and keepsakes,
+              it reinforces the idea that they belong to a shared community.
+            </p>
+
+            <p>
+              The familiarity of a mascot creates continuity,
+              particularly during times of change.
+            </p>
+
+            <h2>A gentle approach to community identity</h2>
+
+            <p>
+              Mascot bears work best when they are woven naturally into everyday life,
+              rather than introduced as one-off items.
+              Their value comes from consistency and familiarity.
+            </p>
+
+            <p>
+              If your school community is exploring mascot or leavers’ bears,
+              you can learn more on our
+              <a href="/schools.html">Schools &amp; Organisations page</a>.
+            </p>
+
+            <hr />
+
+            <p>
+              <a href="/blog.html">← Back to Articles &amp; Ideas</a>
+            </p>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>

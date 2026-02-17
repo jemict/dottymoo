@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/when-words-arent-enough-comfort-objects.html">
+
+  <title>When Words Aren’t Enough: How Comfort Objects Can Support Understanding | Dotty Moo</title>
+
+  <meta name="description" content="A gentle look at how comfort objects can help children process big feelings, reduce overwhelm and feel more secure in everyday situations." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER (GDPR-style) -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE PREFERENCES MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+        <small>
+          These cookies are needed for the website to function correctly and cannot be switched off in our systems.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+        <small>
+          These help us understand how visitors use the website so we can improve content and layout.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+        <small>
+          These may be used to show relevant adverts or track the effectiveness of campaigns.
+          They are set only if you accept them.
+        </small>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        // Highlight "Blog" for all /blog/ pages
+        const path = location.pathname || "";
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        // Mobile nav toggle
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content articles-page">
+          <article class="article" id="when-words-arent-enough-comfort-objects-support-understanding">
+
+            <h1>When Words Aren’t Enough: How Comfort Objects Can Support Understanding</h1>
+
+            <p class="article-meta">
+              <time datetime="2026-01-22">Published 22 January 2026</time>
+            </p>
+
+            <p class="article-summary">
+              A gentle look at how comfort objects can help children process big feelings, reduce overwhelm and feel more secure in everyday situations.
+            </p>
+
+            <p>
+              Children are often expected to understand and respond to spoken instructions quickly. For some, this comes easily.
+              For others, especially when they are tired, anxious or overwhelmed, words alone can feel like too much.
+            </p>
+
+            <p>
+              In these moments, children often benefit from something steady and familiar. Not as a replacement for communication,
+              but as an additional layer of reassurance.
+            </p>
+
+            <h2>Why spoken language can feel overwhelming</h2>
+
+            <p>
+              Spoken instructions disappear as soon as they are said. Children have to listen, process, remember and act, often all at once.
+            </p>
+
+            <p>
+              When emotions are high or environments are busy, this can be particularly challenging. A child may understand the words,
+              but struggle to hold onto them long enough to respond.
+            </p>
+
+            <h2>The role of comfort objects</h2>
+
+            <p>
+              A familiar object, such as a favourite teddy bear, can provide a steady point of focus. Unlike spoken words, it remains physically present.
+              A child can hold it, look at it, or simply know it is nearby.
+            </p>
+
+            <p>
+              Comfort objects do not give instructions. They offer reassurance. That sense of stability can reduce pressure and make it easier
+              for children to process what is happening around them.
+            </p>
+
+            <h2>Supporting transitions and big feelings</h2>
+
+            <p>
+              Transitions can be particularly difficult, whether that is leaving home, preparing for bedtime, visiting somewhere unfamiliar
+              or navigating recovery after illness.
+            </p>
+
+            <p>
+              A personalised teddy bear can act as a gentle bridge between environments. It represents familiarity, routine and emotional safety.
+              Knowing that something trusted is close by can help reduce anxiety around change.
+            </p>
+
+            <h2>Reducing emotional overload</h2>
+
+            <p>
+              In moments of stress, children may find it hard to take in spoken language, even when it is calm and well intentioned.
+            </p>
+
+            <p>
+              A soft toy offers quiet support. There are no extra demands, no instructions and no pressure to respond.
+              Simply holding something comforting can help regulate breathing, slow racing thoughts and create a pause before reacting.
+            </p>
+
+            <h2>A calm, supportive approach</h2>
+
+            <p>
+              At Dotty Moo, we believe comfort should feel gentle and pressure free. A teddy bear is not a behaviour tool or a reward system.
+              It is a companion that supports connection, reassurance and belonging.
+            </p>
+
+            <p>
+              When words feel like too much, something familiar and soft can provide clarity, comfort and a sense of calm.
+            </p>
+
+            <p>
+              If you are looking for a meaningful comfort gift, you can explore our
+              <a href="/bedtime.html">bedtime bears</a>,
+              <a href="/get-well-soon.html">get well soon bears</a>
+              or browse the full
+              <a href="/personalised-bears.html">personalised teddy bear collection</a>.
+            </p>
+
+            <hr />
+
+            <p>
+              <a href="/blog.html">← Back to Articles &amp; Ideas</a>
+            </p>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>
+

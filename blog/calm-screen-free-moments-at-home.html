@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dottymoo.co.uk/blog/calm-screen-free-moments-at-home.html">
+
+  <title>Calm, Screen-Free Moments at Home | Dotty Moo</title>
+
+  <meta name="description" content="Simple, low-pressure ways to help children wind down at home with calm routines, screen-free time and comforting personalised teddy bears." />
+
+  <meta property="og:image" content="https://dottymoo.co.uk/assets/articles-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
+    <p>
+      We use cookies to improve your experience and to understand how this website is used.
+      You can accept all cookies, reject non essential cookies, or manage your preferences.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
+      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
+    </div>
+  </div>
+
+  <!-- COOKIE MODAL -->
+  <div id="cookie-modal-backdrop" class="cookie-modal-backdrop" aria-hidden="true">
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <h2 id="cookie-modal-title">Cookie preferences</h2>
+      <p>You can choose which types of cookies you are happy for us to use. Essential cookies are always on.</p>
+
+      <div class="cookie-category">
+        <h3>Essential cookies</h3>
+        <label>
+          <input type="checkbox" checked disabled class="cookie-toggle" />
+          Always active
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Analytics cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-analytics" class="cookie-toggle" />
+          Allow analytics cookies
+        </label>
+      </div>
+
+      <div class="cookie-category">
+        <h3>Marketing cookies</h3>
+        <label>
+          <input type="checkbox" id="cookie-marketing" class="cookie-toggle" />
+          Allow marketing cookies
+        </label>
+      </div>
+
+      <div class="cookie-modal-actions">
+        <button id="cookie-save" class="cookie-btn cookie-btn-primary">Save preferences</button>
+        <button id="cookie-cancel" class="cookie-btn cookie-btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-layer"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="site-nav"></div>
+
+  <script>
+    fetch("/nav.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        const path = location.pathname || "";
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').split('?')[0];
+          if (path.startsWith('/blog/') && (href === '/blog.html' || href.endsWith('/blog.html'))) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+
+        const nav = document.querySelector('.site-nav');
+        const toggle = document.querySelector('.nav-toggle');
+
+        if (nav && toggle) {
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+      });
+  </script>
+
+  <main id="main-content">
+    <div class="wrap">
+      <div class="card">
+
+        <div class="header">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+        </div>
+
+        <div class="content articles-page">
+          <article class="article" id="calm-screen-free-moments-at-home">
+
+            <h1>Calm, Screen-Free Moments at Home</h1>
+
+            <p class="article-meta">
+              <time datetime="2025-12-19">Published 19 December 2025</time>
+            </p>
+
+            <p class="article-summary">
+              Simple, low-pressure ways to help children wind down at home, especially after busy days or during school holidays.
+            </p>
+
+            <p>
+              Finding calm moments at home can feel surprisingly difficult,
+              especially during busy weeks, school holidays or transitions between activities.
+              Many families are trying to reduce screen time,
+              but still need something that feels genuinely engaging and soothing.
+            </p>
+
+            <p>
+              Screen-free time does not need to be complicated.
+              Often, children benefit most from simple, predictable activities
+              that allow them to focus without pressure.
+            </p>
+
+            <h2>The value of quiet repetition</h2>
+
+            <p>
+              Repetitive, familiar tasks can help children settle.
+              Tidying toys, arranging soft toys, building small scenes,
+              or simply sitting with a favourite teddy can create a sense of control and calm.
+            </p>
+
+            <p>
+              These moments may seem small,
+              but they offer children a break from fast-paced stimulation.
+            </p>
+
+            <h2>Comfort objects and winding down</h2>
+
+            <p>
+              A personalised teddy bear can become part of a child’s quiet routine.
+              Sitting together during story time,
+              resting nearby during homework,
+              or joining a simple imaginative game
+              can help ease the shift from busy to calm.
+            </p>
+
+            <p>
+              Familiar comfort objects provide reassurance,
+              especially after emotionally demanding days.
+            </p>
+
+            <h2>Supporting emotional reset</h2>
+
+            <p>
+              Some children need a predictable reset point after school.
+              A short quiet routine, paired with a soft companion,
+              can help them transition from the outside world back into home life.
+            </p>
+
+            <p>
+              Consistency matters more than complexity.
+              The goal is not to entertain constantly,
+              but to create space where children feel safe and settled.
+            </p>
+
+            <h2>Creating calm without pressure</h2>
+
+            <p>
+              Screen-free time does not need to look perfect or structured.
+              It can be as simple as quiet play,
+              storytelling,
+              or a familiar bedtime ritual.
+            </p>
+
+            <p>
+              If you are looking for a meaningful comfort companion,
+              you can explore our
+              <a href="/bedtime.html">bedtime bears</a>
+              or browse the full
+              <a href="/personalised-bears.html">personalised teddy bear collection</a>.
+            </p>
+
+            <hr />
+
+            <p>
+              <a href="/blog.html">← Back to Articles &amp; Ideas</a>
+            </p>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>
