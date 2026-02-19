@@ -360,7 +360,43 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+    <!-- Builder Bears -->
+<url>
+  <loc>https://dottymoo.co.uk/hivis-classic.html</loc>
+  <lastmod>2026-02-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 
+<url>
+  <loc>https://dottymoo.co.uk/hivis-dog.html</loc>
+  <lastmod>2026-02-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://dottymoo.co.uk/hivis-eco.html</loc>
+  <lastmod>2026-02-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://dottymoo.co.uk/hivis-lion.html</loc>
+  <lastmod>2026-02-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://dottymoo.co.uk/hivis-monkey.html</loc>
+  <lastmod>2026-02-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+  
       <!-- Blog Pages -->
 
 <url>
@@ -444,6 +480,7 @@
 
   
   </urlset>
+
 
 
 
