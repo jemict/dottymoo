@@ -88,7 +88,26 @@
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<div id="site-nav"></div>
 
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("site-nav").innerHTML = html;
+
+      // Active link handling
+      const here = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.site-nav a').forEach(a => {
+        if (a.getAttribute('href') === here) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+
+    
+    });
+</script>
 
   <!-- MAIN CONTENT -->
   <main id="main-content">
@@ -294,6 +313,7 @@ Explore Dotty Moo’s collection of personalised bears and keepsake soft toys, d
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
