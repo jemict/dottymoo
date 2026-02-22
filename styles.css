@@ -1539,3 +1539,13 @@ blockquote{
    14. Utilities & enhancements
    ===================================================== */
 /* (Intentionally left for future utility helpers.) */
+
+/*troubleshooting*/
+
+/* Never let decorative layers block touch/scroll */
+.bg-layer { pointer-events: none; }
+
+/* When cookie modal is hidden, it must not catch touches */
+.cookie-modal-backdrop[aria-hidden="true"] {
+  pointer-events: none;
+}
