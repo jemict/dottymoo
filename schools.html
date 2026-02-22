@@ -82,28 +82,16 @@
     </div>
   </div>
 
-  <div class="bg-layer"></div>
+
+ <div class="bg-layer" aria-hidden="true"></div>
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
-
   <script>
-    fetch("/nav.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("site-nav").innerHTML = html;
-
-        // Active link handling
-        const here = location.pathname.split('/').pop() || 'index.html';
-        document.querySelectorAll('.site-nav a').forEach(a => {
-          if (a.getAttribute('href') === here) {
-            a.classList.add('active');
-            a.setAttribute('aria-current', 'page');
-          }
-        });
-
-       
-      });
+    fetch("nav.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
 
   <main id="main-content">
@@ -291,6 +279,7 @@ Each item can be personalised with your logo, with size and colour options confi
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
