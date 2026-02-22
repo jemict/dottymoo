@@ -9,21 +9,28 @@
   <title>Personalised Photo Classic Bear | Dotty Moo</title>
   <meta name="description" content="Photo bear (22cm sitting height). Add a photo with a short message or name">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -34,7 +41,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -42,23 +49,14 @@
           <h1>Personalised Photo Classic Bear</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
-
+         
           <p class="lead">
          A classic teddy bear personalised with your chosen photo and message to create a special keepsake.
           </p>
 
           <img
             class="product-hero"
-            src="assets/products/photo-classic.png"
+            src="/assets/products/photo-classic.png"
             alt="Photo teddy bear wearing a plain white T-shirt ready for personalisation"
             loading="lazy">
 
@@ -88,7 +86,7 @@
 
           <figure class="sample-figure">
             <img
-              src="assets/products/photo-layout.png"
+              src="/assets/products/photo-layout.png"
               alt="Example of personalisation showing a photo and message"
               loading="lazy"
               style="max-width: 260px; width: 100%; height: auto;">
@@ -138,7 +136,7 @@
           </p>
 
           <p>
-            <a class="btn btn-secondary" href="photo-bears.html">Back to photo bears</a>
+            <a class="btn btn-secondary" href="/photo-bears.html">Back to photo bears</a>
           </p>
 
         </div>
@@ -146,11 +144,22 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+   <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
+
 </body>
 </html>
+
 
 
 
