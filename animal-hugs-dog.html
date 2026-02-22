@@ -18,7 +18,14 @@
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -28,7 +35,7 @@
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
-
+  
   <main id="main-content">
     <div class="wrap">
       <div class="card">
@@ -139,7 +146,7 @@
 
           <figure class="sample-figure">
             <img
-              src="assets/products/animal-layout-puppy.png"
+              src="/assets/products/animal-layout-puppy.png"
               alt="Example of personalisation showing a two-tone message, name and icon"
               loading="lazy"
               style="max-width: 260px; width: 100%; height: auto;">
@@ -210,6 +217,7 @@
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
