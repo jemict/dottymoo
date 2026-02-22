@@ -14,10 +14,10 @@
 <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
 <link rel="icon" href="favicon.ico">
 
-<link rel="preload" as="image" href="assets/banner.png">
-<link rel="preload" as="image" href="assets/cover.png">
+<link rel="preload" as="image" href="/assets/banner.png">
+<link rel="preload" as="image" href="/assets/cover.png">
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -90,7 +90,7 @@
 <div id="site-nav"></div>
 
 <script>
-  fetch("nav.html")
+  fetch("/nav.html")
     .then(response => response.text())
     .then(html => {
       document.getElementById("site-nav").innerHTML = html;
@@ -113,7 +113,7 @@
       <div class="card">
 
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo logo and text">
         </div>
 
     <div class="content">
@@ -168,8 +168,8 @@
 
   <p><strong>Want to explore?</strong></p>
   <p>
-    <a class="btn btn-primary" href="personalised-bears.html">Personalised Bears</a>
-    <a class="btn btn-secondary" href="schools.html">Schools & Organisations</a>
+    <a class="btn btn-primary" href="/personalised-bears.html">Personalised Bears</a>
+    <a class="btn btn-secondary" href="/schools.html">Schools & Organisations</a>
   </p>
 </div>
 
@@ -179,8 +179,8 @@
     </div>
   </main>
 
- <script src="footer-loader.js"></script>
-<script src="cookie-consent.js"></script>
+ <script src="/footer-loader.js"></script>
+<script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
