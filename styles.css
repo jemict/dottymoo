@@ -1549,3 +1549,27 @@ blockquote{
 .cookie-modal-backdrop[aria-hidden="true"] {
   pointer-events: none;
 }
+/* 1) Decorative background must never block touch/scroll */
+.bg-layer {
+  pointer-events: none;
+}
+
+/* 2) Cookie modal backdrop must not block touch when hidden */
+#cookie-modal-backdrop[aria-hidden="true"] {
+  display: none;
+  pointer-events: none;
+}
+
+/* When the cookie modal is open, it can block touch (as intended) */
+#cookie-modal-backdrop[aria-hidden="false"] {
+  display: flex;
+  pointer-events: auto;
+}
+
+/* 3) Extra safety: if you hide the backdrop via opacity/visibility elsewhere */
+#cookie-modal-backdrop {
+  pointer-events: none; /* default closed state */
+}
+#cookie-modal-backdrop[aria-hidden="false"] {
+  pointer-events: auto;
+}
