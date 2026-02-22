@@ -89,7 +89,7 @@
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -298,6 +298,7 @@ Explore Dotty Moo’s collection of personalised bears and keepsake soft toys, d
   <script src="/nav-init.js" defer></script> 
 </body>
 </html>
+
 
 
 
