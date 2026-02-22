@@ -50,16 +50,7 @@
           <h1>Eco Bear Hugs</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("/notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
-
+        
           <p class="lead">
             A gentle eco comfort bear with a printed T-shirt design, made to support calm moments and familiar routines.
           </p>
@@ -213,8 +204,19 @@
   <script src="/footer-loader.js"></script>
   <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+    <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
+
 </body>
 </html>
+
 
 
 
