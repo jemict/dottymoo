@@ -18,7 +18,14 @@
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -35,7 +42,7 @@
 
         <!-- Banner should be INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -43,15 +50,7 @@
           <h1>Animal Hugs</h1>
 <div id="page-notice"></div>
 
-<script>
-  fetch("/notice.html")
-    .then(r => r.text())
-    .then(html => {
-      if (html.trim()) {
-        document.getElementById("page-notice").innerHTML = html;
-      }
-    });
-</script>
+
 
           <p class="lead">
             Personalised animal soft toys for animal lovers, thoughtful everyday gifting, and comfort keepsakes.
@@ -89,7 +88,7 @@
 
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/bear-hugs.png"
+                  src="/assets/products/bear-hugs.png"
                   alt="Animal Hugs design on classic bear"
                   loading="lazy">
                 <h3>Classic Bear</h3>
@@ -97,7 +96,7 @@
                 <p class="product-detail">(22cm sitting height)</p>
                 <p>A traditional teddy bear base that works beautifully for animal-themed messages and keepsakes.</p>
                 <p>
-                  <a class="btn btn-primary" href="animal-hugs-classic.html">Choose this bear</a>
+                  <a class="btn btn-primary" href="/animal-hugs-classic.html">Choose this bear</a>
                 </p>
               </article>
 
@@ -174,8 +173,18 @@
   <script src="/footer-loader.js"></script>
   <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+  <script>
+  fetch("/notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
 </body>
 </html>
+
 
 
 
