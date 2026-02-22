@@ -10,21 +10,28 @@
 <meta name="description" content="Send a personalised get well soon teddy bear with a name and gentle message. A comforting keepsake gift for recovery, hospital stays or rest at home, personalised in the UK." />
 
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -43,16 +50,7 @@
           <h1>Get Well Soon Bears</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
-
+        
           <p class="lead">
             A personalised comfort bear designed to help someone feel cared for during recovery, rest, or a tough week. <p>
 Each bear is personalised in the UK and carefully prepared to order, making it a simple but meaningful gift during recovery.
@@ -63,7 +61,7 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
             Available on multiple bear styles. Choose your base below.
           </p>
 <p class="small-note">
-  Looking for other occasions? Browse <a href="personalised-bears.html">personalised bears</a>.
+  Looking for other occasions? Browse <a href="/personalised-bears.html">personalised bears</a>.
 </p>
           <hr>
 
@@ -105,7 +103,7 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
               <!-- Classic bear -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/get-well-soon-bear.png"
+                  src="/assets/products/get-well-soon-bear.png"
                   alt="Get well soon design on classic bear"
                   loading="lazy">
                 <h3>Classic Bear</h3>
@@ -120,7 +118,7 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
               <!-- Dog soft toy -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/get-well-soon-dog.png"
+                  src="/assets/products/get-well-soon-dog.png"
                   alt="Get well soon design on dog soft toy"
                   loading="lazy">
                 <h3>Dog Soft Toy</h3>
@@ -135,7 +133,7 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
               <!-- Eco bear -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/get-well-soon-eco.png"
+                  src="/assets/products/get-well-soon-eco.png"
                   alt="Get well soon design on eco bear"
                   loading="lazy">
                 <h3>Eco Bear</h3>
@@ -150,7 +148,7 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
               <!-- Lion soft toy -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/get-well-soon-lion.png"
+                  src="/assets/products/get-well-soon-lion.png"
                   alt="Get well soon design on lion soft toy"
                   loading="lazy">
                 <h3>Lion Soft Toy</h3>
@@ -165,7 +163,7 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
               <!-- Monkey soft toy -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/get-well-soon-monkey.png"
+                  src="/assets/products/get-well-soon-monkey.png"
                   alt="Get well soon design on monkey soft toy"
                   loading="lazy">
                 <h3>Monkey Soft Toy</h3>
@@ -199,11 +197,22 @@ Each bear is personalised in the UK and carefully prepared to order, making it a
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+    <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
+
 </body>
 </html>
+
 
 
 
