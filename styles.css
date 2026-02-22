@@ -142,7 +142,13 @@ body::before{
   background:rgba(240,101,92,.12);
   color:#000;
 }
-
+/* Mobile performance fix: avoid fixed + backdrop-filter flicker */
+@media (max-width: 900px) {
+  .site-nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
 
 /* =====================================================
    05. Cookie banner & modal
