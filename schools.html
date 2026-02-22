@@ -8,11 +8,11 @@
   <meta name="description" content="Bulk order mascot bears for schools and organisations. Simple bulk ordering at wholesale pricing, with a calm, low risk trial option.">
   <link rel="canonical" href="https://dottymoo.co.uk/schools.html">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="preload" as="image" href="assets/banner.png">
-  <link rel="preload" as="image" href="assets/cover.png">
+  <link rel="preload" as="image" href="/assets/banner.png">
+  <link rel="preload" as="image" href="/assets/cover.png">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,7 +25,7 @@
     <p>
       We use cookies to improve your experience and to understand how this website is used.
       You can accept all cookies, reject non essential cookies, or manage your preferences.
-      See our <a href="privacy.html">Privacy Policy</a> for more information.
+      See our <a href="/privacy.html">Privacy Policy</a> for more information.
     </p>
     <div class="cookie-banner-buttons">
       <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
@@ -88,7 +88,7 @@
   <div id="site-nav"></div>
 
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(response => response.text())
       .then(html => {
         document.getElementById("site-nav").innerHTML = html;
@@ -110,7 +110,7 @@
     <div class="wrap">
       <div class="card">
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo logo and text">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo logo and text">
         </div>
 
         <div class="content">
@@ -118,7 +118,7 @@
 <div id="page-notice"></div>
 
 <script>
-  fetch("notice.html")
+  fetch("/notice.html")
     .then(r => r.text())
     .then(html => {
       if (html.trim()) {
@@ -171,64 +171,64 @@ Each item can be personalised with your logo, with size and colour options confi
             <div class="range-grid">
 
               <article class="range-card">
-                <img src="assets/products/mascot-bear.jpg" alt="Mascot bear" loading="lazy">
+                <img src="/assets/products/mascot-bear.jpg" alt="Mascot bear" loading="lazy">
                 <h3>Mascot Bear</h3>
                 <p>Available in two bear colours.</p>
               </article>
               
 <article class="range-card">
-  <img src="assets/products/grad-bear.jpg" alt="Graduation bear" loading="lazy">
+  <img src="/assets/products/grad-bear.jpg" alt="Graduation bear" loading="lazy">
   <h3>Graduation/Leavers Bear</h3>
   <p>Graduation outfit included.</p>
   <p>
-    <a class="btn btn-secondary" href="leavers.html">View leavers options</a>
+    <a class="btn btn-secondary" href="/leavers.html">View leavers options</a>
   </p>
 </article>
 
 
                  <article class="range-card">
-                <img src="assets/products/eco-bear.jpg" alt="Eco Bear" loading="lazy">
+                <img src="/assets/products/eco-bear.jpg" alt="Eco Bear" loading="lazy">
                 <h3>Eco Bear</h3>
                 <p>Available in two bear colours.</p>
               </article>
               <article class="range-card">
-                <img src="assets/products/dog-large.jpg" alt="Dog plush" loading="lazy">
+                <img src="/assets/products/dog-large.jpg" alt="Dog plush" loading="lazy">
                 <h3>Dog Plush</h3>
                 <p>Available in small or large.</p>
               </article>
 
               <article class="range-card">
-                <img src="assets/products/monkey-large.jpg" alt="Monkey plush" loading="lazy">
+                <img src="/assets/products/monkey-large.jpg" alt="Monkey plush" loading="lazy">
                 <h3>Monkey Plush</h3>
                 <p>Available in small or large.</p>
               </article>
 
               <article class="range-card">
-                <img src="assets/products/lion-large.jpg" alt="Lion plush" loading="lazy">
+                <img src="/assets/products/lion-large.jpg" alt="Lion plush" loading="lazy">
                 <h3>Lion Plush</h3>
                 <p>Available in small or large.</p>
               </article>
 
               <article class="range-card">
-                <img src="assets/products/bear-keyring.jpg" alt="Bear keyring" loading="lazy">
+                <img src="/assets/products/bear-keyring.jpg" alt="Bear keyring" loading="lazy">
                 <h3>Bear Keyring</h3>
                 <p>One size. A popular impulse item.</p>
               </article>
 
               <article class="range-card">
-                <img src="assets/products/bundle-cream.png" alt="Mug and bear bundle" loading="lazy">
+                <img src="/assets/products/bundle-cream.png" alt="Mug and bear bundle" loading="lazy">
                 <h3>Mug &amp; Bear Bundle</h3>
                 <p>Available in two colour options.</p>
               </article>
 
               <article class="range-card">
-                <img src="assets/products/mug.png" alt="Personalised mug" loading="lazy">
+                <img src="/assets/products/mug.png" alt="Personalised mug" loading="lazy">
                 <h3>Personalised Mug</h3>
                 <p>Optional add-on item. Matches your mascot design.</p>
               </article>
 
               <article class="range-card">
-                <img src="assets/products/tote.png" alt="Tote bag" loading="lazy">
+                <img src="/assets/products/tote.png" alt="Tote bag" loading="lazy">
                 <h3>Tote Bag</h3>
                 <p>One style. Practical add-on item.</p>
               </article>
@@ -277,8 +277,8 @@ Each item can be personalised with your logo, with size and colour options confi
           </p>
 
           <p>
-            <a class="btn btn-primary" href="contact.html">Enquire</a>
-            <a class="btn btn-secondary" href="index.html">Back to homepage</a>
+            <a class="btn btn-primary" href="/contact.html">Enquire</a>
+            <a class="btn btn-secondary" href="/index.html">Back to homepage</a>
           </p>
 
         </div>
@@ -286,11 +286,12 @@ Each item can be personalised with your logo, with size and colour options confi
     </div>
   </main>
 
-<script src="footer-loader.js"></script>
-<script src="cookie-consent.js"></script>
+<script src="/footer-loader.js"></script>
+<script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
