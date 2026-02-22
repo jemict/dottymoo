@@ -88,28 +88,7 @@
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
- <div id="site-nav"></div>
 
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("site-nav").innerHTML = html;
-
-      // Active link handling
-      const here = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.site-nav a').forEach(a => {
-        if (a.getAttribute('href') === here) {
-          a.classList.add('active');
-          a.setAttribute('aria-current', 'page');
-        }
-      });
-
-    
-    });
-</script>
-
-  
 
   <!-- MAIN CONTENT -->
   <main id="main-content">
@@ -127,7 +106,7 @@
 <div id="page-notice"></div>
 
 <script>
-  fetch("notice.html")
+  fetch("/notice.html")
     .then(r => r.text())
     .then(html => {
       if (html.trim()) {
@@ -264,7 +243,7 @@ Explore Dotty Moo’s collection of personalised bears and keepsake soft toys, d
     <img src="/assets/products/school-leaver-bear.png"
          alt="Graduation or school leavers bear"
          loading="lazy">
-    <h3>Graduation / School Leavers Bear</h3>
+    <h3>Graduation / School Leavers Bears</h3>
     <p class="stock-note">Pre-order – coming soon</p>
     <p>A personalised keepsake bear designed to celebrate a school leaver, with the school name, year, and your name printed on the T-shirt.</p>
     <p>
@@ -315,6 +294,7 @@ Explore Dotty Moo’s collection of personalised bears and keepsake soft toys, d
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
