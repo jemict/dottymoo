@@ -18,6 +18,13 @@
 
 <body class="product-page">
 
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
  <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -45,15 +52,7 @@
           <h1>Memorial Teddy Bears</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+         
 
           <p class="lead">
             A personalised keepsake bear with a printed T-shirt design, created to help you remember someone special.
@@ -203,8 +202,18 @@ It is not intended to replace professional support, but it can be a comforting i
   <script src="/footer-loader.js"></script>
   <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+   <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
