@@ -18,16 +18,17 @@
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("/nav.html")
+    fetch("nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
+
 
   <main id="main-content">
     <div class="wrap">
@@ -203,6 +204,7 @@ It is not intended to replace professional support, but it can be a comforting i
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
