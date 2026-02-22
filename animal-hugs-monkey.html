@@ -10,21 +10,28 @@
   <title>Monkey Hugs | Dotty Moo</title>
   <meta name="description" content="Monkey Hugs is a comfort monkey soft toy with a printed T-shirt design. Personalise with a message, name, and optional icon. A gentle keepsake for calm moments at home, or on the go.">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -35,7 +42,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -43,15 +50,7 @@
           <h1>Monkey Hugs</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+       
 
           <p class="lead">
             A playful monkey soft toy with a printed T-shirt design, made to support calm moments and familiar routines.
@@ -59,7 +58,7 @@
 
           <img
             class="product-hero"
-            src="assets/products/monkey-hugs.png"
+            src="/assets/products/monkey-hugs.png"
             alt="Monkey Hugs"
             loading="lazy">
 
@@ -107,7 +106,7 @@
             <div class="dm-samples-grid dm-shop-grid">
 
               <article class="dm-sample-card">
-                <img src="assets/products/memorial-icons.png" alt="Memorial icon guide with code labels" loading="lazy">
+                <img src="/assets/products/memorial-icons.png" alt="Memorial icon guide with code labels" loading="lazy">
                 <h3>Memorial Icons</h3>
                 <p>Memorial icons (choose one code from the guide).</p>
               </article>
@@ -137,7 +136,7 @@
 
           <figure class="sample-figure">
             <img
-              src="assets/products/memorial-layout1.png"
+              src="/assets/products/memorial-layout1.png"
               alt="Example of personalisation showing a photo and star icon"
               loading="lazy"
               style="max-width: 260px; width: 100%; height: auto;">
@@ -187,7 +186,7 @@
 </p>
 
           <p>
-            <a class="btn btn-secondary" href="animal-hugs.html">Back to animal hugs</a>
+            <a class="btn btn-secondary" href="/animal-hugs.html">Back to animal hugs</a>
           </p>
 
         </div>
@@ -195,11 +194,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+     <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
