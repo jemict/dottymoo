@@ -11,21 +11,28 @@
 
 
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -44,15 +51,7 @@
           <h1>Personalised Photo Teddy Bears</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+         
 
          <p class="lead">
   A personalised photo bear with your chosen picture printed on the T-shirt, creating a special keepsake to celebrate favourite memories.
@@ -204,11 +203,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+   <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
