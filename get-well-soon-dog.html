@@ -9,21 +9,28 @@
   <title>Get Well Soon Dog | Dotty Moo</title>
   <meta name="description" content="Get well soon dog (20cm sitting height / 29cm total length). Add a message, a name, plus an optional icon, then choose your font and colour using the guides.">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -34,7 +41,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -42,15 +49,7 @@
           <h1>Get Well Soon Dog</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+         
 
           <p class="lead">
             A friendly dog soft toy personalised to send comfort, encouragement and a little smile when it’s needed most.
@@ -58,7 +57,7 @@
 
           <img
             class="product-hero"
-            src="assets/products/get-well-soon-dog.png"
+            src="/assets/products/get-well-soon-dog.png"
             alt="Get well soon dog soft toy with a personalised T-shirt"
             loading="lazy">
 
@@ -79,13 +78,13 @@
       
 
               <article class="dm-sample-card">
-                <img src="assets/products/colours.png" alt="Colour guide showing Pink, Blue, Green, Red and Grey options" loading="lazy">
+                <img src="/assets/products/colours.png" alt="Colour guide showing Pink, Blue, Green, Red and Grey options" loading="lazy">
                 <h3>Colours</h3>
                 <p>Choose: <strong>Pink</strong>, <strong>Blue</strong>, <strong>Green</strong>, <strong>Red</strong>, or <strong>Grey</strong>.</p>
               </article>
 
                     <article class="dm-sample-card">
-                <img src="assets/products/get-well-soon-icons.png" alt="Name and everyday icon guide with code labels" loading="lazy">
+                <img src="/assets/products/get-well-soon-icons.png" alt="Name and everyday icon guide with code labels" loading="lazy">
                 <h3>Icons</h3>
                        <p>Choose: <strong>A</strong>, <strong>B</strong>, <strong>C</strong>, <strong>D</strong>, <strong>E</strong>, <strong>F</strong>,or <strong>G</strong>.</p>
               <p> (Note: Icon colour will be changed to match your chosen accent colour)</p>
@@ -119,7 +118,7 @@
 
           <figure class="sample-figure">
             <img
-              src="assets/products/get-well-layout.png"
+              src="/assets/products/get-well-layout.png"
               alt="Example of get well soon personalisation showing message, name and icon"
               loading="lazy"
               style="max-width: 260px; width: 100%; height: auto;">
@@ -175,7 +174,7 @@
           </p>
 
           <p>
-            <a class="btn btn-secondary" href="get-well-soon-bears.html">Back to get well bears</a>
+            <a class="btn btn-secondary" href="/get-well-soon-bears.html">Back to get well bears</a>
           </p>
 
         </div>
@@ -183,11 +182,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+   <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
