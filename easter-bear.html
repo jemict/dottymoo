@@ -9,21 +9,28 @@
   <title>Personalised Easter Bear Bundle | Dotty Moo</title>
   <meta name="description" content="A limited edition Personalised Easter Bear Bundle with a ready-made printed T-shirt design personalised with a name. Includes a Cadbury’s Buttons Easter egg (in original sealed packaging) and a small decorative chick. Sitting height 22cm. £17.99.">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -34,7 +41,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -42,15 +49,7 @@
           <h1>Personalised Easter Bear Bundle</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+         
 
           <p class="lead">
            A limited edition Easter gift bundle featuring a personalised “Happy Easter” keepsake bear, soft spring bow, Cadbury’s Buttons egg and a fluffy yellow chick.
@@ -58,7 +57,7 @@
 
           <img
             class="product-hero"
-            src="assets/products/easter-bundle.png"
+            src="/assets/products/easter-bundle.png"
             alt="Personalised Easter bear with green bow and printed T-shirt"
             loading="lazy">
 
@@ -68,11 +67,11 @@
 <h2>How it arrives</h2>
 
 <div class="image-grid">
-  <img src="assets/products/pack2.png"
+  <img src="/assets/products/pack2.png"
        alt="Personalised Easter bear bundle presented inside box with egg and chick"
        loading="lazy">
 
-  <img src="assets/products/pack1.png"
+  <img src="/assets/products/pack1.png"
        alt="Tissue wrapped gift presentation inside box with thank you card"
        loading="lazy">
 </div>
@@ -148,7 +147,7 @@
           </p>
 
           <p>
-            <a class="btn btn-secondary" href="seasonal-bears.html">Back to seasonal bears</a>
+            <a class="btn btn-secondary" href="/seasonal-bears.html">Back to seasonal bears</a>
           </p>
 
         </div>
@@ -156,12 +155,22 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+   <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 
 </html>
+
 
 
 
