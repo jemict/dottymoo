@@ -10,21 +10,28 @@
   <meta name="description" content="Seasonal personalised bears designed for special times of year, with limited designs available throughout the seasons.">
 
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -35,7 +42,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -43,15 +50,7 @@
           <h1>Seasonal Bears</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+       
 
           <p class="lead">
             Limited edition designs for seasonal moments, events, and special dates throughout the year.
@@ -78,7 +77,7 @@
               <!-- World Cup / Event Lion -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/seasonal-lion.png"
+                  src="/assets/products/seasonal-lion.png"
                   alt="England Fan 2026 / event themed lion"
                   loading="lazy">
                 <h3>England Fan 2026 / Event lion</h3>
@@ -86,7 +85,7 @@
                  <p class="product-detail">(26cm full length)</p>
                 <p>A sporty seasonal design, personalised with a name, ideal for tournaments, match days and special events.</p>
                 <p>
-                  <a class="btn btn-primary" href="seasonal-world-cup-lion.html">View details</a>
+                  <a class="btn btn-primary" href="/seasonal-world-cup-lion.html">View details</a>
                 </p>
               </article>
 
@@ -94,7 +93,7 @@
            <!-- Easter -->
 <article class="dm-sample-card">
   <img
-    src="assets/products/easter-bundle.png"
+    src="/assets/products/easter-bundle.png"
     alt="Personalised Easter teddy bear with green bow, Cadbury’s Buttons Easter egg and chick"
     loading="lazy">
   <h3>Easter Bear Bundle</h3>
@@ -106,13 +105,13 @@
     and a small decorative chick for a special Easter morning surprise.
   </p>
   <p>
-    <a class="btn btn-primary" href="easter-bear.html">View details</a>
+    <a class="btn btn-primary" href="/easter-bear.html">View details</a>
   </p>
 </article>
               <!-- Christmas -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/christmas-bear.jpg"
+                  src="/assets/products/christmas-bear.jpg"
                   alt="Christmas bear"
                   loading="lazy">
                 <h3>Christmas Bear</h3>
@@ -120,14 +119,14 @@
                    <p class="product-detail">(17cm sitting height)</p>
                 <p>A festive keepsake bear personalised with a name.</p>
                 <p>
-                  <a class="btn btn-primary" href="christmas-bears.html">View details</a>
+                  <a class="btn btn-primary" href="/christmas-bears.html">View details</a>
                 </p>
               </article>
 
               <!-- Graduation -->
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/school-leaver-bear.png"
+                  src="/assets/products/school-leaver-bear.png"
                   alt="Graduation / school leavers bear"
                   loading="lazy">
                 <h3>Graduation / School Leavers</h3>
@@ -137,7 +136,7 @@
                 <p>A keepsake bear for leavers, personalised with a name and a school name on the T-shirt.</p>
                 <p>
                
-                  <a class="btn btn-primary" href="school-leaver-bears.html">View details</a>
+                  <a class="btn btn-primary" href="/school-leaver-bears.html">View details</a>
                 </p>
               </article>
 
@@ -147,7 +146,7 @@
           <hr>
 
           <p>
-            <a class="btn btn-secondary" href="personalised-bears.html">Back to personalised bears</a>
+            <a class="btn btn-secondary" href="/personalised-bears.html">Back to personalised bears</a>
           </p>
 
         </div>
@@ -155,11 +154,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+     <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
