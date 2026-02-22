@@ -20,13 +20,20 @@
 <body>
 
 
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
  <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -42,15 +49,7 @@
         <h1>Schools & Organisations</h1>
 <div id="page-notice"></div>
 
-<script>
-  fetch("/notice.html")
-    .then(r => r.text())
-    .then(html => {
-      if (html.trim()) {
-        document.getElementById("page-notice").innerHTML = html;
-      }
-    });
-</script>
+
 
 <p class="lead">
   For schools and organisations who want to place a single bulk order at wholesale pricing.
@@ -214,8 +213,18 @@ Each item can be personalised with your logo, with size and colour options confi
 <script src="/footer-loader.js"></script>
 <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+  <script>
+  fetch("/notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
 </body>
 </html>
+
 
 
 
