@@ -11,32 +11,39 @@
 <meta name="description" content="A personalised graduation keepsake bear designed to celebrate milestones and achievements with a name and printed message.">
 
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
-
+  
   <main id="main-content">
     <div class="wrap">
       <div class="card">
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -44,15 +51,7 @@
           <h1>School Leaver Bears</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+       
 
           <p class="lead">
             A personalised keepsake bear designed to mark the end of a school chapter and celebrate moving on.
@@ -60,7 +59,7 @@
 
           <img
             class="product-hero"
-            src="assets/products/school-leaver-bear.png"
+            src="/assets/products/school-leaver-bear.png"
             alt="Personalised school leaver bear with printed T-shirt"
             loading="lazy">
 
@@ -153,7 +152,7 @@
 </p>
 
           <p>
-            <a class="btn btn-secondary" href="personalised-bears.html">Back to personalised bears</a>
+            <a class="btn btn-secondary" href="/personalised-bears.html">Back to personalised bears</a>
           </p>
 
         </div>
@@ -161,11 +160,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+     <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
