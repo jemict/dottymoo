@@ -48,7 +48,7 @@
 
     <div class="content">
   <h1>About Dotty Moo</h1>
-
+<div id="page-notice"></div>
   <p>
     Dotty Moo is a family-run UK brand creating personalised bears and keepsakes for children, families, schools and organisations.
     Each bear is designed to celebrate meaningful moments, offer comfort, or mark a special occasion.
@@ -110,5 +110,14 @@
  <script src="/footer-loader.js"></script>
 <script src="/cookie-consent.js"></script>
  <script src="/nav-init.js" defer></script>
+  <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
