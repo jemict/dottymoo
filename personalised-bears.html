@@ -96,7 +96,7 @@
     .then(html => {
       document.getElementById("site-nav").innerHTML = html;
 
-      // Active link handling (your existing logic)
+      // Active link handling
       const here = location.pathname.split('/').pop() || 'index.html';
       document.querySelectorAll('.site-nav a').forEach(a => {
         if (a.getAttribute('href') === here) {
@@ -105,16 +105,7 @@
         }
       });
 
-      // Failsafe: make sure page is scrollable even if menu state got stuck
-      document.documentElement.classList.remove('nav-open', 'menu-open', 'no-scroll');
-      document.body.classList.remove('nav-open', 'menu-open', 'no-scroll');
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
-
-      // Load nav-init only after nav exists (prevents the phone-only race condition)
-      const s = document.createElement("script");
-      s.src = "/nav-init.js";
-      document.body.appendChild(s);
+    
     });
 </script>
 
@@ -320,9 +311,10 @@ Explore Dotty Moo’s collection of personalised bears and keepsake soft toys, d
 
 <script src="/footer-loader.js"></script>
 <script src="/cookie-consent.js"></script>
-  
+  <script src="/nav-init.js" defer></script> 
 </body>
 </html>
+
 
 
 
