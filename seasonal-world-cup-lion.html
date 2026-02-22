@@ -9,21 +9,28 @@
   <title>England fan 2026 Lion | Dotty Moo</title>
   <meta name="description" content="A limited edition England Fan 2026 lion soft toy with a ready-made printed T-shirt design, personalised with a name. Sitting height 20cm. £13.99.">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+ <div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -34,7 +41,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -42,15 +49,7 @@
           <h1>England Fan 2026 Lion</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+        
 
           <p class="lead">
             A limited edition lion soft toy for football fans and tournament memories, personalised with a name.
@@ -58,7 +57,7 @@
 
           <img
             class="product-hero"
-            src="assets/products/seasonal-lion.png"
+            src="/assets/products/seasonal-lion.png"
             alt="England Fan lion soft toy wearing a printed T-shirt design"
             loading="lazy">
 
@@ -125,7 +124,7 @@
 </p>
 
           <p>
-            <a class="btn btn-secondary" href="seasonal-bears.html">Back to seasonal bears</a>
+            <a class="btn btn-secondary" href="/seasonal-bears.html">Back to seasonal bears</a>
           </p>
 
         </div>
@@ -133,11 +132,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+    <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
