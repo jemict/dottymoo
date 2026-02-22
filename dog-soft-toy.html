@@ -9,21 +9,28 @@
   <title>Dog Soft Toy | Create Your Own | Dotty Moo</title>
   <meta name="description" content="Dog soft toy base (20cm sitting height) for Create Your Own personalised bears. Choose your 3 lines of text, then select a font, colour, and optional icon using the guides.">
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
 
-  <div class="bg-layer" aria-hidden="true"></div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+ <div class="bg-layer" aria-hidden="true"></div>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -34,7 +41,7 @@
 
         <!-- Banner INSIDE the card -->
         <div class="header">
-          <img class="banner" src="assets/banner.png" alt="Dotty Moo banner">
+          <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
         </div>
 
         <div class="content">
@@ -42,15 +49,7 @@
           <h1>Dog Soft Toy</h1>
 
           <div id="page-notice"></div>
-          <script>
-            fetch("notice.html")
-              .then(r => r.text())
-              .then(html => {
-                if (html.trim()) {
-                  document.getElementById("page-notice").innerHTML = html;
-                }
-              });
-          </script>
+        
 
           <p class="lead">
             A soft dog plush base for your Create Your Own personalised bear.
@@ -58,7 +57,7 @@
 
           <img
             class="product-hero"
-            src="assets/products/dog-large.jpg"
+            src="/assets/products/dog-large.jpg"
             alt="Dog soft toy wearing a plain white T-shirt ready for personalisation"
             loading="lazy">
 
@@ -77,13 +76,13 @@
             <div class="dm-samples-grid dm-shop-grid">
 
               <article class="dm-sample-card">
-                <img src="assets/products/fonts.png" alt="Font guide showing Playful and Handwritten Script options" loading="lazy">
+                <img src="/assets/products/fonts.png" alt="Font guide showing Playful and Handwritten Script options" loading="lazy">
                 <h3>Fonts</h3>
                 <p>Choose: <strong>Playful</strong> or <strong>Soft rounded</strong> or <strong>Handwritten</strong> or <strong>Script</strong>.</p>
               </article>
 
               <article class="dm-sample-card">
-                <img src="assets/products/colours.png" alt="Colour guide showing Pink, Blue, Green, Red and Grey options" loading="lazy">
+                <img src="/assets/products/colours.png" alt="Colour guide showing Pink, Blue, Green, Red and Grey options" loading="lazy">
                 <h3>Colours</h3>
                 <p>Choose: <strong>Pink</strong>, <strong>Blue</strong>, <strong>Green</strong>, <strong>Red</strong>, or <strong>Grey</strong>.</p>
               </article>
@@ -104,25 +103,25 @@
             <div class="dm-samples-grid dm-shop-grid">
 
               <article class="dm-sample-card">
-                <img src="assets/products/name-icons.png" alt="Name and everyday icon guide with code labels" loading="lazy">
+                <img src="/assets/products/name-icons.png" alt="Name and everyday icon guide with code labels" loading="lazy">
                 <h3>Name icons</h3>
                 <p>Everyday icons (for example: <strong>N1</strong>, <strong>N4</strong>, <strong>N6</strong>).</p>
               </article>
 
               <article class="dm-sample-card">
-                <img src="assets/products/celebration-icons.png" alt="Celebration icon guide with code labels" loading="lazy">
+                <img src="/assets/products/celebration-icons.png" alt="Celebration icon guide with code labels" loading="lazy">
                 <h3>Celebration icons</h3>
                 <p>Birthday and celebration icons (for example: <strong>C1</strong>, <strong>C4</strong>, <strong>C11</strong>).</p>
               </article>
 
               <article class="dm-sample-card">
-                <img src="assets/products/newborn-icons.png" alt="Newborn icon guide with code labels" loading="lazy">
+                <img src="/assets/products/newborn-icons.png" alt="Newborn icon guide with code labels" loading="lazy">
                 <h3>Newborn icons</h3>
                 <p>Baby-themed icons (for example: <strong>B1</strong>, <strong>B5</strong>, <strong>B7</strong>).</p>
               </article>
 
               <article class="dm-sample-card">
-                <img src="assets/products/memorial-icons.png" alt="Memorial icon guide with code labels" loading="lazy">
+                <img src="/assets/products/memorial-icons.png" alt="Memorial icon guide with code labels" loading="lazy">
                 <h3>Memorial icons</h3>
                 <p>Gentle memorial icons (for example: <strong>M1</strong>, <strong>M5</strong>, <strong>M7</strong>).</p>
               </article>
@@ -155,7 +154,7 @@
 
           <figure class="sample-figure">
             <img
-              src="assets/products/sample.png"
+              src="/assets/products/sample.png"
               alt="Example of personalisation showing a two-tone message, name and icon"
               loading="lazy"
               style="max-width: 260px; width: 100%; height: auto;">
@@ -212,7 +211,7 @@
           </p>
 
           <p>
-            <a class="btn btn-secondary" href="create-your-own-bear.html">Back to Create your own</a>
+            <a class="btn btn-secondary" href="/create-your-own-bear.html">Back to Create your own</a>
           </p>
 
         </div>
@@ -220,11 +219,21 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+    <script>
+            fetch("/notice.html")
+              .then(r => r.text())
+              .then(html => {
+                if (html.trim()) {
+                  document.getElementById("page-notice").innerHTML = html;
+                }
+              });
+          </script>
 </body>
 </html>
+
 
 
 
