@@ -18,7 +18,15 @@
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
-
+<script>
+  // Failsafe: if something accidentally left the page scroll-locked, unlock it.
+  window.addEventListener('pageshow', () => {
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    document.documentElement.classList.remove('no-scroll','menu-open','nav-open');
+    document.body.classList.remove('no-scroll','menu-open','nav-open');
+  });
+</script>
 <body>
 
  <!-- COOKIE BANNER (GDPR-style) -->
@@ -314,6 +322,7 @@ Explore Dotty Moo’s collection of personalised bears and keepsake soft toys, d
   <script src="/nav-init.js" defer></script> 
 </body>
 </html>
+
 
 
 
