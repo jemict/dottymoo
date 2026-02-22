@@ -10,10 +10,10 @@
 <meta name="description" content="Animal Hugs are personalised soft toys inspired by favourite animals, offering comfort, companionship and thoughtful gifting.">
 
 
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body class="product-page">
@@ -24,7 +24,7 @@
 
   <div id="site-nav"></div>
   <script>
-    fetch("nav.html")
+    fetch("/nav.html")
       .then(r => r.text())
       .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
@@ -44,7 +44,7 @@
 <div id="page-notice"></div>
 
 <script>
-  fetch("notice.html")
+  fetch("/notice.html")
     .then(r => r.text())
     .then(html => {
       if (html.trim()) {
@@ -103,7 +103,7 @@
 
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/eco-bear-hugs.png"
+                  src="/assets/products/eco-bear-hugs.png"
                   alt="Animal Hugs design on eco bear"
                   loading="lazy">
                 <h3>Eco Bear</h3>
@@ -111,13 +111,13 @@
                 <p class="product-detail">(20cm sitting height)</p>
                 <p>A soft eco bear option made using recycled materials (where available).</p>
                 <p>
-                  <a class="btn btn-primary" href="animal-hugs-eco.html">Choose this bear</a>
+                  <a class="btn btn-primary" href="/animal-hugs-eco.html">Choose this bear</a>
                 </p>
               </article>
 
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/lion-hugs.png"
+                  src="/assets/products/lion-hugs.png"
                   alt="Animal Hugs design on lion soft toy"
                   loading="lazy">
                 <h3>Lion Soft Toy</h3>
@@ -125,13 +125,13 @@
                 <p class="product-detail">(26cm full length)</p>
                 <p>A bold lion character base, perfect for fun messages and big smiles.</p>
                 <p>
-                  <a class="btn btn-primary" href="animal-hugs-lion.html">Choose this bear</a>
+                  <a class="btn btn-primary" href="/animal-hugs-lion.html">Choose this bear</a>
                 </p>
               </article>
 
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/puppy-hugs.png"
+                  src="/assets/products/puppy-hugs.png"
                   alt="Animal Hugs design on dog soft toy"
                   loading="lazy">
                 <h3>Dog Soft Toy</h3>
@@ -139,13 +139,13 @@
                 <p class="product-detail">(20cm sitting height)</p>
                 <p>A friendly dog character base, ideal for everyday gifting and comfort keepsakes.</p>
                 <p>
-                  <a class="btn btn-primary" href="animal-hugs-dog.html">Choose this bear</a>
+                  <a class="btn btn-primary" href="/animal-hugs-dog.html">Choose this bear</a>
                 </p>
               </article>
 
               <article class="dm-sample-card">
                 <img
-                  src="assets/products/monkey-hugs.png"
+                  src="/assets/products/monkey-hugs.png"
                   alt="Animal Hugs design on monkey soft toy"
                   loading="lazy">
                 <h3>Monkey Soft Toy</h3>
@@ -153,7 +153,7 @@
                 <p class="product-detail">(20cm sitting height)</p>
                 <p>A playful monkey character base that works brilliantly with bright, fun personalisation.</p>
                 <p>
-                  <a class="btn btn-primary" href="animal-hugs-monkey.html">Choose this bear</a>
+                  <a class="btn btn-primary" href="/animal-hugs-monkey.html">Choose this bear</a>
                 </p>
               </article>
 
@@ -163,7 +163,7 @@
           <hr>
 
           <p>
-            <a class="btn btn-secondary" href="personalised-bears.html">Back to personalised bears</a>
+            <a class="btn btn-secondary" href="/personalised-bears.html">Back to personalised bears</a>
           </p>
 
         </div>
@@ -171,11 +171,12 @@
     </div>
   </main>
 
-  <script src="footer-loader.js"></script>
-  <script src="cookie-consent.js"></script>
+  <script src="/footer-loader.js"></script>
+  <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
 
