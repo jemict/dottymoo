@@ -56,10 +56,12 @@
           </p>
 
           <img
-            class="product-hero"
+            id="heroZoom"
+  class="product-hero zoomable"
             src="/assets/products/bedtime-bear.png"
             alt="Personalised bedtime bear"
             loading="lazy">
+          <p class="image-hint">Tap/click to zoom and view personalisation details</p>
        <p class="product-detail">(22cm sitting height)</p>
 
 
@@ -182,6 +184,7 @@
   <script src="/footer-loader.js"></script>
   <script src="/cookie-consent.js"></script>
   <script src="/nav-init.js" defer></script>
+    <script src="/image-zoom.js" defer></script>
   <script>
   fetch("/notice.html")
     .then(r => r.text())
@@ -193,6 +196,7 @@
 </script>
 </body>
 </html>
+
 
 
 
