@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Thank you | Dotty Moo</title>
+  <meta name="description" content="Thanks for your order. Your Dotty Moo keepsake is now being prepared.">
+  <meta name="robots" content="noindex,nofollow">
+
+  <link rel="canonical" href="https://dottymoo.co.uk/thank-you.html">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+  <!-- Cookie shell -->
+  <div id="cookie-shell"></div>
+  <script>
+    fetch("/cookie.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("cookie-shell").innerHTML = html);
+  </script>
+
+  <!-- Nav -->
+  <div id="site-nav"></div>
+  <script>
+    fetch("/nav.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById("site-nav").innerHTML = html;
+
+        // Active link handling (optional)
+        const here = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.site-nav a').forEach(a => {
+          if (a.getAttribute('href') === here) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+      });
+  </script>
+
+  <main class="container" style="max-width: 900px; padding: 24px 16px;">
+    <section class="card" style="padding: 22px;">
+      <h1 style="margin-top: 0;">Thank you for your order</h1>
+
+      <p style="font-size: 1.05rem;">
+        Your Dotty Moo order has been received and is now being prepared.
+      </p>
+
+      <div id="order-meta" style="margin: 16px 0; display: none;">
+        <p style="margin: 0 0 8px;"><strong>Reference:</strong> <span id="ref"></span></p>
+        <p style="margin: 0;"><strong>Item:</strong> <span id="pl"></span></p>
+      </div>
+
+      <hr style="margin: 18px 0;">
+
+      <h2 style="margin: 0 0 10px; font-size: 1.1rem;">What happens next</h2>
+      <ul style="margin-top: 0;">
+        <li>If your order includes personalisation, I will print and prepare your keepsake with care.</li>
+        <li>You will receive updates from Stripe by email, including your payment receipt.</li>
+        <li>If you have any notes to add, reply to your order email as soon as possible.</li>
+      </ul>
+
+      <p style="margin-bottom: 0;">
+        Need help? Email <a href="mailto:hello@dottymoo.co.uk">hello@dottymoo.co.uk</a>
+      </p>
+
+      <div style="margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="/personalised-bears.html">Continue shopping</a>
+        <a class="btn btn-secondary" href="/">Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (optional) -->
+  <div id="site-footer"></div>
+  <script>
+    fetch("/footer.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("site-footer").innerHTML = html);
+  </script>
+
+  <script>
+    // Read Stripe session_id and any optional tracking label
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get("session_id");
+    const pl = params.get("pl"); // optional "payment link label" you add yourself
+
+    if (sessionId || pl) {
+      document.getElementById("order-meta").style.display = "block";
+
+      if (sessionId) {
+        // Show a short reference, not the full session id
+        const shortRef = sessionId.length > 14 ? sessionId.slice(-14) : sessionId;
+        document.getElementById("ref").textContent = shortRef;
+      } else {
+        document.getElementById("ref").textContent = "Provided in your email receipt";
+      }
+
+      document.getElementById("pl").textContent = pl ? pl : "Provided in your email receipt";
+    }
+  </script>
+
+</body>
+</html>
