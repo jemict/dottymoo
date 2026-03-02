@@ -21,53 +21,18 @@
 
 <body>
 
-  <!-- COOKIE BANNER (GDPR-style) -->
-  <div id="cookie-banner" class="cookie-banner" aria-label="Cookie consent banner">
-    <p>
-      We use cookies to improve your experience and to understand how this website is used.
-      You can accept all cookies, reject non essential cookies, or manage your preferences.
-      See our <a href="/privacy.html">Privacy Policy</a> for more information.
-    </p>
-    <div class="cookie-banner-buttons">
-      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept all</button>
-      <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">Reject non essential</button>
-      <button id="cookie-manage" class="cookie-btn cookie-btn-outline">Manage preferences</button>
-    </div>
-  </div>
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
 
-  <div class="bg-layer"></div>
-
-  <!-- Skip link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <div id="site-nav"></div>
-
+   <div id="site-nav"></div>
   <script>
     fetch("/nav.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("site-nav").innerHTML = html;
-
-        const here = location.pathname.split('/').pop() || 'index.html';
-        document.querySelectorAll('.site-nav a').forEach(a => {
-          const href = (a.getAttribute('href') || '').split('?')[0];
-          const file = href.split('/').pop();
-          if (file === here) {
-            a.classList.add('active');
-            a.setAttribute('aria-current', 'page');
-          }
-        });
-
-        const nav = document.querySelector('.site-nav');
-        const toggle = document.querySelector('.nav-toggle');
-
-        if (nav && toggle) {
-          toggle.addEventListener('click', () => {
-            const isOpen = nav.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-          });
-        }
-      });
+      .then(r => r.text())
+      .then(html => document.getElementById("site-nav").innerHTML = html);
   </script>
 
   <!-- MAIN CONTENT -->
@@ -197,7 +162,10 @@
   </main>
 
   <script src="../footer-loader.js"></script>
+    <script src="/cookie-consent.js"></script>
+  <script src="/nav-init.js" defer></script>
 </body>
 </html>
+
 
 
