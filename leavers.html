@@ -166,74 +166,7 @@
             If your school is running a parent ordering window, you will receive a direct link from school.
             Please use that link to access your school’s ordering page.
           </p>
-
-          <h3>Have your school link already?</h3>
-          <p class="lead">
-            Paste the link below and we will take you straight to the correct page.
-          </p>
-
-          <form class="dm-form" id="school-link-form" aria-label="Paste your school link">
-            <label for="schoolLink"><strong>School link</strong></label>
-            <input
-              id="schoolLink"
-              name="schoolLink"
-              type="url"
-              placeholder="Paste the link your school shared"
-              autocomplete="off"
-              inputmode="url"
-              style="width: 100%; max-width: 680px;">
-
-            <p>
-              <button type="submit" class="btn btn-primary">Go to school page</button>
-            </p>
-
-            <p class="stock-note" id="schoolLinkHelp" style="display:none;"></p>
-          </form>
-
-          <script>
-            (function () {
-              const form = document.getElementById('school-link-form');
-              const input = document.getElementById('schoolLink');
-              const help = document.getElementById('schoolLinkHelp');
-
-              function showHelp(msg) {
-                help.textContent = msg;
-                help.style.display = 'block';
-              }
-
-              form.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                const raw = (input.value || '').trim();
-                if (!raw) {
-                  showHelp('Please paste the link your school shared, then click Go to school page.');
-                  return;
-                }
-
-                let url = raw;
-
-                // If they pasted a path without protocol, normalise it
-                if (!/^https?:\/\//i.test(url)) {
-                  url = url.replace(/^\/+/, '');
-                  url = location.origin + '/' + url;
-                }
-
-                try {
-                  const parsed = new URL(url);
-
-                  if (!/dottymoo\.co\.uk$/i.test(parsed.hostname)) {
-                    showHelp('That link does not look like a Dotty Moo school page. Please use the link shared by your school.');
-                    return;
-                  }
-
-                  location.href = parsed.href;
-                } catch (err) {
-                  showHelp('That link does not look quite right. Please paste the full link shared by your school.');
-                }
-              });
-            })();
-          </script>
-
+      
           <hr>
 
           <h2>Schools</h2>
@@ -285,6 +218,7 @@
           </script>
 </body>
 </html>
+
 
 
 
