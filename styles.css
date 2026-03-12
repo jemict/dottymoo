@@ -1206,12 +1206,13 @@ small{ opacity:.75; }
   position:absolute;
   top:0;
   bottom:0;
-  width:33.33%;
+  width:25%;
 }
 
 .ss-fb{ left:0; }
-.ss-ig{ left:33.33%; }
-.ss-tiktok{ left:66.66%; }
+.ss-ig{ left:25%; }
+.ss-pin{ left:50%; }
+.ss-tiktok{ left:75%; }
 
 .ss-link:hover{
   cursor:pointer;
