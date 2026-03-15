@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="https://dottymoo.co.uk/encouragement-bears.html">
+
+  <title>Encouragement Bears | Dotty Moo</title>
+  <meta name="description" content="Personalised Encouragement Bears with a name on the front and a supportive message on the back, designed to encourage confidence, belonging, comfort and reassurance.">
+
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body class="product-page">
+
+<div id="cookie-shell"></div>
+<script>
+  fetch("/cookie.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("cookie-shell").innerHTML = html);
+</script>
+
+<div class="bg-layer" aria-hidden="true"></div>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div id="site-nav"></div>
+<script>
+  fetch("/nav.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("site-nav").innerHTML = html);
+</script>
+
+<main id="main-content">
+  <div class="wrap">
+    <div class="card">
+
+      <div class="header">
+        <img class="banner" src="/assets/banner.png" alt="Dotty Moo banner">
+      </div>
+
+      <div class="content">
+
+        <h1>Encouragement Bears</h1>
+        <div id="page-notice"></div>
+
+        <p class="lead">
+          Personalised bears with a name on the front and a supportive message on the back, designed to encourage confidence, belonging, comfort and reassurance.
+        </p>
+
+        <p class="small-note">
+          Choose a message category below to explore the available designs.
+        </p>
+
+        <hr>
+
+        <h2>What this is</h2>
+        <p>
+          Encouragement Bears are personalised soft toy keepsakes designed to carry a meaningful message.
+          Each bear includes a name printed on the front of the T-shirt and a supportive message printed on the back.
+          They are designed for thoughtful gifting, comfort, encouragement and reassurance.
+        </p>
+
+        <h2>Personalisation</h2>
+        <ul>
+          <li><strong>Name</strong> printed on the front of the T-shirt</li>
+          <li><strong>Supportive message</strong> chosen from a category below for the back of the T-shirt</li>
+          <li><strong>Message style</strong> includes Dotty Moo colours and signature printed design</li>
+        </ul>
+
+        <hr>
+
+        <h2>Choose your message category</h2>
+        <p class="lead">
+          Select a category below to continue. The next page will show the available message designs in that collection.
+        </p>
+
+        <section class="dm-samples" aria-label="Choose an Encouragement Bears category">
+          <div class="dm-samples-grid dm-shop-grid">
+
+            <article class="dm-sample-card">
+              <img
+                src="/assets/products/encouragement-bears/encouragement-bear.png"
+                alt="Encouragement Bear confidence and encouragement category"
+                loading="lazy">
+              <h3>Confidence &amp; Encouragement</h3>
+              <p>Supportive designs focused on confidence, courage and self-belief.</p>
+              <p>
+                <a class="btn btn-primary" href="/encouragement-bears-confidence.html">View this category</a>
+              </p>
+            </article>
+
+            <article class="dm-sample-card">
+              <img
+                src="/assets/products/encouragement-bears/encouragement-bear.png"
+                alt="Encouragement Bear identity belonging and acceptance category"
+                loading="lazy">
+              <h3>Identity, Belonging &amp; Acceptance</h3>
+              <p>Gentle messages centred on difference, belonging and being yourself.</p>
+              <p>
+                <a class="btn btn-primary" href="/encouragement-bears-identity.html">View this category</a>
+              </p>
+            </article>
+
+            <article class="dm-sample-card">
+              <img
+                src="/assets/products/encouragement-bears/encouragement-bear.png"
+                alt="Encouragement Bear comfort and support category"
+                loading="lazy">
+              <h3>Comfort &amp; Support</h3>
+              <p>Reassuring designs created to offer comfort, kindness and emotional support.</p>
+              <p>
+                <a class="btn btn-primary" href="/encouragement-bears-comfort.html">View this category</a>
+              </p>
+            </article>
+
+            <article class="dm-sample-card">
+              <img
+                src="/assets/products/encouragement-bears/encouragement-bear.png"
+                alt="Encouragement Bear calm and reassurance category"
+                loading="lazy">
+              <h3>Calm &amp; Reassurance</h3>
+              <p>Calming messages designed for hard moments, overwhelm and gentle reassurance.</p>
+              <p>
+                <a class="btn btn-primary" href="/encouragement-bears-calm.html">View this category</a>
+              </p>
+            </article>
+
+          </div>
+        </section>
+
+        <hr>
+
+        <p>
+          <a class="btn btn-secondary" href="/personalised-bears.html">Back to personalised bears</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/footer-loader.js"></script>
+<script src="/cookie-consent.js"></script>
+<script src="/nav-init.js" defer></script>
+<script>
+  fetch("/notice.html")
+    .then(r => r.text())
+    .then(html => {
+      if (html.trim()) {
+        document.getElementById("page-notice").innerHTML = html;
+      }
+    });
+</script>
+</body>
+</html>
