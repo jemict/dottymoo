@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Orchid Vale Primary School – Leavers’ Graduation Bear | Dotty Moo</title>
-  <meta name="description" content="Order your Orchid Vale Primary School leavers’ graduation bear. Personalised keepsake delivered to school.">
+  <title>Orchid Vale Primary School Leavers Bears | Dotty Moo</title>
+  <meta name="description" content="Order your Orchid Vale Primary School leavers bear. Choose either the Nursery Leavers Bear or the Year 6 Leavers Bear. Personalised keepsakes delivered to school.">
 
   <!-- Prevent indexing -->
   <meta name="robots" content="noindex, nofollow">
@@ -33,7 +33,6 @@
       .then(html => {
         document.getElementById("site-nav").innerHTML = html;
 
-        // Active link handling (optional)
         const here = location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('.site-nav a').forEach(a => {
           if (a.getAttribute('href') === here) {
@@ -42,7 +41,6 @@
           }
         });
 
-        // Mobile nav toggle
         const nav = document.querySelector('.site-nav');
         const toggle = document.querySelector('.nav-toggle');
         if (nav && toggle) {
@@ -67,61 +65,106 @@
 
         <div class="content">
 
-          <h1>Orchard Vale Primary School</h1>
+          <h1>Orchid Vale Primary School</h1>
 
           <p class="lead">
-            Personalised Leavers’ Graduation Bear – ORDERING NOW OPEN
-          </p>
-
-          <hr>
-
-          <img
-            src="/assets/leavers-example.jpg"
-            alt="Orchard Vale Primary School leavers bear preview"
-            loading="lazy"
-            style="max-width: 380px; width: 100%; display:block; margin: 0 auto;">
-
-          <hr>
-
-          <h2>Product details</h2>
-
-          <p>
-            • Personalised with Orchard Vale Primary School logo<br>
-            • Printed with: PRINT WORDING (e.g. Class of 2026)<br>
-            • Graduation outfit included<br>
-            • Delivered to school in one batch
+            Leavers Bear Ordering Page
           </p>
 
           <p>
-            <strong>Price: £14.99</strong><br>
-            Delivery to school included.
+            Please choose the correct bear below before placing your order. There are two options available for Orchid Vale Primary School families.
           </p>
 
           <hr>
 
-        
+          <h2>Choose your bear</h2>
 
-<h2>Important information</h2>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; margin: 24px 0;">
 
-<p>
-  Ordering closes: <strong>CLOSING DATE</strong><br>
-  Estimated delivery to school: <strong>DELIVERY WEEK</strong>
-</p>
+            <!-- Nursery Bear -->
+            <section style="background:#fff; border:1px solid #e5e5e5; border-radius:16px; padding:22px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+              <img
+                src="/assets/leavers/DM-Orchid-Vale-Nursery.jpg"
+                alt="Orchid Vale Primary School Nursery Leavers Bear"
+                loading="lazy"
+                style="max-width: 260px; width: 100%; display:block; margin: 0 auto 16px auto; border-radius: 8px;">
 
-<div style="text-align:center; padding: 25px 0 10px 0;">
-  <a class="btn btn-primary"
-     href="https://buy.stripe.com/4gM00jgvx8fXavFalv5sA0W"
-     style="font-size: 1.1rem; padding: 14px 32px;">
-     Order your leavers’ bear
-  </a>
-</div>
+              <h3 style="margin-bottom: 10px;">Nursery Leavers Bear</h3>
 
+              <p style="margin-bottom: 14px;">
+                For children leaving <strong>Nursery</strong>.
+              </p>
 
+              <p style="margin-bottom: 14px;">
+                • Orchid Vale school logo<br>
+                • Graduation outfit included<br>
+                • Nursery wording printed on the bear<br>
+                • Delivered to school in one batch
+              </p>
 
+              <p style="margin-bottom: 18px;">
+                <strong>£14.99</strong><br>
+                Delivery to school included
+              </p>
+
+              <a class="btn btn-primary"
+                 href="PASTE-NURSERY-STRIPE-LINK-HERE"
+                 aria-label="Order the Nursery Leavers Bear">
+                 Order Nursery Bear
+              </a>
+            </section>
+
+            <!-- Year 6 Bear -->
+            <section style="background:#fff; border:1px solid #e5e5e5; border-radius:16px; padding:22px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+              <img
+                src="/assets/leavers/DM-Orchid-Vale-Year-6.jpg"
+                alt="Orchid Vale Primary School Year 6 Leavers Bear"
+                loading="lazy"
+                style="max-width: 260px; width: 100%; display:block; margin: 0 auto 16px auto; border-radius: 8px;">
+
+              <h3 style="margin-bottom: 10px;">Year 6 Leavers Bear</h3>
+
+              <p style="margin-bottom: 14px;">
+                For children leaving <strong>Year 6</strong>.
+              </p>
+
+              <p style="margin-bottom: 14px;">
+                • Orchid Vale school logo<br>
+                • Graduation outfit included<br>
+                • Year 6 wording printed on the bear<br>
+                • Delivered to school in one batch
+              </p>
+
+              <p style="margin-bottom: 18px;">
+                <strong>£14.99</strong><br>
+                Delivery to school included
+              </p>
+
+              <a class="btn btn-primary"
+                 href="PASTE-YEAR6-STRIPE-LINK-HERE"
+                 aria-label="Order the Year 6 Leavers Bear">
+                 Order Year 6 Bear
+              </a>
+            </section>
+
+          </div>
+
+          <hr>
+
+          <h2>Important information</h2>
+
+          <p>
+            Ordering closes: <strong>CLOSING DATE</strong><br>
+            Estimated delivery to school: <strong>DELIVERY WEEK</strong>
+          </p>
+
+          <p>
+            Please double-check that you are ordering the correct bear before completing checkout.
+          </p>
 
           <h3>Questions?</h3>
           <p>
-            Please contact hello@dottymoo.co.uk and include your school name in the subject line.
+            Please contact hello@dottymoo.co.uk and include <strong>Orchid Vale</strong> in the subject line.
           </p>
 
           <p>
@@ -137,8 +180,3 @@
   <script src="/cookie-consent.js"></script>
 </body>
 </html>
-
-
-
-
-
